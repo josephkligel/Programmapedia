@@ -1,0 +1,155 @@
+# Reference for UNIX Commands
+
+## Commands
+/bin/bash
+	The bash executable
+/etc/profile
+	The systemwide initialization file, executed for login shells
+~/.bash_profile
+	The personal initialization file, executed for login shells
+~/.bashrc
+	The individual per-interactive-shell startup file
+~/.bash_logout
+	The individual login shell cleanup file, executed when a login shell exits
+~/.inputrc
+	Individual readline initialization file
+
+nano:			Best editor
+	###flags
+	+16:	goes to line 16, e.g. 'nano +16 pyindex.txt'
+
+echo <string>:		Print string to screen
+
+man <command>:		Display manual page for command
+	###flags
+	-k:	to search, e.g. 'man -k "grep"'
+
+⌃C,^A,^E,^U:	stop, beginning of line, eol, delete to beginning of line
+
+Alt-click:		Move cursor to location clicked	
+
+Up/down arrow:		Scroll through previous commands	
+
+clear or ⌃L:		Clear screen
+
+exit or ⌃D:		Exit terminal
+
+echo "str" >> <file>:	appends a string to an existing file
+	###flags and commands
+	-e:	 allows you to add non-characters such as tabs
+	'\t':	 backslash 't' to add tab. example -- echo -e "\t"
+
+echo "str" > <file>:	redirects string to a newly created file
+
+diff:			compares files that are similar
+
+ls:			lists the files in current directory.
+	### flags for 'ls'
+	-a:	 shows all files
+	-1:	 shows simple list, 
+	-l:	 shows read write capabilities of files, 
+	-rtl:	 for list by reversed time of modification long format, 
+	-h:	 for human-readable version of list, 
+	-ahrtl:	 for reverse, modified, human-readable, all list
+	-I:	ignores a string. For example, 'ls -I "s*"' ignores all files that start with the letter s.
+
+touch:		create an empty file
+
+cd:		change directory
+
+*:		Wildcard operator.
+	###Examples
+	's*' to find all the files or directories that start with 's'
+	'*.txt' to list all the files with a .txt extention
+
+mv:			mv to rename a file or move it to a new location
+
+cp:			cp to copy a file
+
+rm:			to remove a file. 
+	###flags
+	-f:	 to force
+	-r:	 to remove directory
+
+pwd:			print current working directory
+
+which:			looks to see if a program is available at the command line
+
+curl:			download a file using a web address
+
+!!:			run the previous command exactly as written
+
+!*:			run the previous command that starts with a certain letter or word. A number will print out the command from that line number, e.g.'!1983' prints 'which curl'
+
+^R:			search previous commands interactively
+
+head:			shows first 10 lines of file
+
+tail:			shows last 10 lines of file. 
+	###flags
+	-f:	allows you view an actively changing file.
+
+wc:		wordcount of file. From left to right, the output is lines, words, and bytes.
+
+|:		pipe is used for piping the results of another command
+
+ping:		sees if a server is working. The argument is a web address.
+
+less:		lets you navigate through a file
+	###Commands for '/'
+	up & down arrow keys:	Move up or down one line
+	spacebar:		Move forward one page
+	Ctrl-F:			Move forward one page
+	Ctrl-B:			Move back one page
+	G:			Move to end of file
+	1G:			Move to beginning of file
+	/<string>:		Search file for string
+	n:			Move to next search result
+	N:			Move to previous search result
+	q:			Quit less
+
+grep:			used to search for a substring in a file
+	###flags
+	-i:	for non-case sensitive searchs
+	-n:	to display the line numbers of a file
+
+ps:			to see all the processes on the system
+	###flags
+	aux:	example -- 'ps aux | grep spring' to see all the processes			 with spring in the program name
+
+kill:			eliminates an unwanted process. For example, 'kill -15 4048' kills chrome
+	###flags
+	-15:	UNIX terminate code
+
+pkill:			kill all the processes matching a name. For example, 'pkill -15 -f spring' kills all spring processes.
+	###flags
+	-15:	terminate code
+	-f:	force
+
+history:		prints the history of commands. For example, 'history | grep curl' prints out the history of 'curl' commands
+
+find:			find files & directories
+	###examples
+	'find . -name foo*.*:	find a file that starts with foo within current directory
+
+update-alternatives:	lets you see the alternative of default programs
+	###examples
+	apt-alternatives --config x-terminal-emulator:	lets you see the alternative termulators installed. Hyper is current default
+
+curl ifconfig.me:	lookup ip address
+
+curl http://api.geoiplookup.net/?query=<Public_IP>:     Looksup geolocation of ip address and spits out results in html
+
+reset:			reinitializes terminal
+
+df:			Find out the available and used disk space
+	###flags
+	-H:	Human readable
+
+~/.local/share/Trash/*:	files of recycle bin
+	###examples
+	rm -rf ~/.local/share/Trash/*: to remove all files and folders in trash
+	
+check memory/RAM: 'free -m', 'cat /proc/meminfo'
+
+check CPU, RAM, and processes: 'top'

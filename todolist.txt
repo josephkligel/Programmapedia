@@ -1,0 +1,27 @@
+#Current Bookmarks:
+ Bash Shell Scripting	8
+ Python A-Z		1212
+ Learning C		https://www.linkedin.com/learning/me/in-progress
+ Udemy/Web-Development	https://www.udemy.com/home/my-courses/learning/
+ Silicon Valley		601
+ I, Claudius		102
+ TNG			204
+ I Dream of Jeannie	200
+ Big Bang Theory	500
+
+#Current todos
+~~>BudgetCrud with Nodejs:
+	-Get body values from '/edit' and post them through '/update'
+	-More tasks in Todoist
+
+~~>Lookup/do:
+	-how to ssh with linux
+	-How to create symbolic links in Linux
+	-Create Python script to batch name folders for me
+		and possibly replace all spaces in filenames with underscores
+	-Webscraping	
+	-sort file to less and see if it works
+
+~~>Fedora:
+	-fix Spotify
+	-Fix git repos
