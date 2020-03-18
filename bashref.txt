@@ -153,3 +153,9 @@ df:			Find out the available and used disk space
 check memory/RAM: 'free -m', 'cat /proc/meminfo'
 
 check CPU, RAM, and processes: 'top'
+
+ln:			Create symbolic links
+	###flags
+	-s:	make symbolic links
+	###examples
+	'ln -s ~/Videos ~/Desktop/Videos'
