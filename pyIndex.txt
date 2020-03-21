@@ -28,6 +28,8 @@ Operators: Typical, single programming operators, while the rest have exceptions
 	reassignment: +=, -=, /=, or *= (no ++ or --)
 	logical: and, or, not/! (no && or ||)
 
+Overload Operators: 'def __add__(self, other)' 
+
 Functions: Functions start with the word 'def' and are loosely typed
 	keyword arg: e.g. 'sum(arg2=3, arg1=10'
 	default arg: e.g. 'def sum(arg1=10, arg2)' 10 is default until specified
@@ -44,14 +46,21 @@ Encapsulation:
 Inheritance: e.g. 'class Square(Polygon)' instead of 'extends' keyword
 	Child class is derived from parent class. Parent class is the base class
 
-Classes: uses '__init__' method to initialize an instance
-	instances: is a version of a class, e.g. Honda is a car
-		self is used in replacement of 'this'
+Classes: uses '__init__' method to initialize an instance and self is used in replacement of 'this'
+	Standards: Class names should be in Camelcase 'ThisIsExample'
+
+Instances: are objects of a class, e.g. Honda is a car
+	Should be all lowercase 'honda'
+	Words in an instance var name should be seperated with an underscore
+	Non-public inst var should begin with a single underscore
+	For private var, two underscores begin the name
 
 
-Modules:
-	math: math.pow(), math.e, math.pi, math.log, math.log10, math.log2
+Modules: Module names should always be in lowercase
+	math: pow(), e, pi, log, log10, log2
 	os: System()
+	datetime: strftime(), today(), strptime()
+	sys: stdout.write()
 	
 
 Escape characters: Put a back slash before the character to be escaped
@@ -65,6 +74,7 @@ Placeholders: Use numbers in curly brackets or % w/ letter (%d,%s,%2f)
 			  print('They are %d and %d' % x, y)
 
 I/O: input()
+	file: open(<filename>, opt) opt: 'w', 'a', 'r'
 
 Help: help(), dir(__builtins__), help(<fname>), dir(<fname>)
 

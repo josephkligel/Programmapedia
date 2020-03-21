@@ -2,7 +2,7 @@
  Learning C		https://www.linkedin.com/learning/me/in-progress
  Udemy/Web-Development	https://www.udemy.com/home/my-courses/learning/
  Bash Shell Scripting	8
- Python A-Z		1212
+ Python A-Z		1301
  Silicon Valley		601
  I, Claudius		102
  TNG			204
