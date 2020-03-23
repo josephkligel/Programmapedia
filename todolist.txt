@@ -1,19 +1,14 @@
-#Current Bookmarks:
- Learning C		https://www.linkedin.com/learning/me/in-progress
+# Current Bookmarks:
  Udemy/Web-Development	https://www.udemy.com/home/my-courses/learning/
+ Linux Complete Guide	10
  Bash Shell Scripting	8
  Python A-Z		1301
  Silicon Valley		601
  I, Claudius		102
  TNG			204
  I Dream of Jeannie	200
- Big Bang Theory	513
+ Big Bang Theory	517
 
-#Current todos
-~~>Lookup/do:
-	-how to ssh with linux
-	-Create Python script to batch name folders for me
-		and possibly replace all spaces in filenames with underscores
-	-Webscraping	
-
-~~>Fedora:
+# Current todos
+ -keyboard shortcuts for LM
+ -add all mongodb initializers to installdeb file
