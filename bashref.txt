@@ -155,6 +155,10 @@ grep:			used to search for a substring in a file
 	-i:	for non-case sensitive searchs
 	-n:	to display the line numbers of a file
 
+awk:			used to print of parts of text
+	###examples
+	awk '{print $1}' <filename>: prints off the first column from the file
+
 ps:			to see all the processes on the system
 	###flags
 	aux:	example -- 'ps aux | grep spring' to see all the processes			 with spring in the program name
