@@ -29,10 +29,27 @@ terminal controls:
 	!*: run the previous command that starts with a certain letter or word. A number will print out the command from that line number, e.g.'!1983' prints 'which curl'
 
 su:			Become root
+	###commands
+	passwd <username>: to change password for username
+	adduser <username>: add user to sudoer file
+
+Permissions:
+	###type
+	r: read
+	w: write
+	x: executable
+	###group levels
+	u: user/you
+	g: group
+	o: other/everyone on the system
+	###commands
+	chmod: Change permission of file or directory
+	chown: Change ownership fo file, e.g. 'chown root <filename>'
 
 nano:			Best editor
 	###commands
 	^L:	redraws editor when text overlaps
+	M-Shift-3 or M-#: Toggles line numbering
 	###flags
 	+16:	goes to line 16, e.g. 'nano +16 pyindex.txt'
 
@@ -45,7 +62,11 @@ echo <string>:		Print string to screen
 	echo "str" > <file>:	redirects string to a newly created file
 	echo "str" >> <file>:	appends a string to an existing file
 
-man <command>:		Display manual page for command
+Help Commands:
+	###commands
+	man:		Display manual page for command
+	whatis:		one line summary of command
+	<command> --help: list options and other info for a command
 	###flags
 	-k:	to search, e.g. 'man -k "grep"'
 
@@ -67,10 +88,12 @@ mkdir:		make empty directory
 
 cd:		change directory
 
-Wildcard operators: Used in regular expression. Very useful
-	###
-	.:		Any character
-	*:		Any number of characters
+Wildcards:	Used in regular expression. Very useful
+	###expressions
+	'.': Any character
+	'*': Any number of characters, including no characters
+	'?': A single character
+	[]:  A range of characters
 	###Examples
 	'*.txt' to list all the files with a .txt extention
 
@@ -86,7 +109,7 @@ rm:			to remove a file.
 
 pwd:			print current working directory
 
-which:			looks to see if a program is available at the command line
+which:			looks up the location of a program
 
 curl:			download a file using a web address
 
@@ -143,6 +166,7 @@ find:			find files & directories
 	'find . -name foo*.*:	find a file that starts with foo within current directory
 
 locate:			find files & dir via database. Much faster
+			Have to update db with updatedb command periodically
 	###examples
 	locate foo*.*
 
@@ -171,9 +195,15 @@ check memory/RAM: 'free -m', 'cat /proc/meminfo'
 check CPU, RAM, and processes: 'top'
 
 ln:			Create symbolic links
+	###types
+	inode: pointer or number of a file on the storage device
+	soft links: links that will be removed if linked files are removed or renamed
+	hard links: Not affected by deletion or manipuulator of linked files
 	###flags
-	-s:	make symbolic links
+	no flage: makes hard symbolic links
+	-s:	makes soft symbolic links
 	###examples
+	ln ~/Videos ~/Desktop/Videos
 	ln -s ~/Videos ~/Desktop/Videos
 
 sed:			Used with regex to manipulate text
