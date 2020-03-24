@@ -20,7 +20,7 @@ pull:
 remote:		'git remote -v'
 	###flags
 	-v: to see all remotes added
-	add: 'git remote add origin "https://blahblah.git"'
+	add: 'git remote add origin <url>'
 
 checkout:	to use another branch
 	###examples
