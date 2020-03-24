@@ -158,4 +158,22 @@ ln:			Create symbolic links
 	###flags
 	-s:	make symbolic links
 	###examples
-	'ln -s ~/Videos ~/Desktop/Videos'
+	ln -s ~/Videos ~/Desktop/Videos
+
+sed:			Used with regex to manipulate text
+	###flags
+	-i: insert into file. No '-i' means it will only print temporary changes
+	###regex
+	^: beginning of line
+	$: end of line
+	s/: substitute characters
+	\s: whitespace
+	'.': any character
+	'*': any numbers of characters
+	g: for multiple instances of replacement
+	d: to delete
+	p: to print when read by sed expression
+	###examples
+	^: sed -i '/^$/ d' test.txt
+	$: sed -i '$a PATH=NULL' /etc/profile
+	s/: sed -i 's/a/A/g' test.txt 
