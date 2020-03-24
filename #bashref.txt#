@@ -14,40 +14,32 @@
 ~/.inputrc
 	Individual readline initialization file
 
-terminal controls:
-	###commands
-	^C: stop process
-	^A: beginning of line
-	^E: end of line
-	^U: delete to beginning of line
-	^R: Check typed history in terminal
-	^L: Clear screen
-	Up/down arrow: Scroll through previous commands	
-	⌃D: Exit terminal
-	^R: search previous commands interactively
-	!!: run the previous command exactly as written
-	!*: run the previous command that starts with a certain letter or word. A number will print out the command from that line number, e.g.'!1983' prints 'which curl'
-
-su:			Become root
-
 nano:			Best editor
-	###commands
-	^L:	redraws editor when text overlaps
 	###flags
 	+16:	goes to line 16, e.g. 'nano +16 pyindex.txt'
 
 echo <string>:		Print string to screen
-	###flags and commands
-	-e:	allows you to add non-characters such as tabs
-	'\t':	backslash 't' to add tab. example -- echo -e "\t"
-	'\n':	new line character
-	###examples
-	echo "str" > <file>:	redirects string to a newly created file
-	echo "str" >> <file>:	appends a string to an existing file
 
 man <command>:		Display manual page for command
 	###flags
 	-k:	to search, e.g. 'man -k "grep"'
+
+⌃C,^A,^E,^U:	stop, beginning of line, eol, delete to beginning of line
+
+Alt-click:		Move cursor to location clicked	
+
+Up/down arrow:		Scroll through previous commands	
+
+clear or ⌃L:		Clear screen
+
+exit or ⌃D:		Exit terminal
+
+echo "str" >> <file>:	appends a string to an existing file
+	###flags and commands
+	-e:	 allows you to add non-characters such as tabs
+	'\t':	 backslash 't' to add tab. example -- echo -e "\t"
+
+echo "str" > <file>:	redirects string to a newly created file
 
 diff:			compares files that are similar
 
@@ -63,15 +55,11 @@ ls:			lists the files in current directory.
 
 touch:		create an empty file
 
-mkdir:		make empty directory
-
 cd:		change directory
 
-Wildcard operators: Used in regular expression. Very useful
-	###
-	.:		Any character
-	*:		Any number of characters
+*:		Wildcard operator.
 	###Examples
+	's*' to find all the files or directories that start with 's'
 	'*.txt' to list all the files with a .txt extention
 
 mv:			mv to rename a file or move it to a new location
@@ -82,13 +70,18 @@ rm:			to remove a file.
 	###flags
 	-f:	 to force
 	-r:	 to remove directory
-	-I:	 ask to remove recursively. Very useful
 
 pwd:			print current working directory
 
 which:			looks to see if a program is available at the command line
 
 curl:			download a file using a web address
+
+!!:			run the previous command exactly as written
+
+!*:			run the previous command that starts with a certain letter or word. A number will print out the command from that line number, e.g.'!1983' prints 'which curl'
+
+^R:			search previous commands interactively
 
 head:			shows first 10 lines of file
 
@@ -97,9 +90,6 @@ tail:			shows last 10 lines of file.
 	-f:	allows you view an actively changing file.
 
 wc:		wordcount of file. From left to right, the output is lines, words, and bytes.
-	###flags
-	-l: counts lines
-	-m: counts characters
 
 |:		pipe is used for piping the results of another command
 
@@ -142,9 +132,7 @@ find:			find files & directories
 	###examples
 	'find . -name foo*.*:	find a file that starts with foo within current directory
 
-locate:			find files & dir via database. Much faster
-	###examples
-	locate foo*.*
+locate:	      	      
 
 update-alternatives:	lets you see the alternative of default programs
 	###examples
@@ -154,15 +142,13 @@ curl ifconfig.me:	lookup ip address
 
 curl http://api.geoiplookup.net/?query=<Public_IP>:     Looksup geolocation of ip address and spits out results in html
 
-whoami:			Shows what user the terminal is logged in as
-
 reset:			reinitializes terminal
 
 df:			Find out the available and used disk space
 	###flags
 	-H:	Human readable
 
-Trash:		~/.local/share/Trash/*
+~/.local/share/Trash/*:	files of recycle bin
 	###examples
 	rm -rf ~/.local/share/Trash/*: to remove all files and folders in trash
 	
@@ -193,4 +179,3 @@ sed:			Used with regex to manipulate text
 	^: sed -i '/^$/ d' test.txt
 	$: sed -i '$a PATH=NULL' /etc/profile
 	s/: sed -i 's/a/A/g' test.txt 
-
