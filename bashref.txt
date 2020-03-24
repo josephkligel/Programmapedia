@@ -118,13 +118,18 @@ head:			shows first 10 lines of file
 tail:			shows last 10 lines of file. 
 	###flags
 	-f:	allows you view an actively changing file.
-
+	-1:	last line. 1 can be replaced with any number
+	
 wc:		wordcount of file. From left to right, the output is lines, words, and bytes.
 	###flags
 	-l: counts lines
 	-m: counts characters
 
 |:		pipe is used for piping the results of another command
+
+tee:		simultaneous actions
+	###flags
+	-a: append
 
 ping:		sees if a server is working. The argument is a web address.
 
@@ -140,6 +145,10 @@ less:		lets you navigate through a file
 	n:			Move to next search result
 	N:			Move to previous search result
 	q:			Quit less
+
+more:		lets you navigate through a file page by page
+	###commands
+	spacebar: to go to next page
 
 grep:			used to search for a substring in a file
 	###flags

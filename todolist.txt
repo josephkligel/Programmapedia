@@ -1,6 +1,6 @@
 # Current Bookmarks:
  Udemy/Web-Development	https://www.udemy.com/home/my-courses/learning/
- Linux Complete Guide	408
+ Linux Complete Guide	512
  Bash Shell Scripting	8
  Python A-Z		1401
  Silicon Valley		601
