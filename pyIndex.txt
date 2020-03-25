@@ -58,7 +58,9 @@ Instances: are objects of a class, e.g. Honda is a car
 
 Modules: Module names should always be in lowercase
 	math: pow(), e, pi, log, log10, log2
-	os: System()
+	os: System("google-chrome google.com"), mkdir, rmdir, rename, 
+		getcwd
+	shutil: copy() 
 	datetime: strftime(), today(), strptime()
 	sys: stdout.write()
 	
