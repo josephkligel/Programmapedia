@@ -4,7 +4,8 @@ Types: Character, short, integer, long, float, double, array, structure
 	placeholders: %c, %d(int), %f, %s, %p(mem add), %1u(sizeof)
 
 Operators: x++, x--, &x
-	'&': to assign for scanf() and to view mem address when uninitialized
+	'&': address of variable
+	'*': what is pointed to by
 
 Constant: '#define const MEAL' or 'const int MEAL;'
 
