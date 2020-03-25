@@ -2,7 +2,7 @@
  Udemy/Web-Development	https://www.udemy.com/home/my-courses/learning/
  Linux Complete Guide	513
  Bash Shell Scripting	8
- Python A-Z		1406
+ Python A-Z		1501
  Silicon Valley		601
  I, Claudius		102
  TNG			204
@@ -10,4 +10,11 @@
  Big Bang Theory	517
 
 # Current todos
- -bash script everytime you login to update .hyper.js file
+ -bash script everytime you login to copy .hyper.js file to config directory and push all
+ -git clone securitynode to Github folder and add the starting files
+ -add config git to gitClone script then add it to Linux Mint's hyper
+ -make hyper like the hyper from Linux Mint
+ -Archlinux installation
+ -matrix text scrolling gif and then use a script to activate it
+ -rasberry pi server
+ -get mysql and mongodb working, install robo3t and Postman
