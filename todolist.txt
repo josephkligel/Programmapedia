@@ -17,3 +17,4 @@
  -Archlinux installation
  -rasberry pi server
  -get mysql and mongodb working, install robo3t and Postman
+ -how to use ssh in command line
