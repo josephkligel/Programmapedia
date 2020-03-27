@@ -32,6 +32,7 @@ su:			Become root
 	###commands
 	passwd <username>: to change password for username
 	adduser <username>: add user to sudoer file
+	grep 'temporary password' /var/log/mysqld.log: pull mysql pw
 
 Permissions:
 	###type
@@ -66,6 +67,9 @@ Help Commands:
 	###commands
 	man:		Display manual page for command
 	whatis:		one line summary of command
+	which:		which directory is a program located at
+	whereis:	where the program is located. Same as above
+	whoami:		shows what user is logged in the current session
 	<command> --help: list options and other info for a command
 	###flags
 	-k:	to search, e.g. 'man -k "grep"'
@@ -108,8 +112,6 @@ rm:			to remove a file.
 	-I:	 ask to remove recursively. Very useful
 
 pwd:			print current working directory
-
-which:			looks up the location of a program
 
 curl:			download a file using a web address
 
@@ -191,8 +193,6 @@ curl ifconfig.me:	lookup ip address
 
 curl http://api.geoiplookup.net/?query=<Public_IP>:     Looksup geolocation of ip address and spits out results in html
 
-whoami:			Shows what user the terminal is logged in as
-
 reset:			reinitializes terminal
 
 df:			Find out the available and used disk space
@@ -203,9 +203,9 @@ Trash:		~/.local/share/Trash/*
 	###examples
 	rm -rf ~/.local/share/Trash/*: to remove all files and folders in trash
 	
-check memory/RAM: 'free -m', 'cat /proc/meminfo'
+'free -m', 'cat /proc/meminfo': check memory
 
-check CPU, RAM, and processes: 'top'
+'top':			check CPU, RAM, and processes
 
 ln:			Create symbolic links
 	###types
@@ -237,3 +237,7 @@ sed:			Used with regex to manipulate text
 	$: sed -i '$a PATH=NULL' /etc/profile
 	s/: sed -i 's/a/A/g' test.txt 
 
+mysql:			below are some steps to take to make sure it is 
+			installed correctly
+	###steps
+	-"grep 'temporary password' /var/log/mysqld.log"

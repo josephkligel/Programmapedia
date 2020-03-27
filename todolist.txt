@@ -14,7 +14,6 @@
  -git clone securitynode to Github folder and add the starting files
  -add config git to gitClone script then add it to Linux Mint's hyper
  -make hyper like the hyper from Linux Mint
- -Archlinux installation
  -rasberry pi server
- -get mysql and mongodb working, install robo3t and Postman
+ -get mongodb working, install robo3t and Postman
  -how to use ssh in command line
