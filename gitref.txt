@@ -26,3 +26,6 @@ checkout:	to use another branch
 	###examples
 	'git checkout -b "firstbranch"'
 
+rm:		to remove from git collection
+	###examples
+	'git rm -r node_modules/'

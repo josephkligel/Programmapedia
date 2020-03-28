@@ -11,9 +11,6 @@
 
 # Current todos
  -bash script everytime you login to copy .hyper.js file to config directory and push all
- -git clone securitynode to Github folder and add the starting files
  -add config git to gitClone script then add it to Linux Mint's hyper
- -make hyper like the hyper from Linux Mint
  -rasberry pi server
- -get mongodb working, install robo3t and Postman
  -how to use ssh in command line
