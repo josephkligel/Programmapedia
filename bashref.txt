@@ -241,3 +241,7 @@ mysql:			below are some steps to take to make sure it is
 			installed correctly
 	###steps
 	-"grep 'temporary password' /var/log/mysqld.log"
+
+ssh:			connect to another linux system
+	###examples
+	'ssh joseph@10.0.0.155'

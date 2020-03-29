@@ -2,15 +2,17 @@
  Udemy/Web-Development	https://www.udemy.com/home/my-courses/learning/
  Linux Complete Guide	513
  Bash Shell Scripting	8
- Python A-Z		1801
+ Python A-Z		1805
  Silicon Valley		601
  I, Claudius		102
- TNG			204
- I Dream of Jeannie	200
+ TNG			205
  Big Bang Theory	517
 
 # Current todos
- -bash script everytime you login to copy .hyper.js file to config directory and push all
- -add config git to gitClone script then add it to Linux Mint's hyper
- -rasberry pi server
- -how to use ssh in command line
+ -Bash script everytime you login to copy .hyper.js file to config directory and push all
+ -Run a windows vm and see if C programs run
+ -Delete CentOS on E6410 and move LM partition if you can
+ -Run programs from Magpi mag
+
+# Rasberry Pi
+ -File server, Rasbian
