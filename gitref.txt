@@ -29,3 +29,8 @@ checkout:	to use another branch
 rm:		to remove from git collection
 	###examples
 	'git rm -r node_modules/'
+
+heroku git:
+	###examples
+	'heroku git:remote -a project'
+	'git push -f heroku master'
