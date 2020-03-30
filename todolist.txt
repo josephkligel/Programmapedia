@@ -10,10 +10,10 @@
 
 # Current todos
  -Bash script everytime you login to copy .hyper.js file to config directory and push all
- -Delete CentOS on E6410 and move LM partition if you can
  -Run programs from Magpi mag
- -Google Drive and OneDrive folders and apps on LM
- -ssh into Goflex. Need root pw
+ -Mysql password
+ -su pw
+ -create table on remote sql database 
 
 # Rasberry Pi
  -File server, Rasbian
