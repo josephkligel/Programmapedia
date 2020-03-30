@@ -71,6 +71,7 @@ Help Commands:
 	whereis:	where the program is located. Same as above
 	whoami:		shows what user is logged in the current session
 	<command> --help: list options and other info for a command
+	command -v <commandname>: Check to see if command is installed
 	###flags
 	-k:	to search, e.g. 'man -k "grep"'
 
@@ -245,3 +246,5 @@ mysql:			below are some steps to take to make sure it is
 ssh:			connect to another linux system
 	###examples
 	'ssh joseph@10.0.0.155'
+	'sudo systemctl enable ssh'
+

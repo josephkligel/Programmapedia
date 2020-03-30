@@ -1,19 +1,22 @@
 # Current Bookmarks:
  Udemy/Web-Development	https://www.udemy.com/home/my-courses/learning/
+ PyQt5			https://pythonbasics.org/pyqt-qmessagebox/
  Linux Complete Guide	513
  Bash Shell Scripting	8
  Python A-Z		1805
  Silicon Valley		601
+ Farscape		109
  I, Claudius		102
  TNG			205
  Big Bang Theory	517
 
 # Current todos
- -Bash script everytime you login to copy .hyper.js file to config directory and push all
- -Run programs from Magpi mag
- -Mysql password
- -su pw
- -create table on remote sql database 
+ -Run programs from Magpi mag and run on Win 7
+ -transactionsdb and copy it over
+ -link budgetCrud to remote sql database
+ -Put Programmapedia reference texts into MongoDB if possible
 
 # Rasberry Pi
  -File server, Rasbian
+ -https://spin.atomicobject.com/2019/06/09/raspberry-pi-laptop-display/
+ -https://raspberrytips.com/raspberry-pi-file-server/
