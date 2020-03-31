@@ -30,9 +30,12 @@ terminal controls:
 
 su:			Become root
 	###commands
-	passwd <username>: to change password for username
-	adduser <username>: add user to sudoer file
-	grep 'temporary password' /var/log/mysqld.log: pull mysql pw
+	'passwd <username>': to change password for username
+	'adduser <username>': add user to sudoer file
+
+visudo:
+	###commands
+	'<username> ALL=(ALL) NOPASSWD:ALL': to require no password for sudo commands
 
 Permissions:
 	###type
