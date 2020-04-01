@@ -55,16 +55,6 @@ Instances: are objects of a class, e.g. Honda is a car
 	Non-public inst var should begin with a single underscore
 	For private var, two underscores begin the name
 
-
-Modules: Module names should always be in lowercase
-	math: pow(), e, pi, log, log10, log2
-	os: System("google-chrome google.com"), mkdir, rmdir, rename, 
-		getcwd
-	shutil: copy() 
-	datetime: strftime(), today(), strptime()
-	sys: stdout.write()
-	
-
 Escape characters: Put a back slash before the character to be escaped
 	characters: \\, \", \', \n, \t
 
@@ -73,10 +63,7 @@ Concatenation: You can concatenate strings/chars and even multiply them
 
 Placeholders: Use numbers in curly brackets or % w/ letter (%d,%s,%2f)
 		Examples: print('They are {0} and {1}'.format(x,y))
-			  print('They are %d and %d' % x, y)
-
-I/O: input()
-	file: open(<filename>, opt) opt: 'w', 'a', 'r'
+			  print('They are %d and %d' % (x, y))
 
 Help: help(), dir(__builtins__), help(<fname>), dir(<fname>)
 
@@ -85,3 +72,53 @@ Comments: # for single comments, and """ """ for multiple-line quotes
 Error: To try and catch errors
 	try: 'try:'
 	catch: 'except Exception as e:'
+
+## Modules
+### Builtin Modules: Module names should always be in lowercase
+
+I/O: 
+	###methods
+	input()
+	open(<filename>, opt): opt: 'w', 'a', 'r', 'x'	
+
+math: 
+	###methods
+	pow(), e, pi, log, log10, log2
+
+os: 
+	###methods
+	system("google-chrome google.com"), mkdir, rmdir, rename, 
+	getcwd
+
+shutil: 
+	###methods
+	copy() 
+
+datetime: 
+	###methods
+	strftime(), today(), strptime()
+
+sys: 
+	###methods
+	stdout.write()
+
+### 3rd Party Modules:
+
+glob: returns the list of files with their full path and is more powerful
+	than os.listdir. Glob uses wildcards
+	###Methods
+	glob()
+
+opencv: use 'import cv2' statement and make sure to use xml detector file
+	###methods
+	cv2.CascadeClassifier(<Haarcascade XML file for faces>)
+	cv2.imread(<singleimagefile>)
+	cv2.cvtColor(<singleimagevar>, cv2.COLOR_BGR2GRAY)
+		^^Converts the image to grayscale
+	detect.detectMultiScale(<convertedgrayimage>, 1.20, 5)
+	for (x, y, w, h) in face:
+        cv2.rectangle(<singleimagevar>, (x, y), (x+w, y+h), (0, 255, 0), 2)
+
+	cv2.imshow("Detect Multiple Images", <singleimagevar>)
+	cv2.waitKey(2000)
+	cv2.destroyAllWindows()
