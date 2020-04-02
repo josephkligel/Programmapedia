@@ -3,7 +3,7 @@
  PyQt5			https://pythonbasics.org/pyqt-qmessagebox/
  Linux Complete Guide	513
  Bash Shell Scripting	8
- Python A-Z		1805
+ Python A-Z		2003
  Silicon Valley		601
  Farscape		111
  I, Claudius		102
@@ -14,11 +14,14 @@
  -Run programs from Magpi mag and run on Win 7
  -transactionsdb and copy it over
  -link budgetCrud to remote sql database on google cloud
- -Put Programmapedia reference texts into MongoDB if possible
  -Fix Grub menu and remove CentOS bootups
+ -Switch python3 to python3.8
+ -Basic SSH mod for Goflex in Downloads folder
+ -Create editguides script
 
 # Rasberry Pi
  -File server, Rasbian
  - https://spin.atomicobject.com/2019/06/09/raspberry-pi-laptop-display/
  - https://raspberrytips.com/raspberry-pi-file-server/
  - Linux Magazine
+ - Get Arch linux to work

@@ -23,6 +23,7 @@ String: s.lower(), replace(s,ch), s.capitalize, s.upper, s[:],
 '{}': Dictionaries if they have key/value pairs. 
 	disclaimer: String keys have to be in quotes
 	methods: d[k], d.get(k), d.pop(k), d.clear(), del(d), d.keys(), d.values(), d.items -> prints k,v, d.update(k:v)
+		d.update({k: v})
 
 Operators: Typical, single programming operators, while the rest have exceptions
 	reassignment: +=, -=, /=, or *= (no ++ or --)

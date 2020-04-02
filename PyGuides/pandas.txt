@@ -1,0 +1,15 @@
+# Pandas Guide
+## Installation and Setup Steps
+
+pip3 install ipython pandas
+
+import pandas
+
+## Methods
+
+DataFrame:
+	###examples
+	df1 = pandas.DataFrame([[5, 5000, 20], [10, 9800, 23], columns = ["Days", "Visitors", "BR"]])
+	###methods
+	<dataframevar>.<columnname>.max(), mean()
+
