@@ -74,13 +74,18 @@ Error: To try and catch errors
 	try: 'try:'
 	catch: 'except Exception as e:'
 
+Virtual Environment: Create a seperate virtual environment in Python
+	###examples
+	venv: 'python3 -m venv <environmentname>'
+
 ## Modules
 ### Builtin Modules: Module names should always be in lowercase
 
 I/O: 
 	###methods
 	input()
-	open(<filename>, opt): opt: 'w', 'a', 'r', 'x'	
+	open(): open(<filename>, opt) 
+	opt: 'w', 'a', 'r', 'x'	
 
 math: 
 	###methods
