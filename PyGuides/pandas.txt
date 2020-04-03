@@ -1,9 +1,11 @@
 # Pandas Guide
 ## Installation and Setup Steps
 
-pip3 install ipython pandas
+1. pip3 install ipython pandas jupyter
 
-import pandas
+2. jupyter notebook
+
+3. import pandas
 
 ## Methods
 

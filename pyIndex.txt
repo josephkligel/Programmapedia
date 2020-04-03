@@ -102,6 +102,7 @@ datetime:
 sys: 
 	###methods
 	stdout.write()
+	exit()
 
 ### 3rd Party Modules:
 

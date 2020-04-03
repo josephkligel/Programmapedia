@@ -1,20 +1,19 @@
 # Reference for UNIX Commands
 
 ## Commands
-/bin/bash
-	The bash executable
-/etc/profile
-	The systemwide initialization file, executed for login shells
-~/.bash_profile
-	The personal initialization file, executed for login shells
-~/.bashrc
-	The individual per-interactive-shell startup file
-~/.bash_logout
-	The individual login shell cleanup file, executed when a login shell exits
-~/.inputrc
-	Individual readline initialization file
+/bin/bash:	The bash executable
 
-terminal controls:
+/etc/profile:	The systemwide initialization file, executed for login shells
+
+~/.bash_profile:	The personal initialization file, executed for login shells
+
+~/.bashrc:	The individual per-interactive-shell startup file
+
+~/.bash_logout:	The individual login shell cleanup file, executed when a login shell exits
+
+~/.inputrc:	Individual readline initialization file
+
+terminal controls: Key controls to interact with terminal
 	###commands
 	^C: stop process
 	^A: beginning of line
@@ -103,7 +102,7 @@ Wildcards:	Used in regular expression. Very useful
 	'?': A single character
 	[]:  A range of characters
 	###Examples
-	'*.txt' to list all the files with a .txt extention
+	'*.txt': to list all the files with a .txt extention
 
 mv:			mv to rename a file or move it to a new location
 
@@ -125,7 +124,7 @@ tail:			shows last 10 lines of file.
 	###flags
 	-f:	allows you view an actively changing file.
 	-1:	last line. 1 can be replaced with any number
-	
+
 wc:		wordcount of file. From left to right, the output is lines, words, and bytes.
 	###flags
 	-l: counts lines
@@ -167,7 +166,7 @@ awk:			used to print of parts of text
 
 ps:			to see all the processes on the system
 	###flags
-	aux:	example -- 'ps aux | grep spring' to see all the processes			 with spring in the program name
+	aux:	example -- 'ps aux | grep spring' to see all the processes with spring in the program name
 
 kill:			eliminates an unwanted process. For example, 'kill -15 4048' kills chrome
 	###flags
@@ -184,10 +183,9 @@ find:			find files & directories
 	###examples
 	'find . -name foo*.*:	find a file that starts with foo within current directory
 
-locate:			find files & dir via database. Much faster
-			Have to update db with updatedb command periodically
+locate:			find files & dir via database. Much faster. Have to update db with updatedb command periodically
 	###examples
-	locate foo*.*
+	locate <pattern>: locate foo*.*
 
 update-alternatives:	lets you see the alternative of default programs
 	###examples
@@ -206,7 +204,7 @@ df:			Find out the available and used disk space
 Trash:		~/.local/share/Trash/*
 	###examples
 	rm -rf ~/.local/share/Trash/*: to remove all files and folders in trash
-	
+
 'free -m', 'cat /proc/meminfo': check memory
 
 'top':			check CPU, RAM, and processes
@@ -217,11 +215,11 @@ ln:			Create symbolic links
 	soft links: links that will be removed if linked files are removed or renamed
 	hard links: Not affected by deletion or manipuulator of linked files
 	###flags
-	no flage: makes hard symbolic links
+	no flags: makes hard symbolic links
 	-s:	makes soft symbolic links
 	###examples
-	ln ~/Videos ~/Desktop/Videos
-	ln -s ~/Videos ~/Desktop/Videos
+	no flags: ln ~/Videos ~/Desktop/Videos
+	-s: ln -s ~/Videos ~/Desktop/Videos
 
 sed:			Used with regex to manipulate text
 	###flags
@@ -241,13 +239,11 @@ sed:			Used with regex to manipulate text
 	$: sed -i '$a PATH=NULL' /etc/profile
 	s/: sed -i 's/a/A/g' test.txt 
 
-mysql:			below are some steps to take to make sure it is 
-			installed correctly
+mysql:			below are some steps to take to make sure it is installed correctly
 	###steps
-	-"grep 'temporary password' /var/log/mysqld.log"
+	password retrieval: "grep 'temporary password' /var/log/mysqld.log"
 
 ssh:			connect to another linux system
 	###examples
-	'ssh joseph@10.0.0.155'
-	'sudo systemctl enable ssh'
-
+	ssh: 'ssh joseph@10.0.0.155'
+	enable: 'sudo systemctl enable ssh'
