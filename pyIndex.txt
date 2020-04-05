@@ -75,8 +75,10 @@ Error: To try and catch errors
 	catch: 'except Exception as e:'
 
 Virtual Environment: Create a seperate virtual environment in Python
-	###examples
-	venv: 'python3 -m venv <environmentname>'
+	###methods
+	'python3 -m venv <environmentname>': creates virtual environment
+	'source <envpath>/bin/activate': puts the shell in virtual environment mode which includes env's path
+	'deactivate': returns the shell back to normal
 
 ## Modules
 ### Builtin Modules: Module names should always be in lowercase

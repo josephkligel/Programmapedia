@@ -32,11 +32,11 @@ su:			Become root
 	'passwd <username>': to change password for username
 	'adduser <username>': add user to sudoer file
 
-visudo:
+visudo: add user and change password settings
 	###commands
 	'<username> ALL=(ALL) NOPASSWD:ALL': to require no password for sudo commands
 
-Permissions:
+Permissions: file and directory permission settings
 	###type
 	r: read
 	w: write
@@ -57,7 +57,7 @@ nano:			Best editor
 	+16:	goes to line 16, e.g. 'nano +16 pyindex.txt'
 
 echo <string>:		Print string to screen
-	###flags and commands
+	###flags and arguments
 	-e:	allows you to add non-characters such as tabs
 	'\t':	backslash 't' to add tab. example -- echo -e "\t"
 	'\n':	new line character
@@ -80,7 +80,7 @@ Help Commands:
 diff:			compares files that are similar
 
 ls:			lists the files in current directory.
-	### flags for 'ls'
+	### flags
 	-a:	 shows all files
 	-1:	 shows simple list, 
 	-l:	 shows read write capabilities of files, 
@@ -101,7 +101,7 @@ Wildcards:	Used in regular expression. Very useful
 	'*': Any number of characters, including no characters
 	'?': A single character
 	[]:  A range of characters
-	###Examples
+	###examples
 	'*.txt': to list all the files with a .txt extention
 
 mv:			mv to rename a file or move it to a new location
@@ -139,7 +139,7 @@ tee:		simultaneous actions
 ping:		sees if a server is working. The argument is a web address.
 
 less:		lets you navigate through a file
-	###Commands for '/'
+	###commands
 	up & down arrow keys:	Move up or down one line
 	spacebar:		Move forward one page
 	Ctrl-F:			Move forward one page
@@ -224,7 +224,7 @@ ln:			Create symbolic links
 sed:			Used with regex to manipulate text
 	###flags
 	-i: insert into file. No '-i' means it will only print temporary changes
-	###regex
+	###expressions
 	^: beginning of line
 	$: end of line
 	s/: substitute characters
@@ -244,6 +244,6 @@ mysql:			below are some steps to take to make sure it is installed correctly
 	password retrieval: "grep 'temporary password' /var/log/mysqld.log"
 
 ssh:			connect to another linux system
-	###examples
+	###steps
 	ssh: 'ssh joseph@10.0.0.155'
 	enable: 'sudo systemctl enable ssh'

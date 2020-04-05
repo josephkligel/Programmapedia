@@ -3,23 +3,19 @@
  PyQt5			https://pythonbasics.org/pyqt-qmessagebox/
  Linux Complete Guide	513
  Bash Shell Scripting	8
- Python A-Z		2004
+ Python A-Z		2109
  Silicon Valley		601
  Farscape		112
  I, Claudius		102
  TNG			205
- Big Bang Theory	517
 
 # Current todos
- -Run programs from Magpi mag and run on Win 7
  -transactionsdb and copy it over
  -link budgetCrud to remote sql database on google cloud
- -Fix Grub menu and remove CentOS bootups
  -Basic SSH mod for Goflex in Downloads folder
- -Create editguides script: can't write to dictionary in the reflist.py
- -Turn off keyring for LM
- -Change brightness when login in LM
- -converbash.py only adds one flag
+ -Create editguides script
+ -can't write to dictionary in the reflist.py
+ -Fix convertjson.py
 
 # Rasberry Pi
  -File server, Rasbian
