@@ -3,7 +3,7 @@
  PyQt5			https://pythonbasics.org/pyqt-qmessagebox/
  Linux Complete Guide	513
  Bash Shell Scripting	8
- Python A-Z		2116
+ Python A-Z		2201
  Silicon Valley		601
  Farscape		112
  I, Claudius		102

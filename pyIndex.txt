@@ -131,3 +131,14 @@ opencv: use 'import cv2' statement and make sure to use xml detector file
 	cv2.imshow("Detect Multiple Images", <singleimagevar>)
 	cv2.waitKey(2000)
 	cv2.destroyAllWindows()
+
+pyinstaller: Convert python program to exe program
+	###methods
+	Easy with many files: 'pyinstaller <pyprogram>'
+	One file: 'pyinstaller <pyprogram> --onefile --noconsole --icon=<iconname>'
+	###options
+	--name: give a name to the executable
+	--onefile: make a single container file for the executable
+	--noconsole: no console output when executable is ran
+	--w: (")
+	--icon: Add an icon to the program
