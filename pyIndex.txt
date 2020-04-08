@@ -110,6 +110,12 @@ sys:
 	###methods
 	stdout.write()
 	exit()
+	
+argparse:
+	###methods
+	<var> = argpase.ArgumentParser()
+	<var>.add_argument('--foo', help='foo help')
+	<var> = parser.parse_args()
 
 ### 3rd Party Modules:
 

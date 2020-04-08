@@ -3,23 +3,17 @@
  PyQt5			https://pythonbasics.org/pyqt-qmessagebox/
  Linux Complete Guide	513
  Bash Shell Scripting	8
- Python A-Z		2201
+ Python A-Z		2204
  Silicon Valley		601
  Farscape		112
  I, Claudius		102
- TNG			205
 
 # Current todos
- -Get phpmyadmin working and import trans.sql
  -access google cloud sql from cli
- -link budgetCrud to remote sql database on google cloud
- -Basic SSH mod for Goflex in Downloads folder
- -Create editguides script
- -can't write to dictionary in the reflist.py
+ -link budgetCrud to goog cloud db or add sqlite3 db
  -Fix convertjson.py
 
 # Rasberry Pi
  -File server, Rasbian
  - https://spin.atomicobject.com/2019/06/09/raspberry-pi-laptop-display/
  - https://raspberrytips.com/raspberry-pi-file-server/
- - Linux Magazine
