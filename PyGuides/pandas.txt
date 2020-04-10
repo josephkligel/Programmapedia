@@ -30,7 +30,11 @@ DataFrame:
 	
 
 Types of files:
-	###types
+	###read from types
 	pandas.read_csv(<filename>, sep=',')
 	pandas.read_json(<filename>)
 	pandas.read_excel(<filename>)
+	###print to types
+	<df>.to_csv(<filename>)
+	<df>.to_json(<fn>)
+	<df>.to_excel(<fn>)

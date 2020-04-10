@@ -3,16 +3,16 @@
  PyQt5			https://pythonbasics.org/pyqt-qmessagebox/
  Linux Complete Guide	513
  Bash Shell Scripting	8
- Python A-Z		2204
+ AI-Python		101
  Silicon Valley		601
  Farscape		112
  I, Claudius		102
-
-# Current todos
- -access google cloud sql from cli
- -link budgetCrud to goog cloud db or add sqlite3 db
 
 # Rasberry Pi
  -File server, Rasbian
  - https://spin.atomicobject.com/2019/06/09/raspberry-pi-laptop-display/
  - https://raspberrytips.com/raspberry-pi-file-server/
+
+ # Current todos
+  -access google cloud sql from cli
+  -link budgetCrud to goog cloud db or add sqlite3 db
