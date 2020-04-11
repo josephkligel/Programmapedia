@@ -247,3 +247,9 @@ ssh:			connect to another linux system
 	###steps
 	ssh: 'ssh joseph@10.0.0.155'
 	enable: 'sudo systemctl enable ssh'
+
+Unicode characters:	remembered unicode characters
+	###characters
+	Γ - gamma: '^C+Shift+u+0393'
+	ϐ - beta: '^C+Shift+u+3d0'
+	Σ - Uppercase Sigma: '^C+Shift+u+03A3'
