@@ -13,7 +13,7 @@ but the environment contains randomness. The prime state and ultimate goal is no
 
 ## Bellman Equation
 The Bellman Equation(BE): V(s) = max(R(s, a) + ΓV(s'))
-	### Breakdown
+### Breakdown
 	s: state - The state of the position the AI is in, e.g. V = 1
 	a: action - The action or movement an AI can make, e.g. left, right, or down movement in a maze.
 	s': prime state - The next state after an action is made, e.g. left+1, right+1, or down+1.
@@ -24,7 +24,7 @@ The Bellman Equation(BE): V(s) = max(R(s, a) + ΓV(s'))
 
 ## Adjusted Bellman Equation
 The Adjusted Bellman Equation(ABE): V(s) = max(R(s, a) + ΣP(s,a,s')*V(s'))
-	### Breakdown
+### Breakdown
 	s, a, s', V, Γ, R, max: Same as BE
 	P: The probability of something
 	ΣP(s,a,s') a.k.a ΣΓV(s'): ΓV(s'1+s'2+s'3), e.g. 0.8*(s'UP) + 0.1*(s'LEFT) + 0.1(s'RIGHT)
