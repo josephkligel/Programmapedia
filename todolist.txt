@@ -15,5 +15,3 @@
 # Current todos
  -access google cloud sql from cli
  -link budgetCrud to goog cloud db or add sqlite3 db
- -Use insync and download gdrive
- -Lookup visualstudio
