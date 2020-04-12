@@ -2,7 +2,7 @@
  Udemy/Web-Development	https://www.udemy.com/home/my-courses/learning/
  Linux Complete Guide	601
  Bash Shell Scripting	8
- AI-Python		111
+ AI-Python		6027
  Silicon Valley		601
  Farscape		112
  I, Claudius		102
@@ -13,5 +13,4 @@
  - https://raspberrytips.com/raspberry-pi-file-server/
 
 # Current todos
- -access google cloud sql from cli
- -link budgetCrud to goog cloud db or add sqlite3 db
+ -access google cloud sql from cli and link budgetCrud to goog cloud db or add sqlite3 db

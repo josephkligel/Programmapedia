@@ -1,5 +1,5 @@
 # Python Index
-## Basics
+## Basics-------------------------------------------------------------------->
 data types: String(str), Integer(int), Boolean(bool), List/arrays
 	bool: 'True' or 'False' values (no 'true' or 'false')
 	type(): prints the datatype of an argument
@@ -75,74 +75,59 @@ Error: To try and catch errors
 	catch: 'except Exception as e:'
 
 Virtual Environment: Create a seperate virtual environment in Python
-	###methods
+#### Methods
 	'python3 -m venv <environmentname>': creates virtual environment
 	'source <envpath>/bin/activate': puts the shell in virtual environment mode which includes env's path
 	'deactivate': returns the shell back to normal
 
-## Modules
-### Builtin Modules: Module names should always be in lowercase
+## Builtin Modules-------------------------------------------------------------------->
+Module names should always be in lowercase
 
 I/O: 
-	###methods
+#### Methods
 	input()
 	open(): open(<filename>, opt) 
 	opt: 'w', 'a', 'r', 'x'	
 
 math: 
-	###methods
+#### Methods
 	pow(), e, pi, log, log10, log2
 
 os: 
-	###methods
+#### Methods
 	system("google-chrome google.com"), mkdir, rmdir, rename, 
 	getcwd
 
 shutil: 
-	###methods
+#### Methods
 	copy() 
 
 datetime: 
-	###methods
+#### Methods
 	strftime(), today(), strptime()
 
 sys: 
-	###methods
+#### Methods
 	stdout.write()
 	exit()
 	
 argparse:
-	###methods
+#### Methods
 	<var> = argpase.ArgumentParser()
 	<var>.add_argument('--foo', help='foo help')
 	<var> = parser.parse_args()
 
-### 3rd Party Modules:
+## 3rd Party Modules:-------------------------------------------------------------------->
 
-glob: returns the list of files with their full path and is more powerful
-	than os.listdir. Glob uses wildcards
-	###Methods
+glob: returns the list of files with their full path and is more powerful than os.listdir. Glob uses wildcards
+#### Methods
 	glob()
 
-opencv: use 'import cv2' statement and make sure to use xml detector file
-	###methods
-	cv2.CascadeClassifier(<Haarcascade XML file for faces>)
-	cv2.imread(<singleimagefile>)
-	cv2.cvtColor(<singleimagevar>, cv2.COLOR_BGR2GRAY)
-		^^Converts the image to grayscale
-	detect.detectMultiScale(<convertedgrayimage>, 1.20, 5)
-	for (x, y, w, h) in face:
-        cv2.rectangle(<singleimagevar>, (x, y), (x+w, y+h), (0, 255, 0), 2)
-
-	cv2.imshow("Detect Multiple Images", <singleimagevar>)
-	cv2.waitKey(2000)
-	cv2.destroyAllWindows()
-
 pyinstaller: Convert python program to exe program
-	###methods
+#### Methods
 	Easy with many files: 'pyinstaller <pyprogram>'
 	One file: 'pyinstaller <pyprogram> --onefile --noconsole --icon=<iconname>'
-	###options
+### Options
 	--name: give a name to the executable
 	--onefile: make a single container file for the executable
 	--noconsole: no console output when executable is ran
