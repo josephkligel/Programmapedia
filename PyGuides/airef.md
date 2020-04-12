@@ -28,4 +28,4 @@ The Adjusted Bellman Equation(ABE): V(s) = max(R(s, a) + ΣP(s,a,s')*V(s'))
 	s, a, s', V, Γ, R, max: Same as BE
 	P: The probability of something
 	ΣP(s,a,s') a.k.a ΣΓV(s'): ΓV(s'1+s'2+s'3), e.g. 0.8*(s'UP) + 0.1*(s'LEFT) + 0.1(s'RIGHT)
-		The sum of the probabilities of the actions and states
+	 -The sum of the probabilities of the actions and states
