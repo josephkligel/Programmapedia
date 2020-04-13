@@ -3,15 +3,15 @@
 ## Commands
 /bin/bash:	The bash executable
 
-/etc/profile:	The systemwide initialization file, executed for login shells
+/etc/profile:	The system-wide initialization file, executed for login shells
 
 ~/.bash_profile:	The personal initialization file, executed for login shells
 
-~/.bashrc:	The individual per-interactive-shell startup file
+~/.bashrc:	The individual per-interactive-shell start-up file
 
 ~/.bash_logout:	The individual login shell cleanup file, executed when a login shell exits
 
-~/.inputrc:	Individual readline initialization file
+~/.inputrc:	Individual read-line initialization file
 
 terminal controls: Key controls to interact with terminal
 	###commands
@@ -47,7 +47,7 @@ Permissions: file and directory permission settings
 	o: other/everyone on the system
 	###commands
 	chmod: Change permission of file or directory
-	chown: Change ownership fo file, e.g. 'chown root <filename>'
+	chown: Change ownership for file, e.g. 'chown root <filename>'
 
 nano:			Best editor
 	###commands
@@ -195,7 +195,7 @@ curl ifconfig.me:	lookup ip address
 
 curl http://api.geoiplookup.net/?query=<Public_IP>:     Looksup geolocation of ip address and spits out results in html
 
-reset:			reinitializes terminal
+reset:			re-initializes terminal
 
 df:			Find out the available and used disk space
 	###flags
@@ -213,7 +213,7 @@ ln:			Create symbolic links
 	###types
 	inode: pointer or number of a file on the storage device
 	soft links: links that will be removed if linked files are removed or renamed
-	hard links: Not affected by deletion or manipuulator of linked files
+	hard links: Not affected by deletion or manipulator of linked files
 	###flags
 	no flags: makes hard symbolic links
 	-s:	makes soft symbolic links
@@ -253,3 +253,8 @@ Unicode characters:	remembered unicode characters
 	Γ - gamma: '^C+Shift+u+0393'
 	ϐ - beta: '^C+Shift+u+3d0'
 	Σ - Uppercase Sigma: '^C+Shift+u+03A3'
+
+variables: named values
+	###examples
+	x=1: Sets 'x' to the integer 1
+	'unset x': x is no longer assigned a value. The variable is gone

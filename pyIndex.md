@@ -1,42 +1,43 @@
 # Python Index
 ## Basics-------------------------------------------------------------------->
-**Data types:** String(str), Integer(int), Boolean(bool), List/arrays
+Data types: String(str), Integer(int), Boolean(bool), List/arrays
     bool:'True' or 'False' values (no 'true' or 'false')
     type(): prints the datatype of an argument
     Conversion: int(), str(), list(), tuple()
     Slice: x[start:stop:step]. Works for any data type
 
-**String:** s.lower(), replace(s,ch), s.capitalize, s.upper, s[:], 
+String: s.lower(), replace(s,ch), s.capitalize, s.upper, s[:], 
 		s.strip, s.lstrip, s.rstrip, s.islower, 
 		s.isupper, s.split("arg"), max(s)
 
-**():** tuples. Immutable, add comma at the end as convention
+(): tuples. Immutable, add comma at the end as convention
 #### Methods: 
     -del(tp), tp[index], tp.count(arg) 
 
-**'[]' or list():** List of values
-#### Methods: len(ls), ls.insert(index, arg), ls.remove(arg), 
+'[]' or list(): List of values
+#### Methods: 
+	-len(ls), ls.insert(index, arg), ls.remove(arg), 
 	-ls.pop(), del(arg), ls.clear(), ls.reverse(), 
 	-ls.sort(), ls.append(), ls.count(arg)
 
-**'{}' or set():** Set of values. No repetition of values
+'{}' or set(): Set of values. No repetition of values
  
-**'{}':** Dictionaries if they have key/value pairs. 
+'{}': Dictionaries if they have key/value pairs. 
 #### Disclaimer: 
 String keys have to be in quotes
 #### Methods: 
-    d[k], d.get(k), d.pop(k), d.clear(), del(d), d.keys(),
-    d.values(), d.items -> prints k,v, d.update(k:v), d.update({k: v})
+    -d[k], d.get(k), d.pop(k), d.clear(), del(d), d.keys()
+    -d.values(), d.items -> prints k,v, d.update(k:v), d.update({k: v})
 
-**Operators:** Typical, single programming operators, while the rest have exceptions
+Operators: Typical, single programming operators, while the rest have exceptions
 #### Reassignment: 
     +=, -=, /=, or *= (no ++ or --)
 #### Logic: 
     and, or, not/! (no && or ||)
 
-**Overload Operators:** 'def __add__(self, other)' 
+Overload Operators: 'def __add__(self, other)' 
 
-**Functions:** Functions start with the word 'def' and are loosely typed
+Functions: Functions start with the word 'def' and are loosely typed
 #### Keyword arg: 
     e.g. 'sum(arg2=3, arg1=10'
 #### Default arg: 
@@ -48,45 +49,50 @@ String keys have to be in quotes
 #### Disclaimer: 
     Remember to print of key/value pairs for each multi-arg
 		
-**OOP:** Encapsulation, abstraction, polymorphism, inheritance, classes, and instances
+OOP: Encapsulation, abstraction, polymorphism, inheritance, classes, and instances
 
-**Encapsulation:**
+Encapsulation:
 #### Private: 
     double underscore preceding the name. Can only be called through a self method
 #### Partially private: 
     single underscore preceeding
 
-**Inheritance:** e.g. 'class Square(Polygon)' instead of 'extends' keyword
+Inheritance: e.g. 'class Square(Polygon)' instead of 'extends' keyword
 	Child class is derived from parent class. Parent class is the base class
 
-**Classes:** uses '__init__' method to initialize an instance and self is used in replacement of 'this'
+Classes: uses '__init__' method to initialize an instance and self is used in replacement of 'this'
 	Standards: Class names should be in Camelcase 'ThisIsExample'
 
-**Instances:** are objects of a class, e.g. Honda is a car
+Instances: are objects of a class, e.g. Honda is a car
 	Should be all lowercase 'honda'
 	Words in an instance var name should be seperated with an underscore
 	Non-public inst var should begin with a single underscore
 	For private var, two underscores begin the name
 
-**Escape characters:** Put a back slash before the character to be escaped
-	characters: \\, \", \', \n, \t
+Escape characters: Put a back slash before the character to be escaped
+#### Characters: 
+	\\, \", \', \n, \t
 
-**Concatenation:** You can concatenate strings/chars and even multiply them
-	Tips: print function automatically adds spaces between arguments
+Concatenation: You can concatenate strings/chars and even multiply them
+	#### Tips: 
+	print function automatically adds spaces between arguments
 
-**Placeholders:** Use numbers in curly brackets or % w/ letter (%d,%s,%2f)
-		Examples: print('They are {0} and {1}'.format(x,y))
-			  print('They are %d and %d' % (x, y))
+Placeholders: Use numbers in curly brackets or % w/ letter (%d,%s,%2f)
+#### Examples: 
+	print('They are {0} and {1}'.format(x,y))
+	print('They are %d and %d' % (x, y))
 
-**Help:** help(), dir(__builtins__), help(<fname>), dir(<fname>)
+Help: help(), dir(__builtins__), help(<fname>), dir(<fname>)
 
-**Comments:** # for single comments, and """ """ for multiple-line quotes
+Comments: # for single comments, and """ """ for multiple-line quotes
 
-**Error:** To try and catch errors
-	try: 'try:'
-	catch: 'except Exception as e:'
+Error: To try and catch errors
+#### try: 
+	'try:'
+#### catch: 
+	'except Exception as e:'
 
-**Virtual Environment:** Create a seperate virtual environment in Python
+Virtual Environment: Create a seperate virtual environment in Python
 #### Methods
 	'python3 -m venv <environmentname>': creates virtual environment
 	'source <envpath>/bin/activate': puts the shell in virtual environment mode which includes env's path
@@ -128,6 +134,15 @@ Module names should always be in lowercase
 	<var> = argpase.ArgumentParser()
 	<var>.add_argument('--foo', help='foo help')
 	<var> = parser.parse_args()
+
+### process:
+#### Methods
+	call(): calls a system command. Just like 'os.system()'
+
+## itertools:
+Tools for iterating
+#### Methods
+	cycle(): Continuously loop through a sequence
 
 ## 3rd Party Modules:-------------------------------------------------------------------->
 

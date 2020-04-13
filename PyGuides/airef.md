@@ -76,7 +76,7 @@ Q value result from the choices given and the agent then chooses an action to ap
 ## Action Selection Policies
 Different action selection policies exist to better manipulate the agent's reponses in the environment. An 
 agent can get stuck in a local maximum state, which is when it acquires the highest award despite the potential 
-of a more efficient action. This local maximum state is not beneficial as it does not exploit the best option.
+of a more efficient action. This local maximum state is not entirely  beneficial as it does not exploit the best of all options.
 Therefore, tweaks where the action policy weighs actions differently instead of choosing a maximumally rewarded
 action are implemented. For example, an agent may be programmed to choose a completely different action from the
-most plausible one in order for it to continue learning and developing the best policy
+most plausible one in order for it to continue learning and developing the best policy.
