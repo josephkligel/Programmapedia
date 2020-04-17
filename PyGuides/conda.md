@@ -7,3 +7,7 @@
 -'source <anaconda folder>/bin/activate'
 -'conda init'
 -'conda install jedi', then run 'spyder' --> Installing jedi not working for spyder
+
+## Usage
+-conda config --set auto_activate_base false: Prevents conda from activating base env by default
+

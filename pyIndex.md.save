@@ -90,12 +90,6 @@ Hybrid of a stack and a queue. Double-ended queue
 	-d.pop(), d.popleft(), d.append(<value>), d.appendleft(<v>)
 	-d.rotate(<num>): rotates last value to front. Can include number or left empty
 
-### Comprehensions
-Makes writing to sequences easier
-#### Examples:
-	- evens = [x for x in range(2, 21) if x%2 == 0]
-	- tempDict = {t: (t*9/5)+32 for t in [0,12,34,100]}
-
 ## ----------------------Operators----------------------
 Typical, single programming operators, while the rest have exceptions
 ### Reassignment: 
@@ -105,9 +99,8 @@ Typical, single programming operators, while the rest have exceptions
     and, or, not/! (no && or ||)
 
 ### Overload Operators: 
-	-Almost all operators and class methods can be overloaded. Operators only within classes 
-	-Numeric operators: e.g. __add__, __sub__, for +, -
-	-Comparison operators: __gt__, __lt__ for >, <
+	-e.g. 'def __add__(self, other)' for adding two numbers. 
+	-Almost all operators and class methods can be overloaded 
 
 ## ----------------------Functions----------------------
 Functions start with the word 'def' and are loosely typed
@@ -148,9 +141,7 @@ Encapsulation, abstraction, polymorphism, inheritance, classes, and instances
 	-uses '__init__' method to initialize an instance and self is used in replacement of 'this'
 	-Standards: Class names should be in Camel-case 'ThisIsExample'
 #### Methods:
-	-All class methods can invoke super methods and/or be overwritten
-	-__inti__, __str__, __repr__, __bytes__, __format__, __getattr__,__getattribute__, __setattr__
-	-__dir__: dir(<instance>) to call. Dir is used to list attributes of a class
+	-__inti__, __str__, __repr__, __bytes__, __format__
 #### Instances: 
 	-are objects of a class, e.g. Honda is a car
 	-Should be all lowercase 'honda'
@@ -189,20 +180,6 @@ Try, catch, finally, etc.
 	-will be performed regardless if error happens or not
 	-e.g. 'finally: print('Done')' will always print done
 
-### Logging:
-import logging. The module is builtin.
-#### Setup:
-	-logging.basicConfig(level=logging.DEBUG, filename='output.log', filemode='w', format=fmtstr, 
-		datefmt=datestr, extra=extraData) 
-	-level: choose what level of debugging is logged 
-	-filemode: 'w' for overwriting log, ommitted if appending 
-	-format: fmtstr = '%(asctime)s: %(levelname)s: %(funcName)s Line:%(lineno)d%(message)s'
-	-datefmt: datestr = '%m/%d/%Y %I:%M:%S %p'
-	-extra: extraData = {'user': 'jk@example.com'}
-#### Methods	
-	-logging.debug(<string message>), logging.info("), logging.warning("), logging.error("), 
-		logging.critical(")
-
 ## ----------------------Uncategorized----------------------
 Miscallaneous Python syntax
 #### Methods: These methods can be used without imports
@@ -225,7 +202,6 @@ This module is very important as it will allow a programmer to run scripts faste
 	-import queue; q = queue.Queue(); queues are used to put and get out items using FIFO.
 	-queue.LifoQueue(): LIFO queues
 	-queue.PriorityQueue(): prioritizes the queues. Can be used with tuples to pass the order
-
 
 ### I/O:
 no import is required 
