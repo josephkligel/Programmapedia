@@ -12,5 +12,11 @@
 # Python Concepts
  -
 # Current todos
- -Debug childpy
+ -Personal Journal and Wiki project
+ -Fix childpy to actually push
  -md/json to html
+ -Linux on usb
+ -7 in 1 notes
+ -Automate Python notes
+ -Web Development
+ -Backup all you can to titanium usb, including learning from 128g, and then organize it
