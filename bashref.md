@@ -258,3 +258,16 @@ variables: named values
 	###examples
 	x=1: Sets 'x' to the integer 1
 	'unset x': x is no longer assigned a value. The variable is gone
+
+Boot: Linux boot process: Firmware, Bootloader, Kernel, Initialization
+	###Config Files
+	UEFI: /boot/efi/EFI/redhat/grub.efi
+	BIOS: /boot/grub2/grub.cfg
+	###Kernel
+	-Kernel loads the ramdisk into ram
+	-Kernel loads device drivers and config files from ramdisk
+	-Kernel unmounts ramdisk and mounts root file system
+	-Starts the initialization state
+	###Initialization
+	-Kernel starts the grandfather process (systemd)
+	-Systemd starts system services, starts login shells and GUI interface
