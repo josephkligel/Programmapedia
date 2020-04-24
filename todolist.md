@@ -4,13 +4,23 @@
  AI-Python		6031
  Linux Complete Guide	601
  Bash Shell Scripting	8
+ 7 in 1: Python
+ HF JS
+ Automate Python
+ Python in a Nutshell
+ Javascript Handbook
+ C mag
+ HF C
+ Modern C
 
- Silicon Valley		601
  Farscape		112
- I, Claudius		102
+ I, Claudius		105
+ IDOAG			204
 
 # Python Concepts
 
 # Current todos
  -Personal Journal and Wiki project
  -Fix childpy to actually push
+ -Fix titanium usb
+ -Delete onepunch s2, silicon valley
