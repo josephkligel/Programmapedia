@@ -14,13 +14,7 @@
  Modern C
 
  Farscape		112
- I, Claudius		106
+ I, Claudius		111
  IDOAG			204
 
-# Python Concepts
-
 # Current todos
- -Personal Journal and Wiki project
- -Fix childpy to actually push
- -Fix titanium usb
- -Delete onepunch s2, silicon valley
