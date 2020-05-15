@@ -4,17 +4,26 @@
  AI-Python		6031
  Linux Complete Guide	601
  Bash Shell Scripting	8
- 7 in 1: Python
- HF JS
- Automate Python
- Python in a Nutshell
- Javascript Handbook
- C mag
- HF C
- Modern C
 
  Farscape		112
  I, Claudius		111
  IDOAG			204
 
-# Current todos
+# Current Todos:
+ -editor.py
+ -installer.py:
+	-Choose OS feature
+	-Add requirement installers
+ -Look at unfinished folder
+ -Tit USB:
+	-Organize backup folder
+	-Format
+	-Transfer backup from 700 HDD to Seagate or Tit
+ -install: scipy, weave
+ -Resume:
+	-Add Github repo link to LinkedIn profile
+	-Add mountain/CSS site to LI profile
+	-Make CV site mobile friendly
+
+# Non-current Todos:
+ -BudgetCrud (look on todoist app for specifics)
