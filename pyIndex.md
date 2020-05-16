@@ -326,3 +326,4 @@ Easy print. Useful for lists and writing variables to files.
 ### send2trash
 Safer than deleting folders or files with other methods. Deleted can be recovered from trash later
 ### Methods	
+	-send2trash.send2trash(<filename string>)
