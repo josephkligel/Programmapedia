@@ -14,16 +14,16 @@
  -installer.py:
 	-Choose OS feature
 	-Add requirement installers
- -Look at unfinished folder
+ -Checkout at unfinished folder
  -Tit USB:
 	-Organize backup folder
 	-Format
 	-Transfer backup from 700 HDD to Seagate or Tit
- -install: scipy, weave
  -Resume:
 	-Add Github repo link to LinkedIn profile
 	-Add mountain/CSS site to LI profile
 	-Make CV site mobile friendly
-
+ -C:
+	-weave, file writing
 # Non-current Todos:
  -BudgetCrud (look on todoist app for specifics)

@@ -22,6 +22,7 @@ Different parsers used for webscraping
 	soup = BeatifulSoup(url.text, 'lxml')
 #### Methods
 	-("),(")
+	-soup.select(<selectorTag>), soup.selectAll(<selectorTags>)
 #### Examples
-	-soud.find_all('table', class_='wikisortable'): attribute name has no quotes and uses equals instead of
-		colons
+	-soud.find_all('table', class_='wikisortable'): attribute name has no quotes and uses equals instead of colons
+

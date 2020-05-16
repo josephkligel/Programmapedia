@@ -226,7 +226,6 @@ This module is very important as it will allow a programmer to run scripts faste
 	-queue.LifoQueue(): LIFO queues
 	-queue.PriorityQueue(): prioritizes the queues. Can be used with tuples to pass the order
 
-
 ### I/O:
 no import is required 
 #### Methods
@@ -246,12 +245,16 @@ import math
 
 ### os: 
 #### Methods
-	system("google-chrome google.com"), mkdir, rmdir, rename, 
-	getcwd
+	-system("google-chrome google.com"), mkdir, rmdir, rename 
+	-getcwd, 
+	-path.expanduser('~'): returns home directory of user
+	-unlink(<filename>): deletes a file
 
 ### shutil: 
 #### Methods
-	copy() 
+	-copy(), move() 
+	-copytree(<src folder>, <dest folder>): creates destination folder and copies source folder to it
+	-rmtree(): removes folder even if it is not empty 
 
 ### datetime: 
 #### Methods
@@ -282,7 +285,12 @@ Tools for iterating
 ### glob: 
 returns the list of files with their full path and is more powerful than os.listdir. Glob can use wild cards
 #### Methods
-	glob(<pathname>)
+	glob(<pathname>/**, recursive=True)
+
+### pathlib:
+Library for manipulating and dealing with paths
+#### Methods:
+	-pathlib.Path.home(): returns home directory
 
 ## ----------------------3rd Party Modules----------------------
 ### pyinstaller: 
@@ -303,3 +311,18 @@ Create a separate virtual environment in Python
 	'python3 -m venv <environmentname>': creates virtual environment
 	'source <envpath>/bin/activate': puts the shell in virtual environment mode which includes env's path
 	'deactivate': returns the shell back to normal
+
+### pyinput
+Input and prompts with style
+#### Methods
+	-pyinput.inputStr(), (").inputNum()
+
+### pprint
+Easy print. Useful for lists and writing variables to files.
+### Methods
+	-pprint.pprint(<list>): Can print list items one by one.
+	-pprint.pformat(<list> or <dict>): Can turn an object into a string and then write it to a file.
+
+### send2trash
+Safer than deleting folders or files with other methods. Deleted can be recovered from trash later
+### Methods	
