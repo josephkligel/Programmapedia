@@ -10,20 +10,16 @@
  IDOAG			204
 
 # Current Todos:
- -editor.py
- -installer.py:
-	-Choose OS feature
-	-Add requirement installers
- -Checkout at unfinished folder
+ -editor.py: cp to software and TODOs
+ -installer.py: TODOs
  -Tit USB:
-	-Organize backup folder
-	-Format
-	-Transfer backup from 700 HDD to Seagate or Tit
+	-Organize backup folder on Fedora, then back it up
+	-backup windows
+	-backup 700 HDD
  -Resume:
 	-Add Github repo link to LinkedIn profile
 	-Add mountain/CSS site to LI profile
-	-Make CV site mobile friendly
- -C:
-	-weave, file writing
 # Non-current Todos:
  -BudgetCrud (look on todoist app for specifics)
+ -Unfinished folder
+ 
