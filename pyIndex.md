@@ -207,6 +207,7 @@ import logging. The module is builtin.
 Miscallaneous Python syntax
 #### Methods: These methods can be used without imports
 	-zip(<l1>,<l2>): Iterates through two lists
+	-map(<function, e.g. x**2>, <list>): applies a function to the items in a list
 
 ## ----------------------Builtin Modules----------------------
 Module names should always be in lowercase
@@ -291,6 +292,20 @@ returns the list of files with their full path and is more powerful than os.list
 Library for manipulating and dealing with paths
 #### Methods:
 	-pathlib.Path.home(): returns home directory
+
+### zipfile:
+Used to work with compressed archives
+#### Usage
+	-import zipfile
+	-newzip = zipfile.Zipfile(<newzip file name>, 'r|w|a')
+	-newzip.write(<file or folders to compress>, compress_type=zipfile.ZIP_DEFLATED)
+		-Other compress types: zipfile.ZIP_BZIP2
+	-newzip.close(): Don't forget to close file
+
+### webbrowser:
+Opens default webbrowser. Beats using the system call to invoke a webbrowser
+#### Methods
+	-wb.open('github.com')
 
 ## ----------------------3rd Party Modules----------------------
 ### pyinstaller: 
