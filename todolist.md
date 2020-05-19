@@ -10,7 +10,10 @@
  IDOAG			204
 
 # Current Todos:
+ -fix fedora wifi, git pull all, xfce-terminal --drop-down
+	-save_to folder on Redmi, videos folder on manjaro, 
  -Tit USB:
+	-backup Seagate
 	-Organize backup folder on Fedora, then back it up
 	-backup windows
 	-backup 700 HDD
