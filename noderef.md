@@ -20,13 +20,19 @@ Node package manager
 Nodejs
 #### Flags
 
+
 ## ---------------------Builtin Packages-----------------------------
 Packages that come with Nodejs preinstalled.
 ### process:
-Used to get system information
-#### Usage
-	-process.env: Logs computer's environment
+Used to get system information. Methods are . after, e.g. process.env
+#### Methods
+	-env: Logs computer's environment
+	-exit: exits session
 
+## Miscallaneous:
+Builtin Methods
+### Methods
+	-global: shows builtin functions
 
 ## -----------------------Third-party Packages---------------------------
 Packages that have to be installed via npm	
