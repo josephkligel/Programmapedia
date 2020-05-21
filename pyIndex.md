@@ -93,8 +93,8 @@ Hybrid of a stack and a queue. Double-ended queue
 ### Comprehensions
 Makes writing to sequences easier
 #### Examples:
-	- evens = [x for x in range(2, 21) if x%2 == 0]
-	- tempDict = {t: (t*9/5)+32 for t in [0,12,34,100]}
+	-evens = [x for x in range(2, 21) if x%2 == 0]
+	-tempDict = {t: (t*9/5)+32 for t in [0,12,34,100]}
 
 ## ----------------------Operators----------------------
 Typical, single programming operators, while the rest have exceptions
@@ -250,6 +250,7 @@ import math
 	-getcwd, 
 	-path.expanduser('~'): returns home directory of user
 	-unlink(<filename>): deletes a file
+	-environ.get('HOME'): get path info
 
 ### shutil: 
 #### Methods
