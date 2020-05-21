@@ -1,20 +1,21 @@
 # Current Bookmarks:
- Linkedin Learning Progress https://www.linkedin.com/learning/me/in-progress	
  Udemy/Web-Development	https://www.udemy.com/home/my-courses/learning/
+ Linkedin Learning Progress https://www.linkedin.com/learning/me/in-progress	
  AI-Python		6031
  Linux Complete Guide	601
- Bash Shell Scripting	8
+ Bash Shell Scripting	108
 
+# Shows/Movies
  Farscape		112
- I, Claudius		111
  IDOAG			204
+ Highlander		1:06 or further in
 
 # Current Todos:
- -fix fedora wifi, git pull all, xfce-terminal --drop-down
-	-save_to folder on Redmi, videos folder on manjaro, 
+ -set default kernel
+ -drive 
  -Tit USB:
 	-backup Seagate
-	-Organize backup folder on Fedora, then back it up
+	-backup fedora backups, videos folder
 	-backup windows
 	-backup 700 HDD
 # Non-current Todos:
