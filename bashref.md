@@ -201,6 +201,10 @@ df:			Find out the available and used disk space
 	###flags
 	-H:	Human readable
 
+du:			Analyze space usage
+	###examples
+	-du [-h|c|s] <directory>
+
 Trash:		~/.local/share/Trash/*
 	###examples
 	rm -rf ~/.local/share/Trash/*: to remove all files and folders in trash
