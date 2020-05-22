@@ -4,11 +4,10 @@
  AI-Python		6031
  Linux Complete Guide	601
  Bash Shell Scripting	108
- Nodejs Development	207 2:15
+ Nodejs Development	3012
 # Shows/Movies
  Farscape		112
  IDOAG			204
- Highlander		1:06 or further in
 
 # Current Todos:
  -set default kernel
