@@ -11,7 +11,6 @@
 
 # Current Todos:
  -set default kernel
- -drive 
  -Tit USB:
 	-backup Seagate
 	-backup fedora backups, videos folder
