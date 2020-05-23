@@ -12,6 +12,13 @@ Methods and Examples of string usages in JavaScript.
 	-'a word or array'.splice(<from index>, <to index>)
 	-'a word or array'.split(<delimiter>, [limit number])
 
+## ----------------------Dates-------------------------
+Methods for dates
+### Methods:
+	-var date = new Date()
+	-date.getDate() or [getFullYear(), getMonth(), getDay(), getHours(), getMinutes()]
+	-date.toLocaleDateString() or [toLocaleTimeString()]
+
 ## -----------------------Elements----------------------
 Methods on Elements
 ### Get element to manipulate:
