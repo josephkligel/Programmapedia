@@ -12,6 +12,14 @@ Methods and Examples of string usages in JavaScript.
 	-'a word or array'.splice(<from index>, <to index>)
 	-'a word or array'.split(<delimiter>, [limit number])
 
+## --------------------Arrays-----------------------------
+Methods for arrays. Many of them also work on strings. So, between arrays and strings, theto-be-mentioned methods are interchangeable.
+### Methods
+	-<array or string>.splice(<start index>, <number to cut>[, <insert word(s) at start index>]): cuts elements from arrays or characters from a string 
+	-(").push(), pop
+	-(").concat(<array 2>): Join arrays together. Make sure to reassing to update the main array variable, e.g. 'planets = planets.planets = planets.concat(rocks)'
+	-(").every(), any(), some(<var name>, callback), forEach(<var name for item in array>, callback)
+
 ## ----------------------Dates-------------------------
 Methods for dates
 ### Methods:
@@ -27,6 +35,10 @@ Methods on Elements
 ### Creation:
 	-<element>.createElement('div')
 
+### Element Manipulation:
+	-<element>.appendChild('p'): add a child to an element
+	-(").innerHTML = <element or string>: add something(e.g. child element or string) between the element tags 
+	
 ### Style:
 	-<element>.height [width]
 	-<element>.style.color or [background, display, or any other css property]
