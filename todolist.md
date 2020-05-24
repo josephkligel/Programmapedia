@@ -19,10 +19,11 @@
 	-backup 700 HDD
  -anydb.py:
 	-Add delete, update, and insert with text boxes
-	-get label text from selecting row
+	-get entry text from selecting row
 	-table fill whole frame
 	-redraw table. Delete the frames when new db is chosen
 	-save last db and table selected
+	-style and colors
 # Non-current Todos:
  -BudgetCrud (look on todoist app for specifics)
  -Unfinished folder
