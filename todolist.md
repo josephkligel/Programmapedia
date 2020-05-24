@@ -24,6 +24,10 @@
 	-redraw table. Delete the frames when new db is chosen
 	-save last db and table selected
 	-style and colors
+ -Tetris:
+	-speed up after awhile
+	-fix block rotation at edge issue
+
 # Non-current Todos:
  -BudgetCrud (look on todoist app for specifics)
  -Unfinished folder
