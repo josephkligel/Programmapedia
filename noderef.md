@@ -7,27 +7,39 @@ Legend:
 ### nvm(command): 
 node version manager
 #### Examples
-	'nvm ls-remote': show all available LTS versions of Node
-	'nvm i 12.16.1': install Nodejs version 12.16.1
-	'nvm install-latest-npm'
+	-nvm ls-remote: show all available LTS versions of Node
+	-nvm i 12.16.': install Nodejs version 12.16.1
+	-nvm install-latest-npm: install latest npm
 	
 
 ### npm:	
 Node package manager
-#### Flags
+#### Usage
+	-npm search <package>, npm list
+	-npm install <package>@<version>: install locally, but if no package is specifed, packages listed in package/package-lock.json are installed.
+	-npm install -g <package>: installs globally 
 
 ### node:	
 Nodejs
-#### Flags
+#### Usage
 
 
 ## ---------------------Builtin Packages-----------------------------
 Packages that come with Nodejs preinstalled.
 ### process:
-Used to get system information. Methods are . after, e.g. process.env
+Used to get system information.
+process does not have to be required.
 #### Methods
 	-env: Logs computer's environment
 	-exit: exits session
+	-argv: lists argument array
+		
+
+## fs:
+Used with file systems
+### Methods
+	-fs.readdirSync, writeFileSync, 
+	-lstatSync: views stats of a file or folder
 
 ## Miscallaneous:
 Builtin Methods
@@ -83,3 +95,25 @@ Confinguration package
 #### Examples
 	-require("dotenv").config();
 
+### chalk:
+add colors to console
+#### Methods:
+	-chalk.blue('Hello World!'), green, etc.
+	-chalk.bgBlue, green, etc.
+	-methods can be chained, e.g. 'chalk.blue.bgPink("Hello")'
+	-inverse: changes the color to background
+	-bold, underline
+
+### nodemon
+Used for debugging. 
+#### Usage:
+	-rs to restart
+### yargs
+Parse arguments
+### Builtin Args:
+	--help, --version
+### Methods:
+	-yargs.help('New help description'), yargs.version('1.1.0')
+	-yargs.command({command: <command name>, describe: <description>, handler:
+function})
+		
