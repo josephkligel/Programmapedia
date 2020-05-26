@@ -17,11 +17,9 @@
 	-backup windows
 	-backup 700 HDD
  -anydb.py:
-	-Add delete, update, and insert text boxes
+	-add directions
 	-get entry text from selecting row
 	-table fill whole frame
-	-redraw table. Delete the frames when new db is chosen
-	-style and colors
  -Tetris:
 	-speed up after awhile
 	-fix block rotation at edge issue
