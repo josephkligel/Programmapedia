@@ -8,7 +8,19 @@
 3. import ReactDOM from "react-dom"
 4. Render: see Rendering section below
 
+## ----------------------Import/Export----------------------------
+import statement usage
+### Methods:
+	-import * as React from "react": wild card to call all methods from a module
+		-React.<function or var>: is the syntax for the use of the asterick
+	-import React from "react": call React from installed react package
+	-import App from "./app": call App from locally-made app.jsx
+	-import {doublePi, triplePi} from './calculator': exports the functions contained in the curly brackets
 
+export statement usage
+### Methods:
+	-export default pi: exports the default named pi
+	-export {doublePi, triplePi}: exports functions name doublePi and triplePi
 
 ## ----------------------Rendering-------------------------
 Basic rendering
@@ -39,4 +51,5 @@ Break down rendered elements into smaller components.
 		-import Heading from './Heading'
 	6. Add component tag to render method
 		-ReactDOM.render(<Heading />...)
+
 	

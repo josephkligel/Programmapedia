@@ -22,7 +22,7 @@ Node package manager
 ### node:	
 Nodejs
 #### Usage
-
+	-node <app name>.js
 
 ## ---------------------Builtin Packages-----------------------------
 Packages that come with Nodejs preinstalled.
@@ -34,12 +34,22 @@ process does not have to be required.
 	-exit: exits session
 	-argv: lists argument array
 		
+## JSON
+Used to deal with JSON data and objects
+Does not have to be required
+### Methods:
+	-stringify(<var>): turns var into a JSON object
+		-cannot call properties of JSON object
+	-parse(): turns JSON object into a regular object
+		- can call properties
 
 ## fs:
 Used with file systems
 ### Methods
-	-fs.readdirSync, writeFileSync, 
+	-fs.readdirSync, writeFileSync 
 	-lstatSync: views stats of a file or folder
+	-readFileSync(<path>): reads byte code. Have to call toString on it
+		-const dataBuffer = readFileSync('somefile').toString() 
 
 ## Miscallaneous:
 Builtin Methods
@@ -114,6 +124,7 @@ Parse arguments
 	--help, --version
 ### Methods:
 	-yargs.help('New help description'), yargs.version('1.1.0')
-	-yargs.command({command: <command name>, describe: <description>, handler:
-function})
-		
+	-yargs.command({command: <command name>, describe: <description>, builder: <option>, handler: <function>})
+		-builder {title: {describe: 'Note title', demandOption: true, type: 'string'}}
+	-yargs.parse(): prints the args
+	
