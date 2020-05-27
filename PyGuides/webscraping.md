@@ -9,7 +9,7 @@
 -url = requests.get('google.com')
 -soup = BeautifulSoup(url.text, <parser>)
 
-## Parsers
+## -------------------------------Parsers------------------------
 Different parsers used for webscraping
 ### html.parser:
 	soup = BeautifulSoup(url.text, 'html.parser')
@@ -18,6 +18,7 @@ Different parsers used for webscraping
 #### Examples:
 	-soup.find('table', {'class': 'wikisortable'})
 	-soup.find_all('tr')
+
 ### lxml:
 	soup = BeatifulSoup(url.text, 'lxml')
 #### Methods
@@ -25,4 +26,6 @@ Different parsers used for webscraping
 	-soup.select(<selectorTag>), soup.selectAll(<selectorTags>)
 #### Examples
 	-soud.find_all('table', class_='wikisortable'): attribute name has no quotes and uses equals instead of colons
+
+
 
