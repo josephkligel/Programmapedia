@@ -24,6 +24,13 @@ Nodejs
 #### Usage
 	-node <app name>.js
 
+## --------------------------Basics-------------------------------
+
+### arrow function:
+() => {}
+#### Usage:
+	-does not bind this
+
 ## ---------------------Builtin Packages-----------------------------
 Packages that come with Nodejs preinstalled.
 ### process:
