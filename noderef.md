@@ -23,6 +23,7 @@ Node package manager
 Nodejs
 #### Usage
 	-node <app name>.js
+	-node inspect <app.js>: make sure to add 'debugger' keyword to script
 
 ## --------------------------Basics-------------------------------
 
