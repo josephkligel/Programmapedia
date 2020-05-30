@@ -343,3 +343,11 @@ Easy print. Useful for lists and writing variables to files.
 Safer than deleting folders or files with other methods. Deleted can be recovered from trash later
 ### Methods	
 	-send2trash.send2trash(<filename string>)
+
+### simple-chalk
+Print in colors. Yay!
+#### Usage
+	-import simple_chalk
+	-green, blue, red, etc.
+	-bgGreen, bgBlue
+	-Chaining: simple_chalk.bgGreen.blue('Hello')
