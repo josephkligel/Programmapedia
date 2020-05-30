@@ -52,4 +52,8 @@ Break down rendered elements into smaller components.
 	6. Add component tag to render method
 		-ReactDOM.render(<Heading />...)
 
-	
+## ----------------------Debugging---------------------------
+React debug tools
+## Usage:
+	-install React Developer Tools on Chrome
+	-In developer menu, go to components tab	

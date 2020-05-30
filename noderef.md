@@ -1,6 +1,7 @@
 # Nodejs/Javascript References:
 Legend:
 >("): The same phrase or word above or before
+>Methods: empty parentheses '()' means function and no parentheses means object attribute
 
 ## --------------------------Install and Setup------------------------
 
@@ -39,9 +40,10 @@ Used to get system information.
 process does not have to be required.
 #### Methods
 	-env: Logs computer's environment
-	-exit: exits session
+		-attributes: SHELL
+	-exit(): exits session
 	-argv: lists argument array
-		
+	-cwd(): 		
 ## JSON
 Used to deal with JSON data and objects
 Does not have to be required
