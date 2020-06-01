@@ -19,6 +19,16 @@ Methods for arrays. Many of them also work on strings. So, between arrays and st
 	-(").push(), pop
 	-(").concat(<array 2>): Join arrays together. Make sure to reassing to update the main array variable, e.g. 'planets = planets.planets = planets.concat(rocks)'
 	-(").every(), any(), some(<var name>, callback), forEach(<var name for item in array>, callback)
+	-map(): Create a new array by doing something with each item in an array.
+		-<array>.map((<array item>) => {return item*2})
+	-filter(): Create an array that matches a condition
+		-<array>.filter(item => return item < 10)
+	-reduce(): Applies a calculation to all the items in an array by using an accumulator
+		-<array>.reduce((accumulator, item) => {return accumulator + item})
+	-find(): find the first item that matches from an array.
+		-<array>.find(item => item < 10)
+	-findIndex(): find the index of the first item that matches from an array
+		-<array>.findIndex(index => item < 10)
 
 ## ----------------------Dates-------------------------
 Methods for dates
@@ -27,8 +37,8 @@ Methods for dates
 	-date.getDate() or [getFullYear(), getMonth(), getDay(), getHours(), getMinutes()]
 	-date.toLocaleDateString() or [toLocaleTimeString()]
 
-## -----------------------Elements----------------------
-Methods on Elements
+## -----------------------DOM----------------------
+DOM Methods
 ### Get element to manipulate:
 	-document.querySelector(".someclass") or [querySelectorAll, getElementById, getElementByClassNames]
 
