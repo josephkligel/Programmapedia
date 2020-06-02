@@ -21,3 +21,18 @@
 
 ## ------------------------------Methods-------------------------
 app.on('ready', <func>): loads window when ready
+
+## ---------------------------IPC-------------------------------
+Formally known as inter process communication. It is what allows the main window to communicate with the electron app.
+
+### Methods:
+	>>>> Main window to electron (In script tag within the main window)<<<<
+	-const electron = require('electron'); 
+	-const {ipcRenderer} = electron;
+	-ipcRender.send('eventname', <data>): sends data on event to electron app
+	-ipcMain.on('eventname', <callback>): receive data in the electron app(index.js)
+
+	>>>> Electron to main window (in index.js)<<<<
+	-const {ipcMain} = require('electron'): require in index.js
+	-mainWindow.webContents.send(): sends from electron to main window
+	-ipcRenderer.on(): main window receives from electron app
