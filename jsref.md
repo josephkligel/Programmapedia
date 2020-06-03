@@ -3,6 +3,20 @@ Legend:
 >("): means what came above or before.
 ><element>: document.querySelector('#someid')
 
+## ----------------------Importing/Exporting-----------------
+Importing modules
+### Importing:
+	-import App from './App';
+	-const lodash = requires('lodash'): for nodejs only
+	-import React, {useState} from 'react': destructuring
+
+Exporting modules
+### Exporting:
+	-export default App: App function is exported
+	-export {app: "app", function: "function", develop: "develop"}: exports other functions with a given name to use
+	-module.exports = function(){}: for nodejs only 
+
+
 ## ----------------------Operators---------------------
 Operators: i++, i--, ++i, --i, i+=1, i-=1
 

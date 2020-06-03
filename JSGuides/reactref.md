@@ -57,4 +57,11 @@ Break down rendered elements into smaller components.
 React debug tools
 ## Usage:
 	-install React Developer Tools on Chrome
-	-In developer menu, go to components tab	
+	-In developer menu, go to components tab
+
+## -----------------------State-----------------------------
+Using state in react
+### Usage:
+	-React.useState(<item>): item can be any data
+	-const state = useState(<item>): will be an array
+	-[item] = useState(<item>): destructuring. First item will be called by item variable	
