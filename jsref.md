@@ -80,3 +80,16 @@ Event listeners for elements
 
 ### Usage:
 	-<element>.addEventListener(<event>, callback)
+
+## ---------------------Spread and Destruct---------------
+Operators for spread and destruct
+### Spread:
+	-'...citrus': adds the items from an array or object called citrus
+		-can be added to anoter list
+	-'[key] : value': the value of key becomes the key name
+	
+### Destructuring:
+	-{ name, value } = event.target: allows you to call event.target.value and event.target.name with the variable names name and value
+		-pulls keys from objects
+		-{name: newName, value: newValue} = event.target: assign new variable names to object properties. The new names are newName and newValue
+	-[ fullName, setFullName  ] = useState(""): Assign variable names to items in a list 
