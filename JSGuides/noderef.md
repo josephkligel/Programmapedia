@@ -137,4 +137,9 @@ Parse arguments
 	-yargs.command({command: <command name>, describe: <description>, builder: <option>, handler: <function>})
 		-builder {title: {describe: 'Note title', demandOption: true, type: 'string'}}
 	-yargs.parse(): prints the args
+
+### request
+Easier way of performing http requests. npm install request(singular).
+### Methods:
+	-
 	
