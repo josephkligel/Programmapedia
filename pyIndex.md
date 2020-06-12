@@ -308,6 +308,13 @@ Opens default webbrowser. Beats using the system call to invoke a webbrowser
 #### Methods
 	-wb.open('github.com')
 
+### cProfile
+Measures the execution time of a program and how many times a function is called. Also tells what programs were called.
+#### Methods:
+	-run(<function or statement>, ['restats']): gives stats on time of run and what functions were called
+	-python -m cProfile [-o outputfile] [-s sort_order] (-m modules|myscript.py):
+		prints the results of run-time of a script or module to output file/console
+
 ## ----------------------3rd Party Modules----------------------
 ### pyinstaller: 
 Convert python program to exe program
