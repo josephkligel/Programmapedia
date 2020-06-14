@@ -44,6 +44,7 @@ process does not have to be required.
 	-exit(): exits session
 	-argv: lists argument array
 	-cwd(): 		
+
 ## JSON
 Used to deal with JSON data and objects
 Does not have to be required
@@ -71,10 +72,12 @@ Packages that have to be installed via npm
 ### express:
 Used to create server
 #### Examples
-	-const express = require('express');
-	-const app = express();
-	-app.use(express.static("public/"));
-	-app.listen(3000, ()=> console.log("Server started on port 3000"));
+	-const express = require('express')
+	-const app = express()
+	-app.use(express.static("public/"))
+	-app.listen(3000, ()=> console.log("Server started on port 3000"))
+	-app.get('/', <callback>), post, put, delete, fetch
+		-chaining: (").post().delete().put()
 
 ### ejs:
 Template engine to create html partials and html pages
@@ -140,6 +143,6 @@ Parse arguments
 
 ### request
 Easier way of performing http requests. npm install request(singular).
-### Methods:
-	-
+### Usage:
+	-request({url: '<url>', json: true}, <callback>)
 	
