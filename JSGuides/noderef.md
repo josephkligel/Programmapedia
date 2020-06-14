@@ -35,7 +35,7 @@ Nodejs
 
 ## ---------------------Builtin Packages-----------------------------
 Packages that come with Nodejs preinstalled.
-### process:
+### process
 Used to get system information.
 process does not have to be required.
 #### Methods
@@ -54,52 +54,61 @@ Does not have to be required
 	-parse(): turns JSON object into a regular object
 		- can call properties
 
-## fs:
+## fs
 Used with file systems
-### Methods
+### Methods:
 	-fs.readdirSync, writeFileSync 
 	-lstatSync: views stats of a file or folder
 	-readFileSync(<path>): reads byte code. Have to call toString on it
 		-const dataBuffer = readFileSync('somefile').toString() 
 
-## Miscallaneous:
+## path
+Manipulate paths with this module
+### Methods:
+	-join(<pathname>[, pathname]): One value is the pathname, two values is the joined pathname of the arguments
+	-
+
+## Miscallaneous
 Builtin Methods
-### Methods
+### Methods:
 	-global: shows builtin functions
 
 ## -----------------------Third-party Packages---------------------------
 Packages that have to be installed via npm	
-### express:
+### express
 Used to create server
-#### Examples
+#### Examples:
 	-const express = require('express')
 	-const app = express()
-	-app.use(express.static("public/"))
+	-app.use(express.static(path.join('<path>[, path]'))): serves up the folder for static files
 	-app.listen(3000, ()=> console.log("Server started on port 3000"))
-	-app.get('/', <callback>), post, put, delete, fetch
+	-app.get('/', (req, res) => {res.render()}), post, put, delete, fetch
 		-chaining: (").post().delete().put()
+		-res.render, send, write
+	-__dirname: gives the directory path of the current file
+	-__filename: give the filename with path of the current file
 
-### ejs:
+### ejs
 Template engine to create html partials and html pages
-#### Examples
+#### Examples:
 	-const ejs = require('ejs');
 	-app.use('view engine', ejs): ejs is not in quotes. Remember that
 
-### body-parser:
+### body-parser
 Parses json, html and other formats
-#### Examples
+#### Examples:
 	-const bodyParser = require("body-parser");
 	-app.use({urlapp.use(bodyParser.urlencoded({
 		extended: true
 	}));
 
-### md5:
+### md5
 
-### bcrypt:
+### bcrypt
 
-### mongoose:
+### mongoose
 Used to communicate with MongoDB databases
-#### Examples
+#### Examples:
 	-const mongoose = require("mongoose");
 	-mongoose.connect("mongodb://localhost:27017/wikiDB", {
 		useNewUrlParser: true,
@@ -111,12 +120,14 @@ Used to communicate with MongoDB databases
 	});
 	-const User = new mongoose.model("User", userSchema);
 
-### mysql:	
+### mysql	
 
-### dotenv:
+### dotenv
 Confinguration package
-#### Examples
-	-require("dotenv").config();
+#### Usage:
+	-create .env file for values
+	-require("dotenv").config(): allows the parsing of .env values
+	-process.env.KEY: get the KEY value in .env file
 
 ### chalk:
 add colors to console
