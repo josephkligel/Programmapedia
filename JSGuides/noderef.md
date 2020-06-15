@@ -81,18 +81,38 @@ Used to create server
 	-const express = require('express')
 	-const app = express()
 	-app.use(express.static(path.join('<path>[, path]'))): serves up the folder for static files
+	-app.set('view engine', 'ejs'): set view engine
+	-app.set('views', <var or name of views directory>): Used to set folder for templates. Make sure to use path.join
 	-app.listen(3000, ()=> console.log("Server started on port 3000"))
-	-app.get('/', (req, res) => {res.render()}), post, put, delete, fetch
+	-app.get('/', (req, res) => {<callbacks>}), post, put, delete, fetch
 		-chaining: (").post().delete().put()
-		-res.render, send, write
+	-callbacks:
+		-res.render('index', {title: 'This App'})
+		-res.send
+		-res.write
 	-__dirname: gives the directory path of the current file
 	-__filename: give the filename with path of the current file
 
 ### ejs
 Template engine to create html partials and html pages
-#### Examples:
+#### Usage:
 	-const ejs = require('ejs');
-	-app.use('view engine', ejs): ejs is not in quotes. Remember that
+	-app.set('view engine', ejs): ejs is not in quotes. Remember that
+	-file extension for templates: 'ejs'
+	-<%- include('partials/header.ejs') -%>: syntax for including ejs files
+	-<%= varible %>: syntax for displaying variables in ejs files
+	-<% logic %>: syntax for JavaScript logic. No conditional statements allowed, only expressions.
+	-'*': res.render('*') will render any url not yet used
+
+### hbs
+Template engine
+#### Usage:
+	-const hbs = require('hbs')
+	-app.set('view engine', 'hbs')
+	-file extensions: 'hbs'
+	-hbs.registerPartials(<partials var or string>): setup for partials directory
+	-{{>header}}: syntax for rendering partials
+	-{{ variable  }}: systax for displaying variables in hbs file
 
 ### body-parser
 Parses json, html and other formats
@@ -144,9 +164,9 @@ Used for debugging.
 	-rs to restart
 ### yargs
 Parse arguments
-### Builtin Args:
+#### Builtin Args:
 	--help, --version
-### Methods:
+#### Methods:
 	-yargs.help('New help description'), yargs.version('1.1.0')
 	-yargs.command({command: <command name>, describe: <description>, builder: <option>, handler: <function>})
 		-builder {title: {describe: 'Note title', demandOption: true, type: 'string'}}
@@ -154,6 +174,6 @@ Parse arguments
 
 ### request
 Easier way of performing http requests. npm install request(singular).
-### Usage:
+#### Usage:
 	-request({url: '<url>', json: true}, <callback>)
 	
