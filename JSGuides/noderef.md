@@ -86,6 +86,9 @@ Used to create server
 	-app.listen(3000, ()=> console.log("Server started on port 3000"))
 	-app.get('/', (req, res) => {<callbacks>}), post, put, delete, fetch
 		-chaining: (").post().delete().put()
+	-req: url request
+		-req.query: contains query strings from a url
+	-res: url response
 	-callbacks:
 		-res.render('index', {title: 'This App'})
 		-res.send
