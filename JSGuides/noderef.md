@@ -17,8 +17,10 @@ node version manager
 Node package manager
 #### Usage:
 	-npm search <package>, npm list
-	-npm install <package>@<version>: install locally, but if no package is specifed, packages listed in package/package-lock.json are installed.
-	-npm install -g <package>: installs globally 
+	-npm install <package>@<version>: install locally
+		* if no packages are specifed, packages listed in package/package-lock.json are installed.
+		* -g: installs globally
+		* --save-dev: installs as dev dependency
 	-npm start or npm run start: run a local app
 
 ### node	
@@ -31,8 +33,9 @@ Nodejs
 Setup of package.json
 #### Usage:
 	* "scripts": {"start": "node src/index.js"}
-		* Can use npm start or npm run start in the app directory
-
+		* npm start or npm run
+	* "scripts": {"dev": "nodemon src/index.js"}
+		* npm run dev
 ## --------------------------Basics-------------------------------
 
 ### arrow function:
