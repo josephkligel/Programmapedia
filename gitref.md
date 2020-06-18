@@ -61,13 +61,20 @@ to remove from git collection
 #### Examples:
 	* 'git rm -r node_modules/'
 
-### heroku git
+## -------------------------Heroku Git------------------------
 Using heroku git
-#### examples:
-	* 'heroku git:remote -a project'
-	* 'git push -f heroku master'
+
+* 'heroku git:remote -a project'
+* 'git push -f heroku master'
 
 ## -----------------------SSH Setup--------------------------
 
-* ssh-keygen -t rsa -b 4096 -C 'jkligel@gmail.com'
-* eval "$(ssh -s)"
+* ssh-keygen -t rsa -b 4096 -C 'jkligel@gmail.com': create key
+	* -t: type of key
+	* -b: bits
+	* -C: create new comment
+
+* eval "$(ssh-agent -s)": Startup ssh-agent
+* ssh-add ~/.ssh/id_rsa
+* Go to settings page of Github repository and add id_rsa.pub key  
+

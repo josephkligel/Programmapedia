@@ -5,26 +5,33 @@ Legend:
 
 ## --------------------------Install and Setup------------------------
 
-### nvm(command): 
+### nvm(command)
 node version manager
-#### Examples
+#### Examples:
 	-nvm ls-remote: show all available LTS versions of Node
 	-nvm i 12.16.': install Nodejs version 12.16.1
 	-nvm install-latest-npm: install latest npm
 	
 
-### npm:	
+### npm	
 Node package manager
-#### Usage
+#### Usage:
 	-npm search <package>, npm list
 	-npm install <package>@<version>: install locally, but if no package is specifed, packages listed in package/package-lock.json are installed.
 	-npm install -g <package>: installs globally 
+	-npm start or npm run start: run a local app
 
-### node:	
+### node	
 Nodejs
-#### Usage
+#### Usage:
 	-node <app name>.js
 	-node inspect <app.js>: make sure to add 'debugger' keyword to script
+
+### package.json
+Setup of package.json
+#### Usage:
+	* "scripts": {"start": "node src/index.js"}
+		* Can use npm start or npm run start in the app directory
 
 ## --------------------------Basics-------------------------------
 
