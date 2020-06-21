@@ -28,7 +28,10 @@ Legend:
 #### Examples:
 	* std::cout << "Hello, World\n": Send text through std console
 
-### 
+### Two Greater-Than Signs
+'>>' are the characters used to tell c++ to receive data from a certain system and assign it
+#### Examples:
+	* std::cin >> variable 
 
 ## ---------------------- Builtin Packages ---------------
 
@@ -37,4 +40,4 @@ Input and output library for C++
 #### Usage:
 	* '#include <iostream>': first thing to do to use iostream library
 	* std::cout << "Hello, World" << std::endl: prints text to console
-	
+	* std::cin >> x: assigns input to a variable
