@@ -12,8 +12,8 @@
 ## -------------------------------Usage------------------------
 Different parsers used for webscraping
 ### parsers:
-	-html.parser
-	-lxml
+	-html.parser: built-in parser
+	-lxml: best parser
 
 ### finding elements:
 	-soup.find(<tag>, {'<attribute>': 'attname'})
