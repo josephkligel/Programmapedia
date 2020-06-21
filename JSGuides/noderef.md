@@ -41,7 +41,18 @@ Setup of package.json
 ### arrow function:
 () => {}
 #### Usage:
-	-does not bind this
+	-does not bind this keyword
+
+### promises
+Used to avoid the callback abyss
+#### Usage:
+	* promise: const updatePromise = new Promise((resolve, reject) => <callback>)
+	* resolve('Success!'): The promise has been fullfilled
+		* called within another another callback, anonymous or otherwise
+	* reject('Failed!'): The promise has been rejected
+		* called within another callback
+	* then(result => console.log(result)): Called when promise is resolved
+	* catch(error => console.log(error)): Called when promise is rejected
 
 ## ---------------------Builtin Packages-----------------------------
 Packages that come with Nodejs preinstalled.
@@ -76,7 +87,6 @@ Used with file systems
 Manipulate paths with this module
 ### Methods:
 	-join(<pathname>[, pathname]): One value is the pathname, two values is the joined pathname of the arguments
-	-
 
 ## Miscallaneous
 Builtin Methods
