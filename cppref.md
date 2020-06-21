@@ -18,8 +18,23 @@ Legend:
 
 ## ---------------------------- Syntax ----------------
 
+### Preprocessor Directives
+'#' before a identifier. These are items that are initialized before the compilation of the program.
+#### Examples:
+	* include: Programs reference and used in a program
+		* <iostream>: For libraries
+		* "myfile.h": For programmer-built programs
+	* define: '#define pi 3.14271'
+		* replaces all instances of pi with the literal 3.14271
+
+### using
+'using' is the namespace directive. It allows methods to be called without including the namespace everytime a method is called.
+#### Examples:
+	* 'using namespace std': This statement will declare entire std namespace
+		* std::cout then becomes cout
+
 ### Double Colons
-'::' are the characters used before a method name
+'::' are the characters used before a method name. It is used with namespaces to identify the correct method to be used.
 #### Examples:
 	* 'std::cout': cout method from std
 
@@ -32,6 +47,22 @@ Legend:
 '>>' are the characters used to tell c++ to receive data from a certain system and assign it
 #### Examples:
 	* std::cin >> variable 
+
+### Variable
+Uses of variables
+#### Usage:
+	* primative types: int, double, float, long, short, char, char*
+	* declaration: 'int age';
+	* initialization: 'int age = 8;' or 'int age{8};'
+	* strings: 'char name[7] = 'Joseph''
+		* Always add one byte for '\0'
+		* 'char name[]': empty brackets means any size
+	* constant: 'const int age{29}'
+
+### Operators
+The operators used in C++
+#### Usage:	
+	* sizeof(var): gets the byte-size of a variable type, variable, or literal
 
 ## ---------------------- Builtin Packages ---------------
 
