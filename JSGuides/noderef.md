@@ -53,6 +53,12 @@ Used to avoid the callback abyss
 		* called within another callback
 	* then(result => console.log(result)): Called when promise is resolved
 	* catch(error => console.log(error)): Called when promise is rejected
+### Errors
+Managing errors in Nodejs
+#### Usage:
+	* throw: 'throw new Error("This is an error!")'
+	* try and catch: 'try{console.log("Something to try")} catch(err) {console.log(err)}'
+
 
 ## ---------------------Builtin Packages-----------------------------
 Packages that come with Nodejs preinstalled.
@@ -199,4 +205,22 @@ Parse arguments
 Easier way of performing http requests. npm install request(singular).
 #### Usage:
 	-request({url: '<url>', json: true}, <callback>)
+
+### mongoose
+Best api to manage mongo databases
+#### Usage:
+	* const mongoose = require('mongoose');
+	* mongoose.connect('mongodb://127.0.0.1:27017/users', {
+			useNewUrlParser: true,
+			useCreateIndex: true})
+	* const User = mongoose.model('User', {
+  		name: {type: String, required: true, trim: true}, age: {type: Number}});
+	* const me = new User({name: "Joseph", age: 29})
+	* me.save().then(() => console.log(me)}).catch(error => console.log(error))
+
+### validator
+Validates data with more intuitive sytanx
+#### Methods:
+	* isEmail: 'validator.isEmail(value)'. Returns true if valid
+	* contains: 'validator.contains(value, "password", {ignoreCase: true})'
 	
