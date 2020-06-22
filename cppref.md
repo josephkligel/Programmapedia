@@ -64,6 +64,20 @@ The operators used in C++
 #### Usage:	
 	* sizeof(var): gets the byte-size of a variable type, variable, or literal
 
+### Arrays
+Lists of items
+#### Usage:
+	* 'int numbers[5] {1, 2, 3, 4, 5}' or 'int numbers[5] = {1...}'
+
+### Vectors
+Multi-dimensional arrays that are dynamic, have all same types of elements, stored contiguously in memory, elements initialized to zero.
+#### Usage:
+	* '#include <vector>': Must include library to use vector
+	* 'vector <int> test_scores (5)': Create a vector that can hold 5 integer element
+	* 'test_scores[1]' or 'test_scores.at(1)': Access element in vector by index
+	* 'test_scores.push_back('a')': push_back adds element to end of vector
+	* 'test_scores.size()': Gives the number of elements in the vector 
+
 ## ---------------------- Builtin Packages ---------------
 
 ### iostream
