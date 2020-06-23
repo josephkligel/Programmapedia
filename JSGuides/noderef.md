@@ -53,6 +53,17 @@ Used to avoid the callback abyss
 		* called within another callback
 	* then(result => console.log(result)): Called when promise is resolved
 	* catch(error => console.log(error)): Called when promise is rejected
+	* chaining: 'User.findByIdAndUpdate(... return User.countDocuments({age: 30})}).then((result) => console.log(result)).catch(e => console.log(e))
+
+### async and await
+These go with promises and are typically associated with them
+#### Usage:
+	* 'async () => {}': Returns an empty promise
+		* Creates a promise. Can apply then and catch functions on the promise
+	* 'await add(1, 2)': Gets a promise back. See node/playground/9-async-await for examples
+		* No need for then and catch, e.g. 'return await(1,2)'
+		* No need for chaining, e.g. 'const sum = await add(1, 2); return await add(sum, 1)'
+
 ### Errors
 Managing errors in Nodejs
 #### Usage:
@@ -67,7 +78,7 @@ Used to get system information.
 process does not have to be required.
 #### Methods
 	-env: Logs computer's environment
-		-attributes: SHELL
+		-attributes: SHELL, port
 	-exit(): exits session
 	-argv: lists argument array
 	-cwd(): 		
@@ -78,7 +89,7 @@ Does not have to be required
 ### Methods:
 	-stringify(<var>): turns var into a JSON object
 		-cannot call properties of JSON object
-	-parse(): turns JSON object into a regular object
+	-parse(): turns JSON object into a regular JavaScript object
 		- can call properties
 
 ## fs
@@ -168,6 +179,7 @@ Used to communicate with MongoDB databases
 		password: String
 	});
 	-const User = new mongoose.model("User", userSchema);
+	-Methods: See mongoose-api.js in node/playground
 
 ### mysql	
 
