@@ -162,26 +162,31 @@ Parses json, html and other formats
 		extended: true
 	}));
 
-### md5
-
 ### bcrypt
+Used to encrypt data. Install bcryptjs
+#### Usage:
+	* const bcrypt = require('bcryptjs')
+	* bcrypt.hash(pass, 8)
+		* First argument is the password
+		* Second is the amount of rounds to hash the password. Never use more than 10
+	* bcrypt.compare(password, hashedPw): Returns true or false after comparing passwords
 
 ### mongoose
 Used to communicate with MongoDB databases
 #### Examples:
-	-const mongoose = require("mongoose");
-	-mongoose.connect("mongodb://localhost:27017/wikiDB", {
+	* const mongoose = require("mongoose");
+	* mongoose.connect("mongodb://localhost:27017/wikiDB", {
 		useNewUrlParser: true,
 		useUnifiedTopology: true
 	});
-	-const userSchema = new mongoose.Schema({
+	* const userSchema = new mongoose.Schema({
 		email: String,
 		password: String
 	});
-	-const User = new mongoose.model("User", userSchema);
-	-Methods: See mongoose-api.js in node/playground
-
-### mysql	
+		* userSchema.pre: done before an event 
+		* userSchema.post: done after an event
+	* const User = new mongoose.model("User", userSchema);
+	* Methods: See mongoose-api.js in node/playground
 
 ### dotenv
 Confinguration package
