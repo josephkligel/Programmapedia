@@ -70,6 +70,10 @@ Managing errors in Nodejs
 	* throw: 'throw new Error("This is an error!")'
 	* try and catch: 'try{console.log("Something to try")} catch(err) {console.log(err)}'
 
+### Lists
+Methods and uses of lists
+#### Usage:
+	* concat: adds an item to a list
 
 ## ---------------------Builtin Packages-----------------------------
 Packages that come with Nodejs preinstalled.
@@ -116,20 +120,31 @@ Packages that have to be installed via npm
 Used to create server
 #### Examples:
 	-const express = require('express')
+	-const router = express.Router(): Creates a router class.
+		* Operates in a similar way as the app variable below
+		* Can call on the same http methods as app: route, get, post, etc.
 	-const app = express()
 	-app.use(express.static(path.join('<path>[, path]'))): serves up the folder for static files
 	-app.set('view engine', 'ejs'): set view engine
 	-app.set('views', <var or name of views directory>): Used to set folder for templates. Make sure to use path.join
 	-app.listen(3000, ()=> console.log("Server started on port 3000"))
-	-app.get('/', (req, res) => {<callbacks>}), post, put, delete, fetch
-		-chaining: (").post().delete().put()
+	-app.route('/'): The route http requests are trying to go to
+		* app.get('/', (req, res) => {<callbacks>}): retrieve a resource
+		* (")post: send a resource
+		* put: replace an existent resource
+		* patch: replace elements of an existent resource 
+		* delete: Remove a resource completely
+		* chaining route methods: app.route('/').post().delete().put()
 	-req: url request
-		-req.query: contains query strings from a url
+		* req.query: contains query strings from a url. Typically used with post methods
+		* req.params: contains param strings from a url. Typically used with get methods
+		* req.method: the method the request is calling
+		* req.path: the path the request is trying to go to
 	-res: url response
 	-callbacks:
-		-res.render('index', {title: 'This App'})
-		-res.send
-		-res.write
+		* res.render('index', {title: 'This App'}): shows a resource, such as a web page
+		* res.send: sends data and terminates the response
+		* res.write: sends data. Terminates when res.send is called
 	-__dirname: gives the directory path of the current file
 	-__filename: give the filename with path of the current file
 
@@ -174,18 +189,20 @@ Used to encrypt data. Install bcryptjs
 ### mongoose
 Used to communicate with MongoDB databases
 #### Examples:
-	* const mongoose = require("mongoose");
-	* mongoose.connect("mongodb://localhost:27017/wikiDB", {
+	* import: 'const mongoose = require("mongoose");'
+	* connection to database: 'mongoose.connect("mongodb://localhost:27017/wikiDB", {
 		useNewUrlParser: true,
 		useUnifiedTopology: true
-	});
-	* const userSchema = new mongoose.Schema({
+	});'
+	* schema: 'const userSchema = new mongoose.Schema({
 		email: String,
 		password: String
-	});
+	});'
 		* userSchema.pre: done before an event 
 		* userSchema.post: done after an event
-	* const User = new mongoose.model("User", userSchema);
+	* model: 'const User = new mongoose.model("User", userSchema);'
+		* model instance: 'const me = new User({name: "Joseph", age: 29})'
+		* save instance: 'me.save().then(() => console.log(me)}).catch(error => console.log(error));'
 	* Methods: See mongoose-api.js in node/playground
 
 ### dotenv
@@ -208,6 +225,7 @@ add colors to console
 Used for debugging. 
 #### Usage:
 	-rs to restart
+
 ### yargs
 Parse arguments
 #### Builtin Args:
@@ -223,21 +241,15 @@ Easier way of performing http requests. npm install request(singular).
 #### Usage:
 	-request({url: '<url>', json: true}, <callback>)
 
-### mongoose
-Best api to manage mongo databases
-#### Usage:
-	* const mongoose = require('mongoose');
-	* mongoose.connect('mongodb://127.0.0.1:27017/users', {
-			useNewUrlParser: true,
-			useCreateIndex: true})
-	* const User = mongoose.model('User', {
-  		name: {type: String, required: true, trim: true}, age: {type: Number}});
-	* const me = new User({name: "Joseph", age: 29})
-	* me.save().then(() => console.log(me)}).catch(error => console.log(error))
-
 ### validator
 Validates data with more intuitive sytanx
 #### Methods:
 	* isEmail: 'validator.isEmail(value)'. Returns true if valid
 	* contains: 'validator.contains(value, "password", {ignoreCase: true})'
-	
+
+### jsonwebtoken
+Use json web tokens for authentication of users
+#### Methods:
+	* const jwt = require('jsonwebtoken')
+	* jwt.sign({_id: 'abc123'}, 'thisismynewcourse'): Turns a piece of data into a token using the second argument key
+	* jwt.verify(token, 'thisismynewcourse'): Returns a decrypted token using a key	
