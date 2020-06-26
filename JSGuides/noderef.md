@@ -70,6 +70,11 @@ Managing errors in Nodejs
 	* throw: 'throw new Error("This is an error!")'
 	* try and catch: 'try{console.log("Something to try")} catch(err) {console.log(err)}'
 
+### Strings
+Methods on strings
+#### Methods:
+	* <str>.replace(this, that): replace this with that
+
 ### Lists
 Methods and uses of lists
 #### Usage:
