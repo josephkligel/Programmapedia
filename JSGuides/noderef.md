@@ -80,6 +80,13 @@ Methods and uses of lists
 #### Usage:
 	* concat: adds an item to a list
 
+### Operators
+Using operators in JS and Node.js
+#### Usage:
+	* 'delete thisArray': deletes an item
+	* '<obj>.toJSON = function(){return {}}': Overload JSON.stringify
+	* '<obj>.toObject = (")': Overload Object methods
+
 ## ---------------------Builtin Packages-----------------------------
 Packages that come with Nodejs preinstalled.
 ### process
@@ -87,7 +94,7 @@ Used to get system information.
 process does not have to be required.
 #### Methods
 	-env: Logs computer's environment
-		-attributes: SHELL, port
+		-attributes: SHELL, port, etc.
 	-exit(): exits session
 	-argv: lists argument array
 	-cwd(): 		
@@ -104,10 +111,12 @@ Does not have to be required
 ## fs
 Used with file systems
 ### Methods:
-	-fs.readdirSync, writeFileSync 
-	-lstatSync: views stats of a file or folder
-	-readFileSync(<path>): reads byte code. Have to call toString on it
-		-const dataBuffer = readFileSync('somefile').toString() 
+	* readdirSync(<dir>): read directory
+	* writeFileSync(<file name>, <text to write>): write without callback
+		* writeFile(<fn>, <text>, <callback>)
+	* readFileSync(<path>): reads byte code. Have to call toString on it
+		* const dataBuffer = readFileSync('somefile').toString() 
+	* lstatSync: views stats of a file or folder
 
 ## path
 Manipulate paths with this module
