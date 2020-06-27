@@ -86,6 +86,10 @@ Using operators in JS and Node.js
 	* 'delete thisArray': deletes an item
 	* '<obj>.toJSON = function(){return {}}': Overload JSON.stringify
 	* '<obj>.toObject = (")': Overload Object methods
+	* 'new Object()': Creates a new instance of an object
+#### Shortcut operators:
+	* '{Model, Schema} = require("mongoose")': Destructure an object, pulling properities out of the object
+	* '...anArray': Spread operator for arrays. Allows you to easily add all elements of an array
 
 ## ---------------------Builtin Packages-----------------------------
 Packages that come with Nodejs preinstalled.
