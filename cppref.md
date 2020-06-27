@@ -122,3 +122,13 @@ Input/output stream manipulator
 	* '#include <iomanip>': link library
 	* 'cout << fixed << setprecision(1);': Round decimals places to one
 
+### climits
+
+### cctypes
+Functions for strings and characters
+#### Usage:
+	* '#include <cctypes>'
+	* Methods: isalpha(<string>), isalnum(), isdigit(), islower(), isupper()
+		* isprint(): if printable character
+		* ispunct(), isspace()
+		* tolower(), toupper()
