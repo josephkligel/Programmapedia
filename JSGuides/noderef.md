@@ -270,4 +270,14 @@ Use json web tokens for authentication of users
 #### Methods:
 	* const jwt = require('jsonwebtoken')
 	* jwt.sign({_id: 'abc123'}, 'thisismynewcourse'): Turns a piece of data into a token using the second argument key
-	* jwt.verify(token, 'thisismynewcourse'): Returns a decrypted token using a key	
+	* jwt.verify(token, 'thisismynewcourse'): Returns a decrypted token using a key
+
+### multer
+Upload files
+#### Usage:
+	* const multer = require('multer')
+	* const upload = multer({dest: 'images'}): create an instance of multer and a destination named images
+	* router.post('/users/me/images', upload.single('avatar'), (req, res)...): post image
+		* upload a single image with the key name of avatar
+		* Use post method to send avatar image to images folder
+	 	
