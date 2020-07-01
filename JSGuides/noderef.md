@@ -170,6 +170,7 @@ Used to create server
 		* res.render('index', {title: 'This App'}): shows a resource, such as a web page
 		* res.send: sends data and terminates the response
 		* res.write: sends data. Terminates when res.send is called
+		* res.set('content-type', 'image/jpg'): sets the response's content type to jpg
 	-__dirname: gives the directory path of the current file
 	-__filename: give the filename with path of the current file
 
@@ -289,3 +290,23 @@ Upload files
 	* router.post('/users/me/images', upload.single('avatar'), (req, res)...): post image
 		* upload a single image with the key name of avatar
 		* Use post method to send avatar image to images folder 	 	
+
+### sharp
+Package for editing images
+#### Usage:
+	* const sharp = require('sharp')
+	* await sharp(<img>).resize({width: 250, height: 250}): Converts to 250 by 250
+	* await sharp(<img>).png(): converts to png format
+	* (").toBuffer(): Converts picture to buffer string. Not part of sharp library
+
+### sendgrid
+Sending emails
+#### Usage:
+	* const sgMail = require('sendgrid/mail')]
+	* sgMail.setApiKey(<api_key>)
+	* sgMail.send({
+		to: 'jkligel@gmail.com',
+		from: 'jkligel@gmail.com',
+		subject: 'This is my first creation',
+		text: 'I hope this gets to you.'
+	})	  
