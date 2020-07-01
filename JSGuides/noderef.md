@@ -74,6 +74,13 @@ Managing errors in Nodejs
 Methods on strings
 #### Methods:
 	* <str>.replace(this, that): replace this with that
+	* <str>.endsWith('.pdf'): return true or false if ends with .pdf
+
+### regex
+Regular expressions
+#### Usage:
+	* 'const phrase = /.*(doc|pdf).?/':  Use forward slashes to denote a regex expression
+	* 'file.originalname.match(phrase)': Return true if file.originalname has the regex phrase in it 
 
 ### Lists
 Methods and uses of lists
@@ -276,8 +283,9 @@ Use json web tokens for authentication of users
 Upload files
 #### Usage:
 	* const multer = require('multer')
-	* const upload = multer({dest: 'images'}): create an instance of multer and a destination named images
+	* const upload = multer({dest: 'images',... <func>}): create an instance of multer and a destination named images
+		*{limits: {fileSize: 1000000}}: Option to limit the size of an uploaded file. 1000000 is 1MB
+		*<func>: 'fileFilter(req, file, cb){cb()...}'
 	* router.post('/users/me/images', upload.single('avatar'), (req, res)...): post image
 		* upload a single image with the key name of avatar
-		* Use post method to send avatar image to images folder
-	 	
+		* Use post method to send avatar image to images folder 	 	
