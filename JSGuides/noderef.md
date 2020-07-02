@@ -238,6 +238,13 @@ Confinguration package
 	-require("dotenv").config(): allows the parsing of .env values
 	-process.env.KEY: get the KEY value in .env file
 
+### env-cmd
+Another configuration packages
+#### Usage:
+	* npm i env-cmd --save-dev
+	* package.json: Add 'env-cmd ./config/dev.env' to scripts
+	* Add key/value pairs to dev.env
+
 ### chalk:
 add colors to console
 #### Methods:
