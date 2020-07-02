@@ -316,4 +316,15 @@ Sending emails
 		from: 'jkligel@gmail.com',
 		subject: 'This is my first creation',
 		text: 'I hope this gets to you.'
-	})	  
+	})
+
+### jest
+Testing framework. Zero config framework
+#### Usage:
+	* npm i jest --save-dev
+	* add "test": "jest --watch" to package.json
+		* --watch allows test to restart
+	* create .test.js file
+	* test('tester', <callback>): tester is the name of the test and the callback is the operation
+	* expect(total).toBe(13): Tests total value and if it is not 13 reports an error
+	* 
