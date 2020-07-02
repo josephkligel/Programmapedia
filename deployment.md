@@ -17,6 +17,11 @@ Setup and deployment on Heroku
 * git add and commit
 * git push heroku master
 
+### config
+* Check config: 'heroku config'
+* heroku config:set key=value
+* heroku config:unset key
+
 ### Troubleshoot
 * git:remote -a jkligel-todo: adds heroku to git remotes
 * heroku buildpacks:set heroku/nodejs : sets nodejs as buildpack
