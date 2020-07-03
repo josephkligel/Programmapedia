@@ -326,5 +326,5 @@ Testing framework. Zero config framework
 		* --watch allows test to restart
 	* create .test.js file
 	* test('tester', <callback>): tester is the name of the test and the callback is the operation
-	* expect(total).toBe(13): Tests total value and if it is not 13 reports an error
-	* 
+	* () => expect(total).toBe(13): Tests total value and if it is not 13 reports an error
+	* call done on async code: (done) => {expect(total).toBe(13); done()}
