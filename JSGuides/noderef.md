@@ -334,4 +334,6 @@ Testing framework. Zero config framework
 ### supertest
 Popular framework for testing
 #### Usage:
-	* 
+	* npm i supertest --save-dev
+	* const supertest = require('supertest')
+	*  
