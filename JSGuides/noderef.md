@@ -330,10 +330,18 @@ Testing framework. Zero config framework
 	* call done on async code: (done) => {expect(total).toBe(13); done()}
 	* add "test": "env-cmd -f ./config/test.env jest --watch" to package.json
 	* add object "jest": {"testEnvironment": "node"} to package.json
+	* beforeEach(<callback>): calls something before test
+	* afterEach(<callback>): calls something after test
 
 ### supertest
 Popular framework for testing
 #### Usage:
 	* npm i supertest --save-dev
 	* const supertest = require('supertest')
-	*  
+	* example use with jest: test('Should signup user', async () => {
+    		await supertest(app).post('/users').send({
+        	name: "Andrew",
+        	email: "andrew@example.com",
+        	password: "MyPass777!"
+    		}).expect(201)
+	})
