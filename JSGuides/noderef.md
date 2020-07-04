@@ -328,3 +328,10 @@ Testing framework. Zero config framework
 	* test('tester', <callback>): tester is the name of the test and the callback is the operation
 	* () => expect(total).toBe(13): Tests total value and if it is not 13 reports an error
 	* call done on async code: (done) => {expect(total).toBe(13); done()}
+	* add "test": "env-cmd -f ./config/test.env jest --watch" to package.json
+	* add object "jest": {"testEnvironment": "node"} to package.json
+
+### supertest
+Popular framework for testing
+#### Usage:
+	* 
