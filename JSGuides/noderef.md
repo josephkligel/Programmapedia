@@ -324,20 +324,28 @@ Sending emails
 Testing framework. Zero config framework
 #### Usage:
 	* npm i jest --save-dev
-	* add "test": "env-cmd -f ./config/test.env jest --watch" to scripts in package.json
-		* --watch allows test to restart
+	* add test to scripts: "test": "env-cmd -f ./config/test.env jest --watch --runInBand" 
+		* test command in scripts object in package.json
+		* restart tests: 'jest --watch'
+		* run test sequentially: 'jest --runInBand'		
+	* add test environment:  "jest": {"testEnvironment": "node"}
+		* add as individual object in package.json
 	* create .test.js file
 	* test('tester', <callback>): tester is the name of the test and the callback is the operation
 	* expect: Tests total value and if it is not 13 reports an error
 		* toBe: () => expect(value).toBe(13)
 		* null test: expect(value).toBeNull()
 		* not test: expect(value).not.toBeNull()
-		* match test: expect(value).toMatchObject({user: {name: 'Andrew'}}) 
-	* call done on async code: (done) => {expect(total).toBe(13); done()}
-	* add "test": "env-cmd -f ./config/test.env jest --watch" to scripts in package.json
-	* add object "jest": {"testEnvironment": "node"} to package.json
+		* match test: expect(value).toMatchObject({user: {name: 'Andrew'}})
+		* toEqual test: expect(object).toEqual(object)
+			* Test if in an object is equal. Used for == statements instead ===
+		* any: expect(user.avatar).toEqual(expect.any(Buffer))
+		* call done on async code: (done) => {expect(total).toBe(13); done()}
 	* beforeEach(<callback>): calls something before test
 	* afterEach(<callback>): calls something after test
+	* mocking: create __mock__ folder and @sendgrid subfolder in test directory
+		* create mail.js and export empty setApiKey and send function
+		* By mocking sendgrid will pretend to send emails to assure tests are succeeding
 
 ### supertest
 Popular framework for testing
