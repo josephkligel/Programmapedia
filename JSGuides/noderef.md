@@ -207,10 +207,12 @@ Parses json, html and other formats
 Used to encrypt data. Install bcryptjs
 #### Usage:
 	* const bcrypt = require('bcryptjs')
-	* bcrypt.hash(pass, 8)
+	* bcrypt(<pass>, 8, <callback>)
+	* bcrypt.hashSync(pass, 8)
 		* First argument is the password
 		* Second is the amount of rounds to hash the password. Never use more than 10
-	* bcrypt.compare(password, hashedPw): Returns true or false after comparing passwords
+	* bcrypt.compare(pass, hash, callback)	
+	* bcrypt.compareSync(password, hashedPw): Returns true or false after comparing passwords
 
 ### mongoose
 Used to communicate with MongoDB databases
@@ -322,13 +324,17 @@ Sending emails
 Testing framework. Zero config framework
 #### Usage:
 	* npm i jest --save-dev
-	* add "test": "jest --watch" to package.json
+	* add "test": "env-cmd -f ./config/test.env jest --watch" to scripts in package.json
 		* --watch allows test to restart
 	* create .test.js file
 	* test('tester', <callback>): tester is the name of the test and the callback is the operation
-	* () => expect(total).toBe(13): Tests total value and if it is not 13 reports an error
+	* expect: Tests total value and if it is not 13 reports an error
+		* toBe: () => expect(value).toBe(13)
+		* null test: expect(value).toBeNull()
+		* not test: expect(value).not.toBeNull()
+		* match test: expect(value).toMatchObject({user: {name: 'Andrew'}}) 
 	* call done on async code: (done) => {expect(total).toBe(13); done()}
-	* add "test": "env-cmd -f ./config/test.env jest --watch" to package.json
+	* add "test": "env-cmd -f ./config/test.env jest --watch" to scripts in package.json
 	* add object "jest": {"testEnvironment": "node"} to package.json
 	* beforeEach(<callback>): calls something before test
 	* afterEach(<callback>): calls something after test
