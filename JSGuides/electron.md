@@ -1,6 +1,6 @@
 # Electon JS
-##Legend:
->("): so as above
+Legend:
+>("): so as above or before
 
 ## ------------------------------Setup---------------------------
 1. npm init -y

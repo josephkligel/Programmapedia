@@ -1,4 +1,4 @@
-# Itertools
+# Advanced Python
 Legend:
 >("): same as above or before
 

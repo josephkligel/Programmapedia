@@ -1,16 +1,22 @@
 # Git Commands Reference
-* Legend:
+Legend:
 >("): Same as above or before
 >repository: A place where git files are stored
 
-## ------------------------Setup-----------------------
-* git-scm.com: Install git
-* git config --global user.email "jkligel@gmail.com"
-* git config --global user.name "Joseph Kligel"
-* git init: initializes git and creates .git folder
-* git add .; git commit -m 'First Commit'; git remote add origin 'https://github.com/zigjag/bin.git'; git push -u origin master; 
+## ------------------------ Setup and Install -----------------------
 
-## ------------------------Usage-----------------------
+* Install git from website: git-scm.com
+* set email: git config --global user.email "jkligel@gmail.com"
+* set username: git config --global user.name "Joseph Kligel"
+* Initialize a new git folder: git init
+* Create .gitignore: echo "node_modules/" >> .gitignore
+* First commit: 
+	* git add .
+	* git commit -m 'First Commit'
+	* git remote add origin 'https://github.com/zigjag/bin.git'
+	* git push -u origin master 
+
+## ------------------------ Commands -----------------------
 Arguments, flags, and commands
 
 ### status
@@ -18,18 +24,15 @@ Check untracked files
 #### Examples:
 	* 'git status'
 
-### .gitignore
-Add directories and files to .gitignore file if they are to be ignored
-#### Example:
-	* 'echo 'node_modules/' >> .gitignore'
-
-### add, commit
+### add
 Add to be tracked	
 #### Examples
 	* 'git add .' or 'git add <filename>': add all or specific file
 		* -A or '.': All files
-	* 'git commit -m "first commit"': Commit changes with messages
-		* -m: Message flag
+	
+### commit
+	* commit: git commit -m "first commit"
+	* -m: Message flag
 
 ### push
 Push changes to remote repository
@@ -52,20 +55,36 @@ Using remote urls
 	* 'git remote set-origin <url>': #Todo
 
 ### checkout:	
-Using other branchs
+Using other branches
 #### Examples:
-	* 'git checkout -b "firstbranch"'
+	* Checkout branch: git checkout -b "firstbranch"
+	* Checkout master: git checkout master
 
 ### rm	
 to remove from git collection
 #### Examples:
-	* 'git rm -r node_modules/'
+	* Remove from git repo and locally: git rm -r <folder>
+	* Remove from git repo only: git rm -r --cached <folder>
+
+## ---------------------- Git Config -------------------
+
+### git config
+Config git
+#### Usage:
+	* set email: git config --global user.email "jkligel@gmail.com"
+	* set username: git config --global user.name "Joseph Kligel"
+
+### .gitignore
+File to with a list of directories and files that should be ignored
+#### Example:
+	* echo 'node_modules/' >> .gitignore
+
 
 ## -------------------------Heroku Git------------------------
 Using heroku git
 
-* 'heroku git:remote -a project'
-* 'git push -f heroku master'
+* Set heroku repo: heroku git:remote -a <project>
+* Force push to heroku: git push -f heroku master
 
 ## -----------------------SSH Setup--------------------------
 

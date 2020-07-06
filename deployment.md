@@ -1,27 +1,27 @@
 # Deployment
-* Legend:
+Legend:
 >("): Same as above or before
 
 ## ----------------------Heroku Setup---------------------
 Setup and deployment on Heroku
 
 ### Setup
-* npm i -g heroku: installs heroku globally
-* heroku -v: check version
-* heroku login: Login through browser
-* heroku keys:add : Adds public key to Heroku
-	* See git reference under ssh setup to create ssh key
-* heroku create <name of app>: Creates a new app with given name and reports the new url for the app
-* Add "scripts": {"start": "node src/index.js"} to package.json
-* run command 'npm start' to test
-* git add and commit
-* git push heroku master
+* Install heroku: npm i -g heroku
+* Check version of heroku: heroku -v
+* Login to to heroku: heroku login
+* Setup ssh key: See SSH Setup section in git reference markup file
+* Add public key to heroku: heroku keys:add
+* Create a new app: heroku create <app>
+* Add to package.json: "scripts": {"start": "node src/index.js"}
+* Test start command: npm start
+* Push to git repo
+* Push to heroku: git push heroku master
 
 ### config
 * Check config: 'heroku config'
-* heroku config:set key=value
-* heroku config:unset key
+* set key/values: heroku config:set key=value
+* Unset key/values: heroku config:unset key
 
 ### Troubleshoot
-* git:remote -a jkligel-todo: adds heroku to git remotes
-* heroku buildpacks:set heroku/nodejs : sets nodejs as buildpack
+* Add heroku to remote repos: heroku git:remote -a jkligel-todo
+* Set nodejs as buildpack: heroku buildpacks:set heroku/nodejs
