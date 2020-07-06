@@ -24,6 +24,13 @@ Check untracked files
 #### Examples:
 	* 'git status'
 
+### reset
+Undo changes and commits
+#### Examples:
+	* Remove staged and working directory changes: git reset --hard
+	* Go back a certain number of changes: git reset --hard HEAD~2
+	* 
+
 ### add
 Add to be tracked	
 #### Examples
@@ -71,14 +78,14 @@ to remove from git collection
 ### git config
 Config git
 #### Usage:
-	* set email: git config --global user.email "jkligel@gmail.com"
-	* set username: git config --global user.name "Joseph Kligel"
+	* Set email: git config --global user.email "jkligel@gmail.com"
+	* Set username: git config --global user.name "Joseph Kligel"
+	* Set timeout git logins: git config --global credential.helper "--cached timeout 7200"
 
 ### .gitignore
 File to with a list of directories and files that should be ignored
 #### Example:
 	* echo 'node_modules/' >> .gitignore
-
 
 ## -------------------------Heroku Git------------------------
 Using heroku git
