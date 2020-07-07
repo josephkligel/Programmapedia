@@ -193,7 +193,7 @@ Template engine
 	-file extensions: 'hbs'
 	-hbs.registerPartials(<partials var or string>): setup for partials directory
 	-{{>header}}: syntax for rendering partials
-	-{{ variable  }}: systax for displaying variables in hbs file
+	-{{ variable  }}: syntax for displaying variables in hbs file
 
 ### body-parser
 Parses json, html and other formats
