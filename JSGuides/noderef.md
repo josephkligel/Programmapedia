@@ -244,7 +244,7 @@ Confinguration package
 Another configuration packages
 #### Usage:
 	* npm i env-cmd --save-dev
-	* package.json: Add 'env-cmd ./config/dev.env' to scripts
+	* package.json: Add 'dev': 'env-cmd -f ./config/dev.env' to scripts
 	* Add key/value pairs to dev.env
 
 ### chalk:
