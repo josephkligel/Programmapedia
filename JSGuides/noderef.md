@@ -359,3 +359,12 @@ Popular framework for testing
         	password: "MyPass777!"
     		}).expect(201)
 	})
+
+### socket.io
+Use websocket framework to create full-duplex communicative apps
+#### Usage:
+	* const socketio = require('socket.io');
+	* const http = require('http'); 
+	* const server = http.createServer(app);
+	* const io = socketio(server);
+	* io.on('connection', () => console.log('New websocket connection')) 	 
