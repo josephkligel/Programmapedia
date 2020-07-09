@@ -361,10 +361,21 @@ Popular framework for testing
 	})
 
 ### socket.io
-Use websocket framework to create full-duplex communicative apps
+Use websocket framework to create full-duplex communicative apps, i.e. functions called from client-side and server-side
 #### Usage:
-	* const socketio = require('socket.io');
-	* const http = require('http'); 
-	* const server = http.createServer(app);
-	* const io = socketio(server);
-	* io.on('connection', () => console.log('New websocket connection')) 	 
+	* require socketio library: ionst socketio = require('socket.io');
+	* require http library: const http = require('http'); 
+	* create server: const server = http.createServer(<express()|app>);
+	* create socketio server-side instance: const io = socketio(server)
+		* emit from io: io.emit('countUpdated', <variable>)
+	* create socketio client-side instance: const socket = io()
+	* server on event: io.on('connection', (socket) => <callback(s)>)
+		* connection event: Listens for a connection event
+		* socket variable: Is the meta-info of the socket connection
+		* callbacks: call internal methods with socket variable
+	* socket variable: io.on('connection', socket => <callback(s)>) | const socket = io()
+		* emit event from server or client: socket.emit('countUpdated', <variable>)
+		* listen on server or client: socket.on('countUpdated', <callback(s)>)
+		* broadcast from server: socket.broadcast.emit('message', <callback(s)>)
+	* send log off message from server: socket.on('disconnect', <callback(s)>)
+

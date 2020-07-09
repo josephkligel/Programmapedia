@@ -5,7 +5,7 @@ Legend:
 
 ## ----------------------Importing/Exporting-----------------
 Importing modules
-### Importing:
+### Importing (ES6):
 	-import App from './App';
 	-const lodash = requires('lodash'): for nodejs only
 	-import React, {useState} from 'react': destructuring
@@ -16,33 +16,60 @@ Exporting modules
 	-export {app: "app", function: "function", develop: "develop"}: exports other functions with a given name to use
 	-module.exports = function(){}: for nodejs only 
 
-
 ## ----------------------Operators---------------------
-Operators: i++, i--, ++i, --i, i+=1, i-=1
 
+### Reassignment
+Assign new values to variables
+#### Usage:
+	* Incrementing: i++, ++i, i+=1
+	* Decrementing: i--, --i, i-=1
+
+### Spread
+Quick way to add an array to a list or object
+#### Usage:
+	* spread operator: const newList = [...citrus]
+		* Definition: Adds the items from an array called citrus
+		* Tip: Can be added to anoter list
+	* Assinge names to items in a list: [ fullName, setFullName  ] = <array>
+	
+### Destructuring
+Pull properties from an object
+#### Usage:
+	* Pulling: { name, value } = event.target
+		* Definition: pulls keys from objects
+		* Tip: Can use any variable name, but name and value were chosen in the example above
+	* Assign new names to pulled properties: {name: newName, value: newValue} = event.target
+		*  newName and newValue are the new names of name and value properties
+ 
 ## ----------------------Strings-----------------------
 Methods and Examples of string usages in JavaScript.
 ### Methods
-	-'a word or array'.splice(<from index>, <to index>)
-	-'a word or array'.split(<delimiter>, [limit number])
+	-splice: 'a word or array'.splice(<from index>, <to index>)
+	-split: 'a word or array'.split(<delimiter>, [limit number])
 
 ## --------------------Arrays-----------------------------
 Methods for arrays. Many of them also work on strings. So, between arrays and strings, theto-be-mentioned methods are interchangeable.
 ### Methods
-	-<array or string>.splice(<start index>, <number to cut>[, <insert word(s) at start index>]): cuts elements from arrays or characters from a string 
-	-(").push(), pop
-	-(").concat(<array 2>): Join arrays together. Make sure to reassing to update the main array variable, e.g. 'planets = planets.planets = planets.concat(rocks)'
-	-(").every(), any(), some(<var name>, callback), forEach(<var name for item in array>, callback)
-	-map(): Create a new array by doing something with each item in an array.
-		-<array>.map((<array item>) => {return item*2})
-	-filter(): Create an array that matches a condition
-		-<array>.filter(item => return item < 10)
-	-reduce(): Applies a calculation to all the items in an array by using an accumulator
-		-<array>.reduce((accumulator, item) => {return accumulator + item})
-	-find(): find the first item that matches from an array.
-		-<array>.find(item => item < 10)
-	-findIndex(): find the index of the first item that matches from an array
-		-<array>.findIndex(index => item < 10)
+	* splice: <array or string>.splice(<start index>, <number to cut>[, <insert word(s) at start index>]): cuts elements from arrays or characters from a string 
+	* push: <array>.push()
+	* pop: <array>.pop()
+	* concat: <array1>.concat(<array2>) 
+		* Join arrays together. 
+		* Reassign array variable to update: planets = planets.concat(rocks)
+	* every: <array>.every(<item>, <return condition>)
+	* some: (").some(")
+	* forEach: (").forEach(")
+	* map: (").map(")
+		* Definition: Create a new array by doing something to each item in an array.
+	* filter: (").filter("): 
+		* Definition: Create an array that matches a condition
+	* reduce: <array>.reduce((<accumulator>, <item>) => {<return accumulator + item>})
+		* Definition: Applies a calculation to all the items in an array by using an accumulator
+		* Accumulator: the sum variable
+	* find: <array>.find(item => item < 10)
+		* Definition: Find the first item that matches from an array.
+	* findIndex: <array>.findIndex(index => item < 10)
+		* Definition: Find the index of the first item that matches from an array
 
 ## ----------------------Dates-------------------------
 Methods for dates
@@ -53,13 +80,23 @@ Methods for dates
 
 ## -----------------------DOM----------------------
 DOM Methods
-### Get element to manipulate:
-	-document.querySelector(".someclass") or [querySelectorAll, getElementById, getElementByClassNames]
 
-### Creation:
-	-<element>.createElement('div')
+### Grabbing element objects:
+Gets an element to manipulate
+#### Usage:
+	* querySelector: document.querySelector(".someclass")
+	* querySelectorAll: (")
+	* getElementById: (")
+	* getElementByClassNames: (")
 
-### Element Manipulation:
+### Creation
+Create an element
+#### Usage:
+	* createElement: <element>.createElement("p")
+
+### Children to element:
+Add or remove from a parent element
+#### Usage:
 	-<element>.appendChild('p'): add a child to an element
 	-(").innerHTML = <element or string>: add something(e.g. child element or string) between the element tags 
 	
@@ -69,27 +106,22 @@ DOM Methods
 		-Value is assigned becuase it is a property
 
 ### Attribute Manipulation:
-	-<element>.classList.add('newclass') or [remove()]
-	-<element>.setAttribute('class', 'newclass')
+	* add class: <element>.classList.add('newclass')
+	* remove class: (").classList.remove(<class name>)
+	* set attribute: (").setAttribute('class', 'newclass')
 
-## -------------------Event Listeners-------------------
-Event listeners for elements
-### Event:
-	-'click': <button>
-	-'change': <select>
+### Events
+Events on Document and Window
+#### Document:
+	* click: <element>.onclick = <callback> | button.addEventListener(<event>, <callback>)
+	* change: (")
+	* mouse: mouseover, mouseout, mouseon
+### Window:
+	* resize: window(<event>, <callback(s)>)
 
-### Usage:
-	-<element>.addEventListener(<event>, callback)
+## ----------------------------------- Navigator ------------------------------------
+Get geolocation info
+#### Methods:
+	* Geolocation: navigator.geolocation.getCurrentPosition(postion => console.log(position))
 
-## ---------------------Spread and Destruct---------------
-Operators for spread and destruct
-### Spread:
-	-'...citrus': adds the items from an array or object called citrus
-		-can be added to anoter list
-	-'[key] : value': the value of key becomes the key name
-	
-### Destructuring:
-	-{ name, value } = event.target: allows you to call event.target.value and event.target.name with the variable names name and value
-		-pulls keys from objects
-		-{name: newName, value: newValue} = event.target: assign new variable names to object properties. The new names are newName and newValue
-	-[ fullName, setFullName  ] = useState(""): Assign variable names to items in a list 
+
