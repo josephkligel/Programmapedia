@@ -124,4 +124,25 @@ Get geolocation info
 #### Methods:
 	* Geolocation: navigator.geolocation.getCurrentPosition(postion => console.log(position))
 
+## --------------------------------- 3rd Party JS Libraries ----------------------------
 
+### Mustache
+JavaScript library to render html
+#### Usage:
+	* link mustashe to html: <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+	* create script in html: <script id="template"><div><p>{{var}}</p></div></script>
+	* reference in js file: const template = document.querySelector('#template').innerHTML
+	* create html var: const html = Mustache.render(template, var)
+	* add template to html: <selectedElement>.insertAdjacentHTML(<position>, html)
+		* position: 'beforebegin', 'afterbegin', 'beforeend', 'afterend'
+
+### moment
+Time and date formatter for JavaScript
+#### Usage:
+	* link moment to html: <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+	*  format: moment(<date>).format('h:m a')
+		* h: hour
+		* m: minute
+		* a/A: am/pm or AM/PM
+		* more tokens: See moment docs webpage for more token examples
+	
