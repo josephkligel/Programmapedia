@@ -203,16 +203,16 @@ Parses json, html and other formats
 		extended: true
 	}));
 
-### bcrypt
+### bcryptjs
 Used to encrypt data. Install bcryptjs
 #### Usage:
-	* const bcrypt = require('bcryptjs')
+	* require: const bcrypt = require('bcryptjs')
 	* bcrypt(<pass>, 8, <callback>)
 	* bcrypt.hashSync(pass, 8)
 		* First argument is the password
 		* Second is the amount of rounds to hash the password. Never use more than 10
-	* bcrypt.compare(pass, hash, callback)	
-	* bcrypt.compareSync(password, hashedPw): Returns true or false after comparing passwords
+	* bcrypt.compare(<pass>, <hashedPw>, <callback>)	
+	* bcrypt.compareSync(<pass>, <hashed>): Returns true or false after comparing passwords
 
 ### mongoose
 Used to communicate with MongoDB databases
@@ -374,8 +374,15 @@ Use websocket framework to create full-duplex communicative apps, i.e. functions
 		* socket variable: Is the meta-info of the socket connection
 		* callbacks: call internal methods with socket variable
 	* socket variable: io.on('connection', socket => <callback(s)>) | const socket = io()
-		* emit event from server or client: socket.emit('countUpdated', <variable>)
+		* emit event from server or client: socket.emit('countUpdated', <variable>, [optional callback])
 		* listen on server or client: socket.on('countUpdated', <callback(s)>)
 		* broadcast from server: socket.broadcast.emit('message', <callback(s)>)
 	* send log off message from server: socket.on('disconnect', <callback(s)>)
 
+### bad-words
+Library to detect bad words
+#### Usage:
+	* require: const Filter = require('bad-words')
+	* new instance: const filter = new Filter()
+	* isProfane: filter.isProfane(<bad-word>)
+	*
