@@ -377,6 +377,10 @@ Use websocket framework to create full-duplex communicative apps, i.e. functions
 		* emit event from server or client: socket.emit('countUpdated', <variable>, [optional callback])
 		* listen on server or client: socket.on('countUpdated', <callback(s)>)
 		* broadcast from server: socket.broadcast.emit('message', <callback(s)>)
+		* join room: socket.join(room)
+		* emit to room: socket.to(room).emit(")
+		* broadcast to room: socket.broadcast.to(room).emit(")
+		*
 	* send log off message from server: socket.on('disconnect', <callback(s)>)
 
 ### bad-words

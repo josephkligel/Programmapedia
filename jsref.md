@@ -88,24 +88,35 @@ Gets an element to manipulate
 	* querySelectorAll: (")
 	* getElementById: (")
 	* getElementByClassNames: (")
+	* Add between element tags: (").innerHTML = <element or text>
+	* Add text to element: (").textContent = <text>
 
 ### Creation
 Create an element
 #### Usage:
 	* createElement: <element>.createElement("p")
 
-### Children to element:
+### Children
 Add or remove from a parent element
 #### Usage:
-	-<element>.appendChild('p'): add a child to an element
-	-(").innerHTML = <element or string>: add something(e.g. child element or string) between the element tags 
-	
-### Style:
-	-<element>.height [width]
-	-<element>.style.color or [background, display, or any other css property]
-		-Value is assigned becuase it is a property
+	* add a child within element: <element>.appendChild('p')
+	* get last element of ul: (").lastChildElement()
 
-### Attribute Manipulation:
+### Property
+Get or assign property of an element
+#### Usage:
+	* get style of element: getComputedStyle(<element>)
+	* get height/width: (").height or width
+	* get visible height/width, excluding margin: (").offsetHeight or offsetWidth
+	* get css property: (").style.color (background or other css property)
+	* get scroll properties:
+		* height of scrollbar: <element>.scrollHeight
+		* scroll from top of scrollbar: (").scrollTop
+
+### Attribute
+Get attribute or set attributes
+#### Usage:
+	* get list of classes: <element>.classlist
 	* add class: <element>.classList.add('newclass')
 	* remove class: (").classList.remove(<class name>)
 	* set attribute: (").setAttribute('class', 'newclass')
@@ -124,6 +135,15 @@ Get geolocation info
 #### Methods:
 	* Geolocation: navigator.geolocation.getCurrentPosition(postion => console.log(position))
 
+## ------------------------------ Location -----------------------------
+Get info about current page
+### Methods:
+	* Info about webpage: location
+	* Url Queries: location.search
+	* Full Url: location.href
+		* redirect: location.href = '/'
+	* Parent page: location.origin
+
 ## --------------------------------- 3rd Party JS Libraries ----------------------------
 
 ### Mustache
@@ -131,6 +151,8 @@ JavaScript library to render html
 #### Usage:
 	* link mustashe to html: <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
 	* create script in html: <script id="template"><div><p>{{var}}</p></div></script>
+		* passing variables: {{var}}
+		* passing lists: <ul>{{#users}} <li>{{user}}</li> {{/users}}</ul>
 	* reference in js file: const template = document.querySelector('#template').innerHTML
 	* create html var: const html = Mustache.render(template, var)
 	* add template to html: <selectedElement>.insertAdjacentHTML(<position>, html)
@@ -145,4 +167,10 @@ Time and date formatter for JavaScript
 		* m: minute
 		* a/A: am/pm or AM/PM
 		* more tokens: See moment docs webpage for more token examples
+
+### Qs
+Library to work with queries
+#### Usage:
+	* link Qs to html: <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+	* get vars: {username, room} = Qs.parse(location.search, {ignoreQueryPrefix: true})
 	
