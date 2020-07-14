@@ -94,11 +94,10 @@ Loops used in C++
 	* for: 'for(int i{}; i < x.size(); i++) do something'
 	* for(ranges): 'for(auto score: scores) cout << score << endl;'
 		* auto uses the type of the collection
-		* loops through a collection
+		* loops through a collection using the var name before the colon
 		* only works on collections, like strings and arrays
 	* while: 'while(x < y) do something'
-	* do while:
-	*
+	* do while: do{something}while(condition)
 
 ## ---------------------- Builtin Packages ---------------
 
@@ -123,12 +122,39 @@ Input/output stream manipulator
 	* 'cout << fixed << setprecision(1);': Round decimals places to one
 
 ### climits
-
-### cctypes
-Functions for strings and characters
+Get the limit info of variable types
 #### Usage:
-	* '#include <cctypes>'
+	* include: #include <climits>
+	* min methods: CHAR_MIN, SHRT_MIN, LONG_MIN, LLONG_MIN
+	* max methods: (")_MAX
+
+### cctype
+Functions for characters
+#### Usage:
+	* include: '#include <cctype>'
 	* Methods: isalpha(<string>), isalnum(), isdigit(), islower(), isupper()
 		* isprint(): if printable character
 		* ispunct(), isspace()
 		* tolower(), toupper()
+### cstring
+Library for c-style strings
+#### Usage:
+	* include: #include <string>
+	* Methods: strcopy(<copy_to>, <copy_from>), strcat("), strcmp(s1, s2)
+
+### string
+Library for c++ strings
+#### Usage:
+	* include: #include <string>
+	* string variable: std::string s1 {"Frank"}
+	* substring: object.substr(start_index, end_index)
+		* disclaimer: substr cut up till and excluding the end index
+	* find index of character: s1.find("Fra")
+	* erase character(s): s1.erase(0, 2)
+	* clear string: s1.clear()
+	* size: s1.length()
+	* concatanate: s1 += " James"
+	* get entire line: getline(cin, s2, 'x')
+		* cin: form of input
+		* s2: the variable to put to
+		* 'x': the delimiter
