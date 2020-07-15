@@ -199,7 +199,7 @@ Template engine
 Parses json, html and other formats
 #### Examples:
 	-const bodyParser = require("body-parser");
-	-app.use({urlapp.use(bodyParser.urlencoded({
+	-app.use(bodyParser.urlencoded({
 		extended: true
 	}));
 
@@ -389,4 +389,3 @@ Library to detect bad words
 	* require: const Filter = require('bad-words')
 	* new instance: const filter = new Filter()
 	* isProfane: filter.isProfane(<bad-word>)
-	*
