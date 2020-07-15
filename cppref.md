@@ -147,14 +147,23 @@ Library for c++ strings
 #### Usage:
 	* include: #include <string>
 	* string variable: std::string s1 {"Frank"}
+		* initializing part of a variable: string s2{s1, 0, 3}
+		* contructor-style initialization: string s3{3, 'x'}, i.e. "xxx"
 	* substring: object.substr(start_index, end_index)
 		* disclaimer: substr cut up till and excluding the end index
 	* find index of character: s1.find("Fra")
 	* erase character(s): s1.erase(0, 2)
 	* clear string: s1.clear()
 	* size: s1.length()
+	* swap values of strings: s1.swap(s2) or std::swap(s1, s2)
 	* concatanate: s1 += " James"
 	* get entire line: getline(cin, s2, 'x')
 		* cin: form of input
 		* s2: the variable to put to
 		* 'x': the delimiter
+
+### iomanip
+Manipulate input and output
+#### Usage:
+	* include: #include <iomanip>
+	* Methods: boolalpha
