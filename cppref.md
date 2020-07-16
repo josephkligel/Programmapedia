@@ -1,4 +1,7 @@
 # C++ Reference Guide
+
+Reference site: https://en.cppreference.com/w/cpp/header
+
 Legend:
 >("): Same as above or near
 >etiam: Also in C programming
@@ -22,7 +25,7 @@ Legend:
 '#' before a identifier. These are items that are initialized before the compilation of the program.
 #### Examples:
 	* include: Programs reference and used in a program
-		* <iostream>: For libraries
+		* <iostream>: For standard libraries
 		* "myfile.h": For programmer-built programs
 	* define: '#define pi 3.14271'
 		* replaces all instances of pi with the literal 3.14271
@@ -99,6 +102,14 @@ Loops used in C++
 	* while: 'while(x < y) do something'
 	* do while: do{something}while(condition)
 
+### Functions
+Logic modularization in C++
+#### Usage:
+	* declaring a function: int add_number(int a, int b){return a + b}
+	* prototyping functions: int add_number(int a, int b)
+		* Functions have to be prototyped if they are called somewhere before their defined
+		* A prototype only consists of the header information and not the body
+
 ## ---------------------- Builtin Packages ---------------
 
 ### iostream
@@ -167,3 +178,27 @@ Manipulate input and output
 #### Usage:
 	* include: #include <iomanip>
 	* Methods: boolalpha
+
+### cmath
+Math library
+#### Usage:
+	* include: #include <cmath>
+	* square root: sqrt(<number>)
+	* Other Methods: cbrt, sin, cos, ceil, floor, round
+	* power: pow(<number>, <power>)
+
+### ctime
+Time library 
+#### Usage:
+	* include: #include <ctime>
+	* get time: time(0)
+		* 0: gets the time from 1971 to now in seconds
+
+### cstdlib
+C library for standard, general functions
+#### Usage:
+	* include: #include <cstdlib>
+	* Generate pseudo-random number: std::rand() % 6 + 1
+		* example above: gets a random number between 1 and 6, inclusive
+	* seed pseudo-random number generator: std::srand(time(nullptr))
+		* Disclaimer: Usually called before rand() to prevent the same sequence
