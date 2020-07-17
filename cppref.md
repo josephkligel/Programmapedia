@@ -177,6 +177,7 @@ Library for c++ strings
 Manipulate input and output
 #### Usage:
 	* include: #include <iomanip>
+	* set precision: cout << fixed << setprecision(2)
 	* Methods: boolalpha
 
 ### cmath
