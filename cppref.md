@@ -5,7 +5,7 @@ Reference site: https://en.cppreference.com/w/cpp/header
 Legend:
 >("): Same as above or near
 >etiam: Also in C programming
->': Single quoted text signifies a litteral piece of text.
+>'': Single quoted text signifies a litteral piece of text.
 	* This is a text that can be used in a program
 
 ## ---------------------------- Setup -------------------
@@ -61,6 +61,7 @@ Uses of variables
 		* Always add one byte for '\0'
 		* 'char name[]': empty brackets means any size
 	* constant: 'const int age{29}'
+		* read-only
 	* unsigned: 'unsigned int x{1}'
 		* Can't be negative
 
@@ -68,6 +69,10 @@ Uses of variables
 The operators used in C++
 #### Usage:	
 	* sizeof(var): gets the byte-size of a variable type, variable, or literal
+	* &var: Declare reference or get dddress of a variable
+		* Declare reference to another variable: std::string &theBoss = mrSamberg
+		* Get address: std::string *theBoss; theBoss = &mrSamberg
+	* 
 
 ### Arrays
 Lists of items
@@ -123,8 +128,12 @@ Input and output library for C++
 Use vectors
 #### Usage:
 	* '#include <vector>': link to library
-	* 'vector<int> nums': create nums vector
+	* 'std::vector<int> nums': create nums vector
+	* Access element: nums[1]
 	* 'vector<vector<int>> grid': create mult-dimensional vector
+	* nums.push_back(2): Adds 2 to end of nums vector
+	* Clear vector: nums.clear()
+	* Size of vector: nums.size()
 
 ### iomanip
 Input/output stream manipulator
