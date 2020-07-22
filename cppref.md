@@ -68,11 +68,20 @@ Uses of variables
 ### Operators
 The operators used in C++
 #### Usage:	
+	* Give priority to code: (*vector_ptr)[0]
 	* sizeof(var): gets the byte-size of a variable type, variable, or literal
-	* &var: Declare reference or get dddress of a variable
+	* null pointer: nullptr
+	* &var: Declare reference or get address of a variable
 		* Declare reference to another variable: std::string &theBoss = mrSamberg
 		* Get address: std::string *theBoss; theBoss = &mrSamberg
-	* 
+	* pointer: int *number{&x}
+		* Definition: Points to a memory location
+		* Disclaimer: Always initialize pointers, e.g. int *number {nullptr}
+		* Print address: cout << &number << endl
+		* Print value: cout << number << endl, i.e. with no operators before name
+		* Dereference and follow pointer: cout << *number << endl
+		* Assign to value to pointer and variable pointed to: *number = 200
+		* Print element of vector pointer: cout << (*vector_ptr)[0]
 
 ### Arrays
 Lists of items
