@@ -71,17 +71,31 @@ The operators used in C++
 	* Give priority to code: (*vector_ptr)[0]
 	* sizeof(var): gets the byte-size of a variable type, variable, or literal
 	* null pointer: nullptr
-	* &var: Declare reference or get address of a variable
-		* Declare reference to another variable: std::string &theBoss = mrSamberg
-		* Get address: std::string *theBoss; theBoss = &mrSamberg
-	* pointer: int *number{&x}
-		* Definition: Points to a memory location
-		* Disclaimer: Always initialize pointers, e.g. int *number {nullptr}
-		* Print address: cout << &number << endl
-		* Print value: cout << number << endl, i.e. with no operators before name
-		* Dereference and follow pointer: cout << *number << endl
-		* Assign to value to pointer and variable pointed to: *number = 200
-		* Print element of vector pointer: cout << (*vector_ptr)[0]
+	* &<var>: Declare reference or get address of a variable
+	* Reference another variable: string &theBoss = mrSamberg
+		* Print reference value: cout << theBoss
+	* Get address: string *theBoss; theBoss = &mrSamberg
+		* Print reference from pointer: cout << theBoss
+		* Print address of variable: cout << &<variable_name>
+	* pointer to memory location: int *number{&x}
+		* See pointer section for more
+### Pointer		
+Points to a memory location
+### Usage:
+	* Disclaimer: Always initialize pointers, e.g. int *number {nullptr}
+	* Pointer to variable: int *number{&x}
+		* Assign new value to variable using pointer: *number = 200
+		* Dereference and follow pointer to value(s): cout << *number << endl
+		* Print address: cout << number << endl, i.e. no operators before name
+	* Pointer to array: int *numbers{digits}
+		* Disclaimer: No ampersand before variable pointed to
+		* Print address: cout << numbers, i.e. with no subscription
+		* Print element: cout << numbers[0], i.e. with no operators before name
+		* Array Pointer arithmetic: (numbers + 1), i.e. next element
+		* Dereference with pointer arithmetic: *(numbers + 1) 
+	* Pointer to vector: vector<string> *vector_ptr {&<array>}
+		* Disclaimer: Ampersand is included when declaring
+		* Print element: cout << (*vector_ptr)[0], i.e. always with parentheses
 
 ### Arrays
 Lists of items
@@ -123,6 +137,14 @@ Logic modularization in C++
 	* prototyping functions: int add_number(int a, int b)
 		* Functions have to be prototyped if they are called somewhere before their defined
 		* A prototype only consists of the header information and not the body
+
+### Memory Allocation
+Dyname memory allocation on the heap, a free-for-all
+#### Usage:
+	* Newly allocated memory: int *int_ptr {nullptr}; int_ptr = new int
+		* Specific size: int_ptr = new int[<size>]
+	* Free allocated storage: delete int_ptr
+		* Delete array storage: delete [] <some_array>
 
 ## ---------------------- Builtin Packages ---------------
 
