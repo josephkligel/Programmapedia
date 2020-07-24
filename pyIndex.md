@@ -2,6 +2,15 @@
 Legend:
 >("): means the same as above or to the left, e.g. ditto something before
 
+## --------------------- Python Setup -------------------
+* Install python and pip
+* Virtual environment for project: python -m venv ./new_project
+	* Or: pip install --user virtualenv; virtualenv ./new_project
+* Create dependency list for projects: pip freeze > requirements.txt
+	* Or: pipreqs new_project_path/
+* Install dependencies: pip install -r requirements.txt
+* Get dependency info: pip show <packagename> 
+
 ## ----------------------Data Types----------------------
 String(str), Integer(int), Boolean(bool), List/arrays
 #### Usage/Explanation:
