@@ -91,11 +91,21 @@ Points to a memory location
 		* Disclaimer: No ampersand before variable pointed to
 		* Print address: cout << numbers, i.e. with no subscription
 		* Print element: cout << numbers[0], i.e. with no operators before name
-		* Array Pointer arithmetic: (numbers + 1), i.e. next element
-		* Dereference with pointer arithmetic: *(numbers + 1) 
+		* Array Pointer next address: (numbers++), i.e. next element
+		* Dereference with pointer arithmetic: *(numbers++) 
 	* Pointer to vector: vector<string> *vector_ptr {&<array>}
 		* Disclaimer: Ampersand is included when declaring
 		* Print element: cout << (*vector_ptr)[0], i.e. always with parentheses
+	* Comparing pointers: cout << (p1 == p2) 
+		* returns true if point to same thing
+	* Pointer Arithmetic: int_ptr++
+		* Next element address in pointer array: array++
+		* Previous element address: array--
+		* Next element in pointer array: *(array++) or *array++
+		* Previous element: *(array--)
+	* Const pointers: const int *score_ptr {&high_score}
+		* Data stays constant: const int *score_ptr {&high_score}
+		* Pointer stays constant: int *const score_ptr {&high_score} 
 
 ### Arrays
 Lists of items
