@@ -90,7 +90,7 @@ Points to a memory location
 	* Pointer to array: int *numbers{digits}
 		* Disclaimer: No ampersand before variable pointed to
 		* Print address: cout << numbers, i.e. with no subscription
-		* Print element: cout << numbers[0], i.e. with no operators before name
+		* Print element: cout << (*numbers)[0]
 		* Array Pointer next address: (numbers++), i.e. next element
 		* Dereference with pointer arithmetic: *(numbers++) 
 	* Pointer to vector: vector<string> *vector_ptr {&<array>}
@@ -106,7 +106,9 @@ Points to a memory location
 	* Const pointers: const int *score_ptr {&high_score}
 		* Data stays constant: const int *score_ptr {&high_score}
 		* Pointer stays constant: int *const score_ptr {&high_score} 
-
+	* Passing/Function pointers: void double(int *int_ptr){*int_ptr *= 2}
+		* Calling pointer: *int_ptr argument will either be the address of a variable or the naked variable name (e.g. x and not *x)
+		* Assigning pointer argument's value to var: int num = *int_ptr
 ### Arrays
 Lists of items
 #### Usage:
