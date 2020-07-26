@@ -79,7 +79,7 @@ The operators used in C++
 		* Print address of variable: cout << &<variable_name>
 	* pointer to memory location: int *number{&x}
 		* See pointer section for more
-### Pointer		
+### Pointers		
 Points to a memory location
 ### Usage:
 	* Disclaimer: Always initialize pointers, e.g. int *number {nullptr}
@@ -109,6 +109,19 @@ Points to a memory location
 	* Passing/Function pointers: void double(int *int_ptr){*int_ptr *= 2}
 		* Calling pointer: *int_ptr argument will either be the address of a variable or the naked variable name (e.g. x and not *x)
 		* Assigning pointer argument's value to var: int num = *int_ptr
+
+### References
+An alias for a variable
+#### Usage:
+	* Disclaimer: Must be initialized when declared
+		* 1: Cannot be null
+		* 2: Once initialized cannot be reference to another variable
+		* 3: A reference is a constant pointer that is automatically dereferenced
+	* Declare and initialize ref: int &ref = num
+	* Change value of ref and var: ref = 300, i.e. now ref's and num's value is 300
+	* Loops: for(auto &str: stooges) cout << str == 'Funny'
+		* Disclaimer: To manipulate the values use reference and copies 
+
 ### Arrays
 Lists of items
 #### Usage:
