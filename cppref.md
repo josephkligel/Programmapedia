@@ -171,6 +171,13 @@ Dyname memory allocation on the heap, a free-for-all
 	* Free allocated storage: delete int_ptr
 		* Delete array storage: delete [] <some_array>
 
+## -------------------- Classes -------------------------
+
+### Classes
+Abstract fashion of re-utilizing code
+#### Usage:
+	* Declare class: 
+
 ## ---------------------- Builtin Packages ---------------
 
 ### iostream
