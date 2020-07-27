@@ -176,7 +176,16 @@ Dyname memory allocation on the heap, a free-for-all
 ### Classes
 Abstract fashion of re-utilizing code
 #### Usage:
-	* Declare class: 
+	* Declare class: class Player {...}
+		* Pointer: Player *frank_ptr = new Player()
+		* Array: Player players[] {frank, hero}
+		* Vector: vector<player> {player}
+	* Disclaimer: Capitalize class name
+	* Instance of class: Player frank
+	* Access methods and attributes: frank.exp
+		* Disclaimer: Make class public before accessing properties
+		* Pointer: (*frank_ptr).exp or frank_ptr->exp 
+		
 
 ## ---------------------- Builtin Packages ---------------
 
