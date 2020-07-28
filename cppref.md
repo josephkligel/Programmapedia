@@ -189,7 +189,7 @@ Abstract fashion of re-utilizing code
 		* Pointer: Player *frank_ptr = new Player()
 		* Array: Player players[] {frank, hero}
 		* Vector: vector<player> {player}
-	* Disclaimer: Capitalize class name
+	* Disclaimer: Capitalize class name and always end class block with semicolon
 	* Instance of class: Player frank
 	* Access methods and attributes: frank.exp
 
@@ -212,15 +212,23 @@ Class functions
 ### Constructor
 Initialize instance of a class
 #### Usage:
+	* Info: Classes automatically create no-args constructors
+	* Disclaimer: If constructor is provided, default constructor no longer works
 	* Initializing contructor: Player()
+		* Initializing constructor with args: Player frank {"Frank", 100, 13}
 		* Initializing pointer: Player *enemy = new Player
 	* Overload contructor: Player(std::string name); Player(string style)
+		* Info: Classes can have as many constructors as needed
 	* Destructor: ~Player()
-		* Definition: Special member method
-		* Disclaimer: Invoked automatically when obj is destroyed
+		* Definition: Destroys instance
+		* Info: Invoked automatically when obj is destroyed
 			* 1: No return type nor parameters
 			* 2: Only 1 destructor per class
 			* 3: Useful for releasing memory and other resources
+	* Constructor initializing lists: Player(string n):name{n}{} 
+		* Disclaimer: Use colon to initialize lists
+			* 1: make sure list in order of the declaration of parameters
+		* Definition: Follows the parameter list and initializes automatically
 		
 
 ## ---------------------- Builtin Packages ---------------
