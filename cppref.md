@@ -211,12 +211,12 @@ Class functions
 
 ### Constructor
 Initialize instance of a class
-#### Usage:
+#### Tips:
 	* Info: Classes automatically create no-args constructors
 	* Disclaimer: If constructor is provided, default constructor no longer works
-	* Initializing contructor: Player()
-		* Initializing constructor with args: Player frank {"Frank", 100, 13}
-		* Initializing pointer: Player *enemy = new Player
+#### Creating Constructor and Destructor:
+	* Declaration of constructor in class: Player(string name)
+		* External declaration: Player::Player(string name)
 	* Overload contructor: Player(std::string name); Player(string style)
 		* Info: Classes can have as many constructors as needed
 	* Destructor: ~Player()
@@ -229,7 +229,19 @@ Initialize instance of a class
 		* Disclaimer: Use colon to initialize lists
 			* 1: make sure list in order of the declaration of parameters
 		* Definition: Follows the parameter list and initializes automatically
-		
+	* Delegating constructors: Player():Player("None", 0, 0){}
+		* Definition: Delegates to a default constructor (e.g. 3 args constructor)
+		* Disclaimer: When delegating use either "{" or "("
+		* Info: Can use delegation instead of contructor lists
+	* Default parameters: Player(string n="No name", int health=0)
+#### Initializing Contructor:	
+	* Initializing contructor var: Player frank or Player frank = Player()
+	* Initializing constructor with args: Player frank {"Frank", 100, 13}
+	* Initializing pointer: Player *enemy = new Player
+	* Disclaimer: Default parameters during declaration only
+#### Copying Constructor:	
+	* Create instructor: Player::Player(const Player &source){...}
+	* Disclaimer: Make copy instructor constant	
 
 ## ---------------------- Builtin Packages ---------------
 
