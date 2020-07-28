@@ -164,12 +164,21 @@ Logic modularization in C++
 		* A prototype only consists of the header information and not the body
 
 ### Memory Allocation
-Dyname memory allocation on the heap, a free-for-all
+Dynamic memory allocation on the heap, a free-for-all
 #### Usage:
 	* Newly allocated memory: int *int_ptr {nullptr}; int_ptr = new int
 		* Specific size: int_ptr = new int[<size>]
 	* Free allocated storage: delete int_ptr
 		* Delete array storage: delete [] <some_array>
+
+### Header Files
+Including and creating external header files
+#### Usage:
+	* Create header file: touch Account.h
+	* Check if file has been defined: #ifndef _ACCOUNT_H_
+	* If not defined: #define _ACCOUNT_H_
+	* Close prepocessor declaration: #endif
+	 
 
 ## -------------------- Classes -------------------------
 
@@ -183,8 +192,35 @@ Abstract fashion of re-utilizing code
 	* Disclaimer: Capitalize class name
 	* Instance of class: Player frank
 	* Access methods and attributes: frank.exp
-		* Disclaimer: Make class public before accessing properties
+
+### Access Modifiers
+The level of access on classes and their properties
+#### Usage:
+	* private: class Player{private: ...}
+		* Definition: Only accessable with in the class not outside of the class
+	* public: class Player{public: ...}
+		* Definition: Accessable to all
+
+### Methods	
+Class functions
+#### Usage:
+	* Disclaimer: Make class public if accessing properties directly
+	* Access inline methods: frank.talk()
 		* Pointer: (*frank_ptr).exp or frank_ptr->exp 
+	* Access external methods: frank::talk()
+
+### Constructor
+Initialize instance of a class
+#### Usage:
+	* Initializing contructor: Player()
+		* Initializing pointer: Player *enemy = new Player
+	* Overload contructor: Player(std::string name); Player(string style)
+	* Destructor: ~Player()
+		* Definition: Special member method
+		* Disclaimer: Invoked automatically when obj is destroyed
+			* 1: No return type nor parameters
+			* 2: Only 1 destructor per class
+			* 3: Useful for releasing memory and other resources
 		
 
 ## ---------------------- Builtin Packages ---------------
