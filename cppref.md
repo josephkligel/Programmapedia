@@ -241,7 +241,15 @@ Initialize instance of a class
 	* Disclaimer: Default parameters during declaration only
 #### Copying Constructor:	
 	* Create instructor: Player::Player(const Player &source){...}
-	* Disclaimer: Make copy instructor constant	
+	* Disclaimer: Make copy instructor constant
+#### Const Correctness:
+	* Definition: Getting access to class methods when instance is declared as a constant
+	* Usage: string get_name()const {return name;}
+		* const qualifier: Tells the class const instances can access method
+#### Static Class Members
+	* Definition: Class wide information that doesn't belong to an object or instance
+	* Declare static data member: static int num_players
+	* Declare static method: static int get_num_players()
 
 ## ---------------------- Builtin Packages ---------------
 
