@@ -246,10 +246,16 @@ Initialize instance of a class
 	* Definition: Getting access to class methods when instance is declared as a constant
 	* Usage: string get_name()const {return name;}
 		* const qualifier: Tells the class const instances can access method
+
 #### Static Class Members
 	* Definition: Class wide information that doesn't belong to an object or instance
 	* Declare static data member: static int num_players
 	* Declare static method: static int get_num_players()
+
+#### Friends
+	* Definition: Granting other classes access to class members
+	* Access to all class members: friend Class Other_Class
+
 
 ## ---------------------- Builtin Packages ---------------
 
