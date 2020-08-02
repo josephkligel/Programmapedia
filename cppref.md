@@ -201,6 +201,12 @@ The level of access on classes and their properties
 	* public: class Player{public: ...}
 		* Definition: Accessable to all
 
+### Class Data Members
+Properties and/or attributes of classes
+#### Usage:
+	* Declaration of member: std::name;
+
+
 ### Methods	
 Class functions
 #### Usage:
@@ -247,15 +253,23 @@ Initialize instance of a class
 	* Usage: string get_name()const {return name;}
 		* const qualifier: Tells the class const instances can access method
 
-#### Static Class Members
-	* Definition: Class wide information that doesn't belong to an object or instance
+### Static Class Members
+Class wide information that doesn't belong to an object or instance
+#### Usage:
 	* Declare static data member: static int num_players
 	* Declare static method: static int get_num_players()
-
-#### Friends
-	* Definition: Granting other classes access to class members
+	* Disclaimer: Static method must be used to retreive static member
+### Friends
+Granting other classes access to class members
+#### Usage:
 	* Access to all class members: friend Class Other_Class
 
+### Overloading Operators
+Creating altered operators
+#### Usage:
+	* Declaring Assignment constructor: Type &Type::operator=(const Type &rhs)
+		* Disclaimer: The keyword operator must precede operator symbol
+	
 
 ## ---------------------- Builtin Packages ---------------
 
