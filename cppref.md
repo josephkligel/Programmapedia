@@ -266,15 +266,20 @@ Granting other classes access to class members
 
 ### Overloading Operators
 Creating altered operators
-#### Usage:
-	* Declaring Assignment Constructor: Type &operator=(const Type &rhs)
+#### Assignment Operator:
+	* Declaring '=' Constructor: Type &operator=(const Type &rhs)
 		* Disclaimer: The keyword operator must precede operator symbol
 	* Initialize Assignment Constructor: Type &Type::operator=(const Type &rhs){...}
 		* Examples: See cpp_programs/playground/Overloading_Operators folder
+#### Move Operator:
 	* Declaring Move Constructor: Type &operator=(Type &&rhs)
 		* Disclaimer: rhs should not be constant and should cotain two &'s
 	* Initializing Move Constructor: Type &Type::operator=(Type &&rhs){...}
 		* Examples: See cpp_programs/playground/Overloading_Operators folder
+#### Conditional Operators:
+	* Declaring '==' or '!=' constructor: Type operator=(const Type &rhs)const
+		* Disclaimer: Make constructor and paramater constant
+	* Initializing: Type Type::operator==(const Type &rhs)const
 	
 
 ## ---------------------- Builtin Packages ---------------
