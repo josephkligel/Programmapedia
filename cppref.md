@@ -276,11 +276,30 @@ Creating altered operators
 		* Disclaimer: rhs should not be constant and should cotain two &'s
 	* Initializing Move Constructor: Type &Type::operator=(Type &&rhs){...}
 		* Examples: See cpp_programs/playground/Overloading_Operators folder
+#### Unary Operator:
+	* Declaring '+': Type operator+(const Type &rhs)
+	* Initializing '+': Type Type::operator+(const Type &rhs){...}
+	* Declaring '-': Type operator-()
+	* Initializing '-': Type Type::operator-(){...}
+#### Increment/Decrement Operator:
+	* Declaring '++':
+	* Initializing '++':
+	* Declaring '--':
+	* Initializing '--':
 #### Conditional Operators:
-	* Declaring '==' or '!=' constructor: Type operator=(const Type &rhs)const
+	* Declaring '==' or '!=': Type operator==(const Type &rhs)const
 		* Disclaimer: Make constructor and paramater constant
-	* Initializing: Type Type::operator==(const Type &rhs)const
-	
+	* Initializing: Type Type::operator==(const Type &rhs)const{...}
+#### Global Operators:
+	* Declaring: friend Type operator+(const Type &lhs, const Type &rhs)
+	* Initializing: Type operator+(")
+		* Info: No namespace is required because it is global
+#### Stream Operators:
+	* Declaring insertion: friend std::ostream &operator<<(std::ostream &os, const Type &rhs)
+	* Initializing insertion: std::ostream &operator<<("){...}
+	* Declaring extraction: friend std::istream &operator>>(std::istream &in, Type &rhs)
+		* Disclaimer: Input parameter should not be constant
+	* Initializing extraction: std::istream &operator>>("){...}
 
 ## ---------------------- Builtin Packages ---------------
 
