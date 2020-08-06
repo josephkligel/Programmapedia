@@ -301,6 +301,23 @@ Creating altered operators
 		* Disclaimer: Input parameter should not be constant
 	* Initializing extraction: std::istream &operator>>("){...}
 
+### Inheritance
+Classes in C++ can be extended, creating new classes which retain characteristics of the base class. Reusability mechanism
+#### Terminology:
+	* Base Class: Parent class, super class
+	* Derived Class: Child class, sub class
+	* Single Inheritance: A new class is created from another single class
+	* Multiple Inheritance: A new class is created from two (or more) other classes
+	* Public Inheritance: Is-a relationship
+		* Is-a Relationship: Class B is A, given class A is the base class
+	* Composition: Has-a relationship
+		* Has-a Relationship: Person class has an Account, or class A has a B
+	* Three Types of Inheritance: Public, private, protected
+		* Public: Most common, establishes is-a relationship
+		* Private and Protected: Has-a relationship, different from composition
+#### Usage:
+	* Public Inheritance: Class Derived: public Base {...};
+
 ## ---------------------- Builtin Packages ---------------
 
 ### iostream
