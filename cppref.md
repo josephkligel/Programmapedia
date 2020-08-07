@@ -200,6 +200,9 @@ The level of access on classes and their properties
 		* Definition: Only accessable with in the class not outside of the class
 	* public: class Player{public: ...}
 		* Definition: Accessable to all
+	* protected: class Player{protected: ...}
+		* Definition: Accessible from the base class and classes derived from the base class
+		* Disclaimer: Not accessible by objects of base or derived
 
 ### Class Data Members
 Properties and/or attributes of classes
@@ -317,6 +320,7 @@ Classes in C++ can be extended, creating new classes which retain characteristic
 		* Private and Protected: Has-a relationship, different from composition
 #### Usage:
 	* Public Inheritance: Class Derived: public Base {...};
+	* Use base class constructors: using Base::Base
 
 ## ---------------------- Builtin Packages ---------------
 
