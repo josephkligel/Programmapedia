@@ -83,6 +83,7 @@ The operators used in C++
 Points to a memory location
 ### Usage:
 	* Disclaimer: Always initialize pointers, e.g. int *number {nullptr}
+		* 1: Always delete pointers after done using them, e.g. delete number
 	* Pointer to variable: int *number{&x}
 		* Assign new value to variable using pointer: *number = 200
 		* Dereference and follow pointer to value(s): cout << *number << endl
@@ -209,7 +210,6 @@ Properties and/or attributes of classes
 #### Usage:
 	* Declaration of member: std::name;
 
-
 ### Methods	
 Class functions
 #### Usage:
@@ -246,7 +246,7 @@ Initialize instance of a class
 #### Initializing Contructor:	
 	* Initializing contructor var: Player frank or Player frank = Player()
 	* Initializing constructor with args: Player frank {"Frank", 100, 13}
-	* Initializing pointer: Player *enemy = new Player
+	* Initializing pointer: Player *enemy = new Player()
 	* Disclaimer: Default parameters during declaration only
 #### Copying Constructor:	
 	* Create instructor: Player::Player(const Player &source){...}
@@ -322,6 +322,14 @@ Classes in C++ can be extended, creating new classes which retain characteristic
 	* Public Inheritance: Class Derived: public Base {...};
 	* Use base class constructors: using Base::Base
 
+### Polymorphism
+Use methods to perform different tasks
+#### Usage:
+	* Static Polymorphis: Base *ptr = new Derived; ptr->say_hello()
+	* Dynamic Binding: virtual void say_hello(...)
+		* Define it for each class, including the base class
+		* Disclaimer: If you don't provide an overridden version it is inherited from it's base class
+	* Virtual Destructors: virtual ~Derived()
 ## ---------------------- Builtin Packages ---------------
 
 ### iostream
