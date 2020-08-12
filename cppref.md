@@ -325,11 +325,15 @@ Classes in C++ can be extended, creating new classes which retain characteristic
 ### Polymorphism
 Use methods to perform different tasks
 #### Usage:
-	* Static Polymorphis: Base *ptr = new Derived; ptr->say_hello()
-	* Dynamic Binding: virtual void say_hello(...)
+	* Static Polymorphism: Base *ptr = new Derived; ptr->say_hello()
+	* Dynamic Binding for methods: virtual void say_hello(...)
 		* Define it for each class, including the base class
 		* Disclaimer: If you don't provide an overridden version it is inherited from it's base class
+		* Info: References can be used, e.g. Account &ref = trust_obj
 	* Virtual Destructors: virtual ~Derived()
+	* Overide method: virtual void say_hello() override
+	* Prevent deriving: virtual void say_hello() final
+	
 ## ---------------------- Builtin Packages ---------------
 
 ### iostream
