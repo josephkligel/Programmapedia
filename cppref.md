@@ -333,7 +333,19 @@ Use methods to perform different tasks
 	* Virtual Destructors: virtual ~Derived()
 	* Overide method: virtual void say_hello() override
 	* Prevent deriving: virtual void say_hello() final
-	
+
+### Abstract Classes
+Classes that cannot be instantiated and are used as base classes in inheritance heirarchies
+#### Usage:
+	* Info: Can use pointers and references to dynamically refere to concrete classes derived from them
+	* Concrete Classes: Classes that can be instantiated, e.g. Savings Account, etc.
+	* Pure virtual function: virtual void draw() = 0;
+		* Disclaimer: Cannot be instantiated
+#### Interface
+	* Example: class Shape{...};
+	* Disclaimer: No keyword for declaring interface classes
+		* 1: Subclasses have to instantiate all virtual of functions of an interface 
+	* Tip: Use 'I' in front of the interface class names, e.g. class I_Shape
 ## ---------------------- Builtin Packages ---------------
 
 ### iostream
