@@ -346,6 +346,49 @@ Classes that cannot be instantiated and are used as base classes in inheritance 
 	* Disclaimer: No keyword for declaring interface classes
 		* 1: Subclasses have to instantiate all virtual of functions of an interface 
 	* Tip: Use 'I' in front of the interface class names, e.g. class I_Shape
+
+## ---------------------- Smart Pointers ------------------
+
+### Smart Pointer
+A pointer that automatically manages its memory allocation
+#### Usage:
+	* Include memory: #include <memory>
+	* Declare Smart Pointer: std::smart_pointer<class> ptr = ...
+	* Print Smart Pointer: cout << (*ptr) << endl
+
+### Unique Pointer
+A smart pointer that cannot be assigned or copied and points to an object on the heap
+#### Usage:
+	* Include: #include <memory>
+	* Declare and Define: std::unique_ptr<int> p1 { new int {100} }
+	* Make unique: std::unique_ptr<int> p1 = make_unique<int>(100)
+		* Alternative: auto p1 = make_unique<int>(100)
+		* Info: Automatically deleted
+	* Print Pointer: std::cout << *p1 [or p1.get()] << std::endl
+	* Reset pointer to nullptr: p1.reset()
+	* Move unique pointer to new pointer: std::unique_ptr<int> p3; p3 = std::move(p1)
+		* Disclaimer: P1 is now a null pointer
+	* Disclaimer: Cannot add unique pointers to vectors because it copies
+
+### Shared Pointers
+Provides shared ownership of heap objects
+#### Usage
+	* Include: #include <memory>
+	* Declare and Define: std::shared_ptr<int>p1 { new int {100} }
+	* Print: cout << *p1 << endl
+	* Reassignment: *p1 = 200
+	* Number of Shared objects using ptr: p1.use_count()
+	* Make shared pointer: std::shared_ptr<int> p1 = make_shared<int>(100)	
+	* Disclaimer: Shared pointers can be added to vectors
+		* 1: When a shared pointer is added to a vector its count increases by 1
+		* 2: When shared pointers are deleted, they can cause memory leak because the objects they point to may have not been destoryed
+
+### Weak Pointers
+Creates a non-owning weak reference
+#### Usage:
+	* Include: #include <memory>
+	* Defining and Declaring: std::weak_ptr<A> a_ptr = a
+
 ## ---------------------- Builtin Packages ---------------
 
 ### iostream
