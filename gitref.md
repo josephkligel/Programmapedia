@@ -3,6 +3,12 @@ Legend:
 >("): Same as above or before
 >repository: A place where git files are stored
 
+Table of Contents:
+> Setup and Install
+> Commands
+> Git Config
+> SSH Setup
+
 ## ------------------------ Setup and Install -----------------------
 
 * Install git from website: git-scm.com
