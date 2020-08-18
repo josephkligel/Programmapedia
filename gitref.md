@@ -29,15 +29,16 @@ Undo changes and commits
 #### Examples:
 	* Remove staged and working directory changes: git reset --hard
 	* Go back a certain number of changes: git reset --hard HEAD~2
-	* 
 
 ### add
 Add to be tracked	
-#### Examples
+#### Examples:
 	* 'git add .' or 'git add <filename>': add all or specific file
 		* -A or '.': All files
 	
 ### commit
+Stage changes
+#### Usage:
 	* commit: git commit -m "first commit"
 	* -m: Message flag
 
@@ -61,11 +62,17 @@ Using remote urls
 	* 'git remote add origin <url>': add a new git repo by variable name origin
 	* 'git remote set-origin <url>': #Todo
 
+### branch
+See branches
+#### Usage:
+	* Branch list: git branch
+	* Create new branch: git branch <new-branch>
+
 ### checkout:	
 Using other branches
 #### Examples:
-	* Checkout branch: git checkout -b "firstbranch"
-	* Checkout master: git checkout master
+	* Checkout branch: git checkout master
+	* Create and switch to new branch : git checkout -b "firstbranch"
 
 ### rm	
 to remove from git collection
