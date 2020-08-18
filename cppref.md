@@ -389,6 +389,19 @@ Creates a non-owning weak reference
 	* Include: #include <memory>
 	* Defining and Declaring: std::weak_ptr<A> a_ptr = a
 
+## ---------------------- Error Handling -------------------
+
+### Basic Syntax
+Javascript's syntax is similar to C++'s error handling syntax
+#### Usage:
+	* Try: try{<code to try>}
+	* Catch Object: catch(int &ex) {...do this if exception}
+		* Info: Exceptions can be any type, depending on the type of exception thrown
+	* Catch all: catch(...){do this}
+		* Disclaimer: Must use elipses and exception object cannot be accessed
+	* Print to error output stream: std::cerr << ...
+	* Throw error: Throw 0
+
 ## ---------------------- Builtin Packages ---------------
 
 ### iostream
