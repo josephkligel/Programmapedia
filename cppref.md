@@ -401,6 +401,17 @@ Javascript's syntax is similar to C++'s error handling syntax
 		* Disclaimer: Must use elipses and exception object cannot be accessed
 	* Print to error output stream: std::cerr << ...
 	* Throw error: Throw 0
+		* Info: Can throw any type. Throwing classes is very useful
+		* Disclaimer: Do not throw exceptions in destructors
+	* Throwing classes: Throw DivideByZero()
+		* Disclaimer: Make sure to instantiate class when you throw it
+	* No exception: virtual const char* what() const noexcept {...}
+		* Definition: Don't throw exeption from this method
+
+### Heirarchy
+Deriving from C++ built-in exceptions
+#### Usage:
+	* Derive from exception class: class Some_Except: public std::exception{...};
 
 ## ---------------------- Builtin Packages ---------------
 
