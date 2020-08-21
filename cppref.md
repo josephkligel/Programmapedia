@@ -413,6 +413,61 @@ Deriving from C++ built-in exceptions
 #### Usage:
 	* Derive from exception class: class Some_Except: public std::exception{...};
 
+## ------------------------ Streams -------------------------------
+Stream manipulation, input/output, and formatting
+### Boolean
+Boolean manipulation
+#### Iomanip:
+	* Include: #include<iomanip>
+	* Display conditional statement: std::cout << (10 == 10) << std::endl  //returns 1
+	* Display boolean: std::cout << std::boolalpha // true or false
+	* Display no boolean: std::cout << std::noboolalpha // 0 or 1
+#### Iostream
+	* Include: #include<iostream>
+	* Set formatting: std::cout.setf(std::ios::boolalpha)
+	* No boolean: std::cout.setf(std::ios::noboolalpha)
+	* Reset formatting to default: std::cout << std::resetioflags(std::ios::boolalpha)
+
+
+### Integer
+Integer Manipulation
+#### Iomanip:
+	* Include: #include<iomanip>
+	* Decimal: std::cout << std::dec << num << std::endl
+	* Hexadecimal: std::cout << std::hex << num << std::endl
+	* Octadecimal: std::cout << std::oct << num << std::endl
+	* Show base: std::cout << std::showbase; (") // 0377
+		* Hex: 0x prefix printed
+		* Oct: 0 prefix printed
+	* No base: std::cout << std::noshowbase; (")
+	* Uppercase show base: std::cout << std::noshowbase << std::uppercase; (")
+	* Show positive sign: std::cout << std::showpos; (")
+	* No show positive sign: std::cout << std::noshowpos; (")
+#### Iostream:
+	* Include: #include <iostream>
+	* Reset io flags: std::cout << std::resetiosflags(std::ios::basefield)
+		* Showing base: std::cout << std::resetiosflags(std::ios::showbase)
+		* Showing pos sign: std::cout << std::resetiosflags(std::ios::showpos)
+		* Showing uppercase: std::cout << std::resetiosflags(std::ios::uppercase)
+
+### Floating Point
+Floating point manipulation
+#### Usage:
+	* Include: #include<iomanip>
+	* Disclaimer: Default number of digits is 6
+	* Set the number of digits: std::cout << std::setprecision(3); std::cout << num
+		* Result: if num is 255.7, num will set to 256
+	* Set decimal digits: std::cout << setprecision(3) << std::fixed; (")
+		* Result: 255.700 
+	* Set scientific: std::cout << std::scientific; (")
+	* Show trailing zeroes: std::cout << std::showpoint; (")
+		
+### Formating Field Widths
+Field width, fill, and align
+#### Usage:
+	*  
+
+
 ## ---------------------- Builtin Packages ---------------
 
 ### iostream
