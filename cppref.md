@@ -465,8 +465,32 @@ Floating point manipulation
 ### Formating Field Widths
 Field width, fill, and align
 #### Usage:
-	*  
+	* Include: #include <iomanip>
+	* Set character width: cout << std::setw(10) << num << std::endl // -------num
+		* 10(argument): Tells the setw method to make data 10 characters long
+		* '-': The dashes represent the empty characters
+	* Left justify data: cout << std::left << num << hello
 
+### File Streams
+Input and Output with files
+#### Fstream:
+	* Include: #include <fstream>
+	* Text input fstream: std::fstream in_file {"../myfile.txt", std::ios::in}
+		* Disclaimer: Default is to read from text, i.e. no mode setting needed
+	* Binary: std::fstream in_file {"../myfile.txt", std::ios::in | std::ios::binary}
+#### Ifstream
+	* Include: #include <ifstream>	
+	* Declare file stream: std::fstream in_file
+	* Open text: in_file.open("../myfile.txt")
+	* Open file: in_file.open("...", std::ios::binary)
+	* Close file: in_file.close()
+	* Is file open: in_file.is_open() // returns boolean
+	* Assign line from text to variable: std::getline(in_file, line_var)
+	* Get character: in_file.get(c)
+	* Direct input from file to variable: in_file >> line
+		* Disclaimer: Stops at first space or newline character
+		* Assign to multiple variables: in_file >> line_var >> num >> total
+	* Is file at the end: infile.eof() //returns boolean
 
 ## ---------------------- Builtin Packages ---------------
 
