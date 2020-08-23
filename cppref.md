@@ -508,6 +508,18 @@ Input and Output with files. Fstream for input and output, ifstream for input on
 	* Disclaimer: Always close file to flush out buffer
 	* Close file: out_file.close()
 
+### String Streams
+String buffers
+#### Usage:
+	* Include: #include <sstream>
+#### Input String Stream
+	* Create input string buffer: std::istringstream iss {"Moe 100 1234.56"}
+	* From buffer to variables: iss >> name >> num >> total
+#### Output String Stream
+	* Create output string buffer: std::ostringstream oss {}
+	* From Variable to buffer: oss << name
+	* Flush out buffer to console: std::cout << oss.str()
+
 ## ---------------------- Builtin Packages ---------------
 
 ### iostream
