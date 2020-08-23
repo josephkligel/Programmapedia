@@ -472,25 +472,41 @@ Field width, fill, and align
 	* Left justify data: cout << std::left << num << hello
 
 ### File Streams
-Input and Output with files
+Input and Output with files. Fstream for input and output, ifstream for input only, and ofstream for output only
 #### Fstream:
 	* Include: #include <fstream>
-	* Text input fstream: std::fstream in_file {"../myfile.txt", std::ios::in}
+	* Input file creation: std::fstream in_file {"../myfile.txt", std::ios::in}
 		* Disclaimer: Default is to read from text, i.e. no mode setting needed
-	* Binary: std::fstream in_file {"../myfile.txt", std::ios::in | std::ios::binary}
+		* Binary: ("){"../myfile.txt", std::ios::in | std::ios::binary}
+	* Output file creation: std::fstream out_file {"../myfile.txt", std::ios::out}
+		* Binary: ("){"../myfile.txt", std::ios:out | std::ios::binary} 
 #### Ifstream
-	* Include: #include <ifstream>	
-	* Declare file stream: std::fstream in_file
+	* Include: #include <fstream>	
+	* Declare file stream: std::fstream in_file or std::ifstream in_file
 	* Open text: in_file.open("../myfile.txt")
 	* Open file: in_file.open("...", std::ios::binary)
 	* Close file: in_file.close()
 	* Is file open: in_file.is_open() // returns boolean
 	* Assign line from text to variable: std::getline(in_file, line_var)
-	* Get character: in_file.get(c)
+	* Get by character: in_file.get(c)
 	* Direct input from file to variable: in_file >> line
 		* Disclaimer: Stops at first space or newline character
 		* Assign to multiple variables: in_file >> line_var >> num >> total
+	* Get line from file to variable: std::getline(in_file, line)
+		* Disclaimer: This may be the best option if printing from file to cout
 	* Is file at the end: infile.eof() //returns boolean
+#### Ofstream
+	* Include: #include <fstream>
+	* Output file: std::ofstream out_file {"../myfile.txt", std::ios::trunc}
+		* std::ios::trunc: discard contents when opening
+		* std::ios::app: to append on each write to file
+		* std::ios::ate: seek to end of stream when opening
+		* std::ios::binary: for binary files
+	* Alternative opening: declare stream; out_file.open("../myfile.txt", <mode>)
+		* No mode: Automatically open in truncated mode
+		* Modes: Same modes as above
+	* Disclaimer: Always close file to flush out buffer
+	* Close file: out_file.close()
 
 ## ---------------------- Builtin Packages ---------------
 
@@ -558,6 +574,9 @@ Library for c++ strings
 		* cin: form of input
 		* s2: the variable to put to
 		* 'x': the delimiter
+	* No position of string: std::string::npos
+		* Example: if(s1.find(s2) != std::string::npos){" substring found"}
+		* Example 2: if(s1.find(s2) == string::npos){"Correct substr not found"}
 
 ### iomanip
 Manipulate input and output
