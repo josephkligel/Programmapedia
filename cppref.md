@@ -123,21 +123,6 @@ An alias for a variable
 	* Loops: for(auto &str: stooges) cout << str == 'Funny'
 		* Disclaimer: To manipulate the values use reference and copies 
 
-### Arrays
-Lists of items
-#### Usage:
-	* 'int numbers[5] {1, 2, 3, 4, 5}' or 'int numbers[5] = {1...}'
-
-### Vectors
-Multi-dimensional arrays that are dynamic, have all same types of elements, stored contiguously in memory, elements initialized to zero.
-#### Usage:
-	* '#include <vector>': Must include library to use vector
-	* 'vector <int> test_scores (5)': Create a vector that can hold 5 integer element
-		* When using loops with vectors, use unsigned counters
-	* 'test_scores[1]' or 'test_scores.at(1)': Access element in vector by index
-	* 'test_scores.push_back('a')': push_back adds element to end of vector
-	* 'test_scores.size()': Gives the number of elements in the vector 
-
 ### Conditional Statements
 Do something based on a condition
 #### Usage:
@@ -520,6 +505,47 @@ String buffers
 	* From Variable to buffer: oss << name
 	* Flush out buffer to console: std::cout << oss.str()
 
+## ---------------------- Standard Template Library -------------------
+Easily accessable containers and algorithms
+### Container Libraries
+Lists that hold elements
+#### Types
+	* Sequence Containers: array, vector, list, forward_list, deque
+	* Associative Containers: set, multi set, map, multi map
+	* Container Adapters: stack, queue, priority_queue
+
+### Algorithm Library
+Step-by-step instructions used to solve problems
+#### Usage:
+	* Include: #include <algorithm>
+	* Sort: std::sort(v.begin(), v.end())
+	* Reverse: std::reverse(v.begin(), v.end())
+	* Accumulate: std::accumulate(v.begin(), v.end(), 0)
+		* 0: running sum starts at 0. Can be 0.0 for double 
+
+## ----------------------------- Sequence Containers ------------------------------
+
+### Arrays
+Lists of items
+#### Usage:
+	* Initialize Array: 'int numbers[5] {1, 2, 3, 4, 5}' or 'int numbers[5] = {1...}'
+
+### Vectors
+Multi-dimensional arrays that are dynamic, have all same types of elements, stored contiguously in memory, elements initialized to zero.
+#### Usage:
+	* Include: #include <vector>
+	* Declare vector with size and initialize: std::vector <int> test_scores (5) {1, 2, 3, 4, 5}
+		* When using for loops with vectors, use unsigned counters, e.g. size_t
+	* Access element by index: test_scores[1] or 'test_scores.at(1)
+	* Append element: test_scores.push_back('a')
+	* Size of vector: test_scores.size()
+	* Declare multi-dimensional vector vector<vector<int>> grid
+	* Clear vector: test_scores.clear()
+
+## ----------------------------- Associative Containers ------------------------------
+
+## ----------------------------- Container Adapters ------------------------------
+
 ## ---------------------- Builtin Packages ---------------
 
 ### iostream
@@ -528,17 +554,6 @@ Input and output library for C++
 	* '#include <iostream>': first thing to do to use iostream library
 	* std::cout << "Hello, World" << std::endl: prints text to console
 	* std::cin >> x: assigns input to a variable
-
-### vector
-Use vectors
-#### Usage:
-	* '#include <vector>': link to library
-	* 'std::vector<int> nums': create nums vector
-	* Access element: nums[1]
-	* 'vector<vector<int>> grid': create mult-dimensional vector
-	* nums.push_back(2): Adds 2 to end of nums vector
-	* Clear vector: nums.clear()
-	* Size of vector: nums.size()
 
 ### iomanip
 Input/output stream manipulator

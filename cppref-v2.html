@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>C++ Reference</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">C++ Reference</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#c-reference-guide">C++ Reference Guide</a><ul>
+<li><a href="#setup--------------------">---------------------------- Setup -------------------</a></li>
+<li><a href="#syntax-----------------">---------------------------- Syntax ----------------</a><ul>
+<li><a href="#preprocessor-directives">Preprocessor Directives</a></li>
+<li><a href="#using">using</a></li>
+<li><a href="#double-colons">Double Colons</a></li>
+<li><a href="#two-less-than-signs">Two Less-Than Signs</a></li>
+<li><a href="#two-greater-than-signs">Two Greater-Than Signs</a></li>
+<li><a href="#variable">Variable</a></li>
+<li><a href="#operators">Operators</a></li>
+<li><a href="#pointers">Pointers</a></li>
+<li><a href="#usage-2">Usage:</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#conditional-statements">Conditional Statements</a></li>
+<li><a href="#loops">Loops</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#memory-allocation">Memory Allocation</a></li>
+<li><a href="#header-files">Header Files</a></li>
+</ul></li>
+<li><a href="#classes--------------------------">-------------------- Classes -------------------------</a><ul>
+<li><a href="#classes">Classes</a></li>
+<li><a href="#access-modifiers">Access Modifiers</a></li>
+<li><a href="#class-data-members">Class Data Members</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#constructor">Constructor</a></li>
+<li><a href="#static-class-members">Static Class Members</a></li>
+<li><a href="#friends">Friends</a></li>
+<li><a href="#overloading-operators">Overloading Operators</a></li>
+<li><a href="#inheritance">Inheritance</a></li>
+<li><a href="#polymorphism">Polymorphism</a></li>
+<li><a href="#abstract-classes">Abstract Classes</a></li>
+</ul></li>
+<li><a href="#smart-pointers-------------------">---------------------- Smart Pointers ------------------</a><ul>
+<li><a href="#smart-pointer">Smart Pointer</a></li>
+<li><a href="#unique-pointer">Unique Pointer</a></li>
+<li><a href="#shared-pointers">Shared Pointers</a></li>
+<li><a href="#weak-pointers">Weak Pointers</a></li>
+</ul></li>
+<li><a href="#error-handling--------------------">---------------------- Error Handling -------------------</a><ul>
+<li><a href="#basic-syntax">Basic Syntax</a></li>
+<li><a href="#heirarchy">Heirarchy</a></li>
+</ul></li>
+<li><a href="#streams--------------------------------">------------------------ Streams -------------------------------</a><ul>
+<li><a href="#boolean">Boolean</a></li>
+<li><a href="#integer">Integer</a></li>
+<li><a href="#floating-point">Floating Point</a></li>
+<li><a href="#formating-field-widths">Formating Field Widths</a></li>
+<li><a href="#file-streams">File Streams</a></li>
+<li><a href="#string-streams">String Streams</a></li>
+</ul></li>
+<li><a href="#standard-template-library--------------------">---------------------- Standard Template Library -------------------</a><ul>
+<li><a href="#container-libraries">Container Libraries</a></li>
+<li><a href="#algorithm-library">Algorithm Library</a></li>
+</ul></li>
+<li><a href="#sequence-containers-------------------------------">----------------------------- Sequence Containers ------------------------------</a><ul>
+<li><a href="#arrays">Arrays</a></li>
+<li><a href="#vectors">Vectors</a></li>
+</ul></li>
+<li><a href="#associative-containers-------------------------------">----------------------------- Associative Containers ------------------------------</a></li>
+<li><a href="#container-adapters-------------------------------">----------------------------- Container Adapters ------------------------------</a></li>
+<li><a href="#builtin-packages----------------">---------------------- Builtin Packages ---------------</a><ul>
+<li><a href="#iostream-2">iostream</a></li>
+<li><a href="#iomanip-2">iomanip</a></li>
+<li><a href="#climits">climits</a></li>
+<li><a href="#cctype">cctype</a></li>
+<li><a href="#cstring">cstring</a></li>
+<li><a href="#string">string</a></li>
+<li><a href="#iomanip-3">iomanip</a></li>
+<li><a href="#cmath">cmath</a></li>
+<li><a href="#ctime">ctime</a></li>
+<li><a href="#cstdlib">cstdlib</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<ul>
+<li><span>C++ Reference Guide</span>
+<ul>
+<li><span>---------------------------- Setup -------------------</span></li>
+<li><span>---------------------------- Syntax ----------------</span>
+<ul>
+<li><span>Preprocessor Directives</span></li>
+<li><span>using</span></li>
+<li><span>Double Colons</span></li>
+<li><span>Two Less-Than Signs</span></li>
+<li><span>Two Greater-Than Signs</span></li>
+<li><span>Variable</span></li>
+<li><span>Operators</span></li>
+<li><span>Pointers</span></li>
+<li><span>Usage:</span></li>
+<li><span>References</span></li>
+<li><span>Conditional Statements</span></li>
+<li><span>Loops</span></li>
+<li><span>Functions</span></li>
+<li><span>Memory Allocation</span></li>
+<li><span>Header Files</span></li>
+</ul></li>
+<li><span>-------------------- Classes -------------------------</span>
+<ul>
+<li><span>Classes</span></li>
+<li><span>Access Modifiers</span></li>
+<li><span>Class Data Members</span></li>
+<li><span>Methods</span></li>
+<li><span>Constructor</span></li>
+<li><span>Static Class Members</span></li>
+<li><span>Friends</span></li>
+<li><span>Overloading Operators</span></li>
+<li><span>Inheritance</span></li>
+<li><span>Polymorphism</span></li>
+<li><span>Abstract Classes</span></li>
+</ul></li>
+<li><span>---------------------- Smart Pointers ------------------</span>
+<ul>
+<li><span>Smart Pointer</span></li>
+<li><span>Unique Pointer</span></li>
+<li><span>Shared Pointers</span></li>
+<li><span>Weak Pointers</span></li>
+</ul></li>
+<li><span>---------------------- Error Handling -------------------</span>
+<ul>
+<li><span>Basic Syntax</span></li>
+<li><span>Heirarchy</span></li>
+</ul></li>
+<li><span>------------------------ Streams -------------------------------</span>
+<ul>
+<li><span>Boolean</span></li>
+<li><span>Integer</span></li>
+<li><span>Floating Point</span></li>
+<li><span>Formating Field Widths</span></li>
+<li><span>File Streams</span></li>
+<li><span>String Streams</span></li>
+</ul></li>
+<li><span>---------------------- Standard Template Library -------------------</span>
+<ul>
+<li><span>Container Libraries</span></li>
+<li><span>Algorithm Library</span></li>
+</ul></li>
+<li><span>----------------------------- Sequence Containers ------------------------------</span>
+<ul>
+<li><span>Arrays</span></li>
+<li><span>Vectors</span></li>
+</ul></li>
+<li><span>----------------------------- Associative Containers ------------------------------</span></li>
+<li><span>----------------------------- Container Adapters ------------------------------</span></li>
+<li><span>---------------------- Builtin Packages ---------------</span>
+<ul>
+<li><span>iostream</span></li>
+<li><span>iomanip</span></li>
+<li><span>climits</span></li>
+<li><span>cctype</span></li>
+<li><span>cstring</span></li>
+<li><span>string</span></li>
+<li><span>iomanip</span></li>
+<li><span>cmath</span></li>
+<li><span>ctime</span></li>
+<li><span>cstdlib</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<h1 id="c-reference-guide">C++ Reference Guide</h1>
+<p>Reference site: https://en.cppreference.com/w/cpp/header</p>
+<p>Legend:</p>
+<blockquote>
+<p>("): Same as above or near etiam: Also in C programming '': Single quoted text signifies a litteral piece of text. * This is a text that can be used in a program</p>
+</blockquote>
+<h2 id="setup--------------------">---------------------------- Setup -------------------</h2>
+<ul>
+<li>Install a C++ compiler: Depends on platform being used
+<ul>
+<li>Linux: g++</li>
+<li>Web: Can run C++ programs on cpp.sh website</li>
+</ul></li>
+<li>compile: g++ -Wall -std=c++14 main.cpp -o main
+<ul>
+<li>-Wall: Shows warnings</li>
+<li>-std: Specifies the version of C++ to be used</li>
+<li>main.cpp: The name of the program to compile</li>
+<li>-o: The output name for the main.cpp executable</li>
+</ul></li>
+</ul>
+<h2 id="syntax-----------------">---------------------------- Syntax ----------------</h2>
+<h3 id="preprocessor-directives">Preprocessor Directives</h3>
+<p>'#' before a identifier. These are items that are initialized before the compilation of the program.</p>
+<h4 id="examples">Examples:</h4>
+<pre><code>* include: Programs reference and used in a program
+    * &lt;iostream&gt;: For standard libraries
+    * &quot;myfile.h&quot;: For programmer-built programs
+* define: &#39;#define pi 3.14271&#39;
+    * replaces all instances of pi with the literal 3.14271</code></pre>
+<h3 id="using">using</h3>
+<p>'using' is the namespace directive. It allows methods to be called without including the namespace everytime a method is called.</p>
+<h4 id="examples-1">Examples:</h4>
+<pre><code>* &#39;using namespace std&#39;: This statement will declare entire std namespace
+    * std::cout then becomes cout</code></pre>
+<h3 id="double-colons">Double Colons</h3>
+<p>'::' are the characters used before a method name. It is used with namespaces to identify the correct method to be used.</p>
+<h4 id="examples-2">Examples:</h4>
+<pre><code>* &#39;std::cout&#39;: cout method from std</code></pre>
+<h3 id="two-less-than-signs">Two Less-Than Signs</h3>
+<p>'&lt;&lt;' are the characters used to tell c++ to send data to a particular system</p>
+<h4 id="examples-3">Examples:</h4>
+<pre><code>* std::cout &lt;&lt; &quot;Hello, World\n&quot;: Send text through std console</code></pre>
+<h3 id="two-greater-than-signs">Two Greater-Than Signs</h3>
+<p>'&gt;&gt;' are the characters used to tell c++ to receive data from a certain system and assign it</p>
+<h4 id="examples-4">Examples:</h4>
+<pre><code>* std::cin &gt;&gt; variable </code></pre>
+<h3 id="variable">Variable</h3>
+<p>Uses of variables</p>
+<h4 id="usage">Usage:</h4>
+<pre><code>* primative types: int, double, float, long, short, char, char*
+* declaration: &#39;int age&#39;;
+* initialization: &#39;int age = 8;&#39; or &#39;int age{8};&#39;
+* strings: &#39;char name[7] = &#39;Joseph&#39;&#39;
+    * Always add one byte for &#39;\0&#39;
+    * &#39;char name[]&#39;: empty brackets means any size
+* constant: &#39;const int age{29}&#39;
+    * read-only
+* unsigned: &#39;unsigned int x{1}&#39;
+    * Can&#39;t be negative</code></pre>
+<h3 id="operators">Operators</h3>
+<p>The operators used in C++</p>
+<h4 id="usage-1">Usage:</h4>
+<pre><code>* Give priority to code: (*vector_ptr)[0]
+* sizeof(var): gets the byte-size of a variable type, variable, or literal
+* null pointer: nullptr
+* &amp;&lt;var&gt;: Declare reference or get address of a variable
+* Reference another variable: string &amp;theBoss = mrSamberg
+    * Print reference value: cout &lt;&lt; theBoss
+* Get address: string *theBoss; theBoss = &amp;mrSamberg
+    * Print reference from pointer: cout &lt;&lt; theBoss
+    * Print address of variable: cout &lt;&lt; &amp;&lt;variable_name&gt;
+* pointer to memory location: int *number{&amp;x}
+    * See pointer section for more</code></pre>
+<h3 id="pointers">Pointers</h3>
+<p>Points to a memory location</p>
+<h3 id="usage-2">Usage:</h3>
+<pre><code>* Disclaimer: Always initialize pointers, e.g. int *number {nullptr}
+    * 1: Always delete pointers after done using them, e.g. delete number
+* Pointer to variable: int *number{&amp;x}
+    * Assign new value to variable using pointer: *number = 200
+    * Dereference and follow pointer to value(s): cout &lt;&lt; *number &lt;&lt; endl
+    * Print address: cout &lt;&lt; number &lt;&lt; endl, i.e. no operators before name
+* Pointer to array: int *numbers{digits}
+    * Disclaimer: No ampersand before variable pointed to
+    * Print address: cout &lt;&lt; numbers, i.e. with no subscription
+    * Print element: cout &lt;&lt; (*numbers)[0]
+    * Array Pointer next address: (numbers++), i.e. next element
+    * Dereference with pointer arithmetic: *(numbers++) 
+* Pointer to vector: vector&lt;string&gt; *vector_ptr {&amp;&lt;array&gt;}
+    * Disclaimer: Ampersand is included when declaring
+    * Print element: cout &lt;&lt; (*vector_ptr)[0], i.e. always with parentheses
+* Comparing pointers: cout &lt;&lt; (p1 == p2) 
+    * returns true if point to same thing
+* Pointer Arithmetic: int_ptr++
+    * Next element address in pointer array: array++
+    * Previous element address: array--
+    * Next element in pointer array: *(array++) or *array++
+    * Previous element: *(array--)
+* Const pointers: const int *score_ptr {&amp;high_score}
+    * Data stays constant: const int *score_ptr {&amp;high_score}
+    * Pointer stays constant: int *const score_ptr {&amp;high_score} 
+* Passing/Function pointers: void double(int *int_ptr){*int_ptr *= 2}
+    * Calling pointer: *int_ptr argument will either be the address of a variable or the naked variable name (e.g. x and not *x)
+    * Assigning pointer argument&#39;s value to var: int num = *int_ptr</code></pre>
+<h3 id="references">References</h3>
+<p>An alias for a variable</p>
+<h4 id="usage-3">Usage:</h4>
+<pre><code>* Disclaimer: Must be initialized when declared
+    * 1: Cannot be null
+    * 2: Once initialized cannot be reference to another variable
+    * 3: A reference is a constant pointer that is automatically dereferenced
+* Declare and initialize ref: int &amp;ref = num
+* Change value of ref and var: ref = 300, i.e. now ref&#39;s and num&#39;s value is 300
+* Loops: for(auto &amp;str: stooges) cout &lt;&lt; str == &#39;Funny&#39;
+    * Disclaimer: To manipulate the values use reference and copies </code></pre>
+<h3 id="conditional-statements">Conditional Statements</h3>
+<p>Do something based on a condition</p>
+<h4 id="usage-4">Usage:</h4>
+<pre><code>* if: &#39;if(x &lt; y) do something&#39;
+* else &#39;if(x &gt; y) do something&#39;
+* else: &#39;else(x &lt; y) do something&#39;</code></pre>
+<h3 id="loops">Loops</h3>
+<p>Loops used in C++</p>
+<h4 id="usage-5">Usage:</h4>
+<pre><code>* for: &#39;for(int i{}; i &lt; x.size(); i++) do something&#39;
+* for(ranges): &#39;for(auto score: scores) cout &lt;&lt; score &lt;&lt; endl;&#39;
+    * auto uses the type of the collection
+    * loops through a collection using the var name before the colon
+    * only works on collections, like strings and arrays
+* while: &#39;while(x &lt; y) do something&#39;
+* do while: do{something}while(condition)</code></pre>
+<h3 id="functions">Functions</h3>
+<p>Logic modularization in C++</p>
+<h4 id="usage-6">Usage:</h4>
+<pre><code>* declaring a function: int add_number(int a, int b){return a + b}
+* prototyping functions: int add_number(int a, int b)
+    * Functions have to be prototyped if they are called somewhere before their defined
+    * A prototype only consists of the header information and not the body</code></pre>
+<h3 id="memory-allocation">Memory Allocation</h3>
+<p>Dynamic memory allocation on the heap, a free-for-all</p>
+<h4 id="usage-7">Usage:</h4>
+<pre><code>* Newly allocated memory: int *int_ptr {nullptr}; int_ptr = new int
+    * Specific size: int_ptr = new int[&lt;size&gt;]
+* Free allocated storage: delete int_ptr
+    * Delete array storage: delete [] &lt;some_array&gt;</code></pre>
+<h3 id="header-files">Header Files</h3>
+<p>Including and creating external header files</p>
+<h4 id="usage-8">Usage:</h4>
+<pre><code>* Create header file: touch Account.h
+* Check if file has been defined: #ifndef _ACCOUNT_H_
+* If not defined: #define _ACCOUNT_H_
+* Close prepocessor declaration: #endif
+ </code></pre>
+<h2 id="classes--------------------------">-------------------- Classes -------------------------</h2>
+<h3 id="classes">Classes</h3>
+<p>Abstract fashion of re-utilizing code</p>
+<h4 id="usage-9">Usage:</h4>
+<pre><code>* Declare class: class Player {...}
+    * Pointer: Player *frank_ptr = new Player()
+    * Array: Player players[] {frank, hero}
+    * Vector: vector&lt;player&gt; {player}
+* Disclaimer: Capitalize class name and always end class block with semicolon
+* Instance of class: Player frank
+* Access methods and attributes: frank.exp</code></pre>
+<h3 id="access-modifiers">Access Modifiers</h3>
+<p>The level of access on classes and their properties</p>
+<h4 id="usage-10">Usage:</h4>
+<pre><code>* private: class Player{private: ...}
+    * Definition: Only accessable with in the class not outside of the class
+* public: class Player{public: ...}
+    * Definition: Accessable to all
+* protected: class Player{protected: ...}
+    * Definition: Accessible from the base class and classes derived from the base class
+    * Disclaimer: Not accessible by objects of base or derived</code></pre>
+<h3 id="class-data-members">Class Data Members</h3>
+<p>Properties and/or attributes of classes</p>
+<h4 id="usage-11">Usage:</h4>
+<pre><code>* Declaration of member: std::name;</code></pre>
+<h3 id="methods">Methods</h3>
+<p>Class functions</p>
+<h4 id="usage-12">Usage:</h4>
+<pre><code>* Disclaimer: Make class public if accessing properties directly
+* Access inline methods: frank.talk()
+    * Pointer: (*frank_ptr).exp or frank_ptr-&gt;exp 
+* Access external methods: frank::talk()</code></pre>
+<h3 id="constructor">Constructor</h3>
+<p>Initialize instance of a class</p>
+<h4 id="tips">Tips:</h4>
+<pre><code>* Info: Classes automatically create no-args constructors
+* Disclaimer: If constructor is provided, default constructor no longer works</code></pre>
+<h4 id="creating-constructor-and-destructor">Creating Constructor and Destructor:</h4>
+<pre><code>* Declaration of constructor in class: Player(string name)
+    * External declaration: Player::Player(string name)
+* Overload contructor: Player(std::string name); Player(string style)
+    * Info: Classes can have as many constructors as needed
+* Destructor: ~Player()
+    * Definition: Destroys instance
+    * Info: Invoked automatically when obj is destroyed
+        * 1: No return type nor parameters
+        * 2: Only 1 destructor per class
+        * 3: Useful for releasing memory and other resources
+* Constructor initializing lists: Player(string n):name{n}{} 
+    * Disclaimer: Use colon to initialize lists
+        * 1: make sure list in order of the declaration of parameters
+    * Definition: Follows the parameter list and initializes automatically
+* Delegating constructors: Player():Player(&quot;None&quot;, 0, 0){}
+    * Definition: Delegates to a default constructor (e.g. 3 args constructor)
+    * Disclaimer: When delegating use either &quot;{&quot; or &quot;(&quot;
+    * Info: Can use delegation instead of contructor lists
+* Default parameters: Player(string n=&quot;No name&quot;, int health=0)</code></pre>
+<h4 id="initializing-contructor">Initializing Contructor:</h4>
+<pre><code>* Initializing contructor var: Player frank or Player frank = Player()
+* Initializing constructor with args: Player frank {&quot;Frank&quot;, 100, 13}
+* Initializing pointer: Player *enemy = new Player()
+* Disclaimer: Default parameters during declaration only</code></pre>
+<h4 id="copying-constructor">Copying Constructor:</h4>
+<pre><code>* Create instructor: Player::Player(const Player &amp;source){...}
+* Disclaimer: Make copy instructor constant</code></pre>
+<h4 id="const-correctness">Const Correctness:</h4>
+<pre><code>* Definition: Getting access to class methods when instance is declared as a constant
+* Usage: string get_name()const {return name;}
+    * const qualifier: Tells the class const instances can access method</code></pre>
+<h3 id="static-class-members">Static Class Members</h3>
+<p>Class wide information that doesn't belong to an object or instance</p>
+<h4 id="usage-13">Usage:</h4>
+<pre><code>* Declare static data member: static int num_players
+* Declare static method: static int get_num_players()
+* Disclaimer: Static method must be used to retreive static member</code></pre>
+<h3 id="friends">Friends</h3>
+<p>Granting other classes access to class members</p>
+<h4 id="usage-14">Usage:</h4>
+<pre><code>* Access to all class members: friend Class Other_Class</code></pre>
+<h3 id="overloading-operators">Overloading Operators</h3>
+<p>Creating altered operators</p>
+<h4 id="assignment-operator">Assignment Operator:</h4>
+<pre><code>* Declaring &#39;=&#39; Constructor: Type &amp;operator=(const Type &amp;rhs)
+    * Disclaimer: The keyword operator must precede operator symbol
+* Initialize Assignment Constructor: Type &amp;Type::operator=(const Type &amp;rhs){...}
+    * Examples: See cpp_programs/playground/Overloading_Operators folder</code></pre>
+<h4 id="move-operator">Move Operator:</h4>
+<pre><code>* Declaring Move Constructor: Type &amp;operator=(Type &amp;&amp;rhs)
+    * Disclaimer: rhs should not be constant and should cotain two &amp;&#39;s
+* Initializing Move Constructor: Type &amp;Type::operator=(Type &amp;&amp;rhs){...}
+    * Examples: See cpp_programs/playground/Overloading_Operators folder</code></pre>
+<h4 id="unary-operator">Unary Operator:</h4>
+<pre><code>* Declaring &#39;+&#39;: Type operator+(const Type &amp;rhs)
+* Initializing &#39;+&#39;: Type Type::operator+(const Type &amp;rhs){...}
+* Declaring &#39;-&#39;: Type operator-()
+* Initializing &#39;-&#39;: Type Type::operator-(){...}</code></pre>
+<h4 id="incrementdecrement-operator">Increment/Decrement Operator:</h4>
+<pre><code>* Declaring &#39;++&#39;:
+* Initializing &#39;++&#39;:
+* Declaring &#39;--&#39;:
+* Initializing &#39;--&#39;:</code></pre>
+<h4 id="conditional-operators">Conditional Operators:</h4>
+<pre><code>* Declaring &#39;==&#39; or &#39;!=&#39;: Type operator==(const Type &amp;rhs)const
+    * Disclaimer: Make constructor and paramater constant
+* Initializing: Type Type::operator==(const Type &amp;rhs)const{...}</code></pre>
+<h4 id="global-operators">Global Operators:</h4>
+<pre><code>* Declaring: friend Type operator+(const Type &amp;lhs, const Type &amp;rhs)
+* Initializing: Type operator+(&quot;)
+    * Info: No namespace is required because it is global</code></pre>
+<h4 id="stream-operators">Stream Operators:</h4>
+<pre><code>* Declaring insertion: friend std::ostream &amp;operator&lt;&lt;(std::ostream &amp;os, const Type &amp;rhs)
+* Initializing insertion: std::ostream &amp;operator&lt;&lt;(&quot;){...}
+* Declaring extraction: friend std::istream &amp;operator&gt;&gt;(std::istream &amp;in, Type &amp;rhs)
+    * Disclaimer: Input parameter should not be constant
+* Initializing extraction: std::istream &amp;operator&gt;&gt;(&quot;){...}</code></pre>
+<h3 id="inheritance">Inheritance</h3>
+<p>Classes in C++ can be extended, creating new classes which retain characteristics of the base class. Reusability mechanism</p>
+<h4 id="terminology">Terminology:</h4>
+<pre><code>* Base Class: Parent class, super class
+* Derived Class: Child class, sub class
+* Single Inheritance: A new class is created from another single class
+* Multiple Inheritance: A new class is created from two (or more) other classes
+* Public Inheritance: Is-a relationship
+    * Is-a Relationship: Class B is A, given class A is the base class
+* Composition: Has-a relationship
+    * Has-a Relationship: Person class has an Account, or class A has a B
+* Three Types of Inheritance: Public, private, protected
+    * Public: Most common, establishes is-a relationship
+    * Private and Protected: Has-a relationship, different from composition</code></pre>
+<h4 id="usage-15">Usage:</h4>
+<pre><code>* Public Inheritance: Class Derived: public Base {...};
+* Use base class constructors: using Base::Base</code></pre>
+<h3 id="polymorphism">Polymorphism</h3>
+<p>Use methods to perform different tasks</p>
+<h4 id="usage-16">Usage:</h4>
+<pre><code>* Static Polymorphism: Base *ptr = new Derived; ptr-&gt;say_hello()
+* Dynamic Binding for methods: virtual void say_hello(...)
+    * Define it for each class, including the base class
+    * Disclaimer: If you don&#39;t provide an overridden version it is inherited from it&#39;s base class
+    * Info: References can be used, e.g. Account &amp;ref = trust_obj
+* Virtual Destructors: virtual ~Derived()
+* Overide method: virtual void say_hello() override
+* Prevent deriving: virtual void say_hello() final</code></pre>
+<h3 id="abstract-classes">Abstract Classes</h3>
+<p>Classes that cannot be instantiated and are used as base classes in inheritance heirarchies</p>
+<h4 id="usage-17">Usage:</h4>
+<pre><code>* Info: Can use pointers and references to dynamically refere to concrete classes derived from them
+* Concrete Classes: Classes that can be instantiated, e.g. Savings Account, etc.
+* Pure virtual function: virtual void draw() = 0;
+    * Disclaimer: Cannot be instantiated</code></pre>
+<h4 id="interface">Interface</h4>
+<pre><code>* Example: class Shape{...};
+* Disclaimer: No keyword for declaring interface classes
+    * 1: Subclasses have to instantiate all virtual of functions of an interface 
+* Tip: Use &#39;I&#39; in front of the interface class names, e.g. class I_Shape</code></pre>
+<h2 id="smart-pointers-------------------">---------------------- Smart Pointers ------------------</h2>
+<h3 id="smart-pointer">Smart Pointer</h3>
+<p>A pointer that automatically manages its memory allocation</p>
+<h4 id="usage-18">Usage:</h4>
+<pre><code>* Include memory: #include &lt;memory&gt;
+* Declare Smart Pointer: std::smart_pointer&lt;class&gt; ptr = ...
+* Print Smart Pointer: cout &lt;&lt; (*ptr) &lt;&lt; endl</code></pre>
+<h3 id="unique-pointer">Unique Pointer</h3>
+<p>A smart pointer that cannot be assigned or copied and points to an object on the heap</p>
+<h4 id="usage-19">Usage:</h4>
+<pre><code>* Include: #include &lt;memory&gt;
+* Declare and Define: std::unique_ptr&lt;int&gt; p1 { new int {100} }
+* Make unique: std::unique_ptr&lt;int&gt; p1 = make_unique&lt;int&gt;(100)
+    * Alternative: auto p1 = make_unique&lt;int&gt;(100)
+    * Info: Automatically deleted
+* Print Pointer: std::cout &lt;&lt; *p1 [or p1.get()] &lt;&lt; std::endl
+* Reset pointer to nullptr: p1.reset()
+* Move unique pointer to new pointer: std::unique_ptr&lt;int&gt; p3; p3 = std::move(p1)
+    * Disclaimer: P1 is now a null pointer
+* Disclaimer: Cannot add unique pointers to vectors because it copies</code></pre>
+<h3 id="shared-pointers">Shared Pointers</h3>
+<p>Provides shared ownership of heap objects</p>
+<h4 id="usage-20">Usage</h4>
+<pre><code>* Include: #include &lt;memory&gt;
+* Declare and Define: std::shared_ptr&lt;int&gt;p1 { new int {100} }
+* Print: cout &lt;&lt; *p1 &lt;&lt; endl
+* Reassignment: *p1 = 200
+* Number of Shared objects using ptr: p1.use_count()
+* Make shared pointer: std::shared_ptr&lt;int&gt; p1 = make_shared&lt;int&gt;(100)  
+* Disclaimer: Shared pointers can be added to vectors
+    * 1: When a shared pointer is added to a vector its count increases by 1
+    * 2: When shared pointers are deleted, they can cause memory leak because the objects they point to may have not been destoryed</code></pre>
+<h3 id="weak-pointers">Weak Pointers</h3>
+<p>Creates a non-owning weak reference</p>
+<h4 id="usage-21">Usage:</h4>
+<pre><code>* Include: #include &lt;memory&gt;
+* Defining and Declaring: std::weak_ptr&lt;A&gt; a_ptr = a</code></pre>
+<h2 id="error-handling--------------------">---------------------- Error Handling -------------------</h2>
+<h3 id="basic-syntax">Basic Syntax</h3>
+<p>Javascript's syntax is similar to C++'s error handling syntax</p>
+<h4 id="usage-22">Usage:</h4>
+<pre><code>* Try: try{&lt;code to try&gt;}
+* Catch Object: catch(int &amp;ex) {...do this if exception}
+    * Info: Exceptions can be any type, depending on the type of exception thrown
+* Catch all: catch(...){do this}
+    * Disclaimer: Must use elipses and exception object cannot be accessed
+* Print to error output stream: std::cerr &lt;&lt; ...
+* Throw error: Throw 0
+    * Info: Can throw any type. Throwing classes is very useful
+    * Disclaimer: Do not throw exceptions in destructors
+* Throwing classes: Throw DivideByZero()
+    * Disclaimer: Make sure to instantiate class when you throw it
+* No exception: virtual const char* what() const noexcept {...}
+    * Definition: Don&#39;t throw exeption from this method</code></pre>
+<h3 id="heirarchy">Heirarchy</h3>
+<p>Deriving from C++ built-in exceptions</p>
+<h4 id="usage-23">Usage:</h4>
+<pre><code>* Derive from exception class: class Some_Except: public std::exception{...};</code></pre>
+<h2 id="streams--------------------------------">------------------------ Streams -------------------------------</h2>
+<p>Stream manipulation, input/output, and formatting</p>
+<h3 id="boolean">Boolean</h3>
+<p>Boolean manipulation</p>
+<h4 id="iomanip">Iomanip:</h4>
+<pre><code>* Include: #include&lt;iomanip&gt;
+* Display conditional statement: std::cout &lt;&lt; (10 == 10) &lt;&lt; std::endl  //returns 1
+* Display boolean: std::cout &lt;&lt; std::boolalpha // true or false
+* Display no boolean: std::cout &lt;&lt; std::noboolalpha // 0 or 1</code></pre>
+<h4 id="iostream">Iostream</h4>
+<pre><code>* Include: #include&lt;iostream&gt;
+* Set formatting: std::cout.setf(std::ios::boolalpha)
+* No boolean: std::cout.setf(std::ios::noboolalpha)
+* Reset formatting to default: std::cout &lt;&lt; std::resetioflags(std::ios::boolalpha)</code></pre>
+<h3 id="integer">Integer</h3>
+<p>Integer Manipulation</p>
+<h4 id="iomanip-1">Iomanip:</h4>
+<pre><code>* Include: #include&lt;iomanip&gt;
+* Decimal: std::cout &lt;&lt; std::dec &lt;&lt; num &lt;&lt; std::endl
+* Hexadecimal: std::cout &lt;&lt; std::hex &lt;&lt; num &lt;&lt; std::endl
+* Octadecimal: std::cout &lt;&lt; std::oct &lt;&lt; num &lt;&lt; std::endl
+* Show base: std::cout &lt;&lt; std::showbase; (&quot;) // 0377
+    * Hex: 0x prefix printed
+    * Oct: 0 prefix printed
+* No base: std::cout &lt;&lt; std::noshowbase; (&quot;)
+* Uppercase show base: std::cout &lt;&lt; std::noshowbase &lt;&lt; std::uppercase; (&quot;)
+* Show positive sign: std::cout &lt;&lt; std::showpos; (&quot;)
+* No show positive sign: std::cout &lt;&lt; std::noshowpos; (&quot;)</code></pre>
+<h4 id="iostream-1">Iostream:</h4>
+<pre><code>* Include: #include &lt;iostream&gt;
+* Reset io flags: std::cout &lt;&lt; std::resetiosflags(std::ios::basefield)
+    * Showing base: std::cout &lt;&lt; std::resetiosflags(std::ios::showbase)
+    * Showing pos sign: std::cout &lt;&lt; std::resetiosflags(std::ios::showpos)
+    * Showing uppercase: std::cout &lt;&lt; std::resetiosflags(std::ios::uppercase)</code></pre>
+<h3 id="floating-point">Floating Point</h3>
+<p>Floating point manipulation</p>
+<h4 id="usage-24">Usage:</h4>
+<pre><code>* Include: #include&lt;iomanip&gt;
+* Disclaimer: Default number of digits is 6
+* Set the number of digits: std::cout &lt;&lt; std::setprecision(3); std::cout &lt;&lt; num
+    * Result: if num is 255.7, num will set to 256
+* Set decimal digits: std::cout &lt;&lt; setprecision(3) &lt;&lt; std::fixed; (&quot;)
+    * Result: 255.700 
+* Set scientific: std::cout &lt;&lt; std::scientific; (&quot;)
+* Show trailing zeroes: std::cout &lt;&lt; std::showpoint; (&quot;)
+    </code></pre>
+<h3 id="formating-field-widths">Formating Field Widths</h3>
+<p>Field width, fill, and align</p>
+<h4 id="usage-25">Usage:</h4>
+<pre><code>* Include: #include &lt;iomanip&gt;
+* Set character width: cout &lt;&lt; std::setw(10) &lt;&lt; num &lt;&lt; std::endl // -------num
+    * 10(argument): Tells the setw method to make data 10 characters long
+    * &#39;-&#39;: The dashes represent the empty characters
+* Left justify data: cout &lt;&lt; std::left &lt;&lt; num &lt;&lt; hello</code></pre>
+<h3 id="file-streams">File Streams</h3>
+<p>Input and Output with files. Fstream for input and output, ifstream for input only, and ofstream for output only</p>
+<h4 id="fstream">Fstream:</h4>
+<pre><code>* Include: #include &lt;fstream&gt;
+* Input file creation: std::fstream in_file {&quot;../myfile.txt&quot;, std::ios::in}
+    * Disclaimer: Default is to read from text, i.e. no mode setting needed
+    * Binary: (&quot;){&quot;../myfile.txt&quot;, std::ios::in | std::ios::binary}
+* Output file creation: std::fstream out_file {&quot;../myfile.txt&quot;, std::ios::out}
+    * Binary: (&quot;){&quot;../myfile.txt&quot;, std::ios:out | std::ios::binary} </code></pre>
+<h4 id="ifstream">Ifstream</h4>
+<pre><code>* Include: #include &lt;fstream&gt;   
+* Declare file stream: std::fstream in_file or std::ifstream in_file
+* Open text: in_file.open(&quot;../myfile.txt&quot;)
+* Open file: in_file.open(&quot;...&quot;, std::ios::binary)
+* Close file: in_file.close()
+* Is file open: in_file.is_open() // returns boolean
+* Assign line from text to variable: std::getline(in_file, line_var)
+* Get by character: in_file.get(c)
+* Direct input from file to variable: in_file &gt;&gt; line
+    * Disclaimer: Stops at first space or newline character
+    * Assign to multiple variables: in_file &gt;&gt; line_var &gt;&gt; num &gt;&gt; total
+* Get line from file to variable: std::getline(in_file, line)
+    * Disclaimer: This may be the best option if printing from file to cout
+* Is file at the end: infile.eof() //returns boolean</code></pre>
+<h4 id="ofstream">Ofstream</h4>
+<pre><code>* Include: #include &lt;fstream&gt;
+* Output file: std::ofstream out_file {&quot;../myfile.txt&quot;, std::ios::trunc}
+    * std::ios::trunc: discard contents when opening
+    * std::ios::app: to append on each write to file
+    * std::ios::ate: seek to end of stream when opening
+    * std::ios::binary: for binary files
+* Alternative opening: declare stream; out_file.open(&quot;../myfile.txt&quot;, &lt;mode&gt;)
+    * No mode: Automatically open in truncated mode
+    * Modes: Same modes as above
+* Disclaimer: Always close file to flush out buffer
+* Close file: out_file.close()</code></pre>
+<h3 id="string-streams">String Streams</h3>
+<p>String buffers</p>
+<h4 id="usage-26">Usage:</h4>
+<pre><code>* Include: #include &lt;sstream&gt;</code></pre>
+<h4 id="input-string-stream">Input String Stream</h4>
+<pre><code>* Create input string buffer: std::istringstream iss {&quot;Moe 100 1234.56&quot;}
+* From buffer to variables: iss &gt;&gt; name &gt;&gt; num &gt;&gt; total</code></pre>
+<h4 id="output-string-stream">Output String Stream</h4>
+<pre><code>* Create output string buffer: std::ostringstream oss {}
+* From Variable to buffer: oss &lt;&lt; name
+* Flush out buffer to console: std::cout &lt;&lt; oss.str()</code></pre>
+<h2 id="standard-template-library--------------------">---------------------- Standard Template Library -------------------</h2>
+<p>Easily accessable containers and algorithms</p>
+<h3 id="container-libraries">Container Libraries</h3>
+<p>Lists that hold elements</p>
+<h4 id="types">Types</h4>
+<pre><code>* Sequence Containers
+* Associative Containers
+* Container Adapters</code></pre>
+<h3 id="algorithm-library">Algorithm Library</h3>
+<p>Step-by-step instructions used to solve problems</p>
+<h4 id="usage-27">Usage:</h4>
+<pre><code>* Include: #include &lt;algorithm&gt;
+* Sort: std::sort(v.begin(), v.end())
+* Reverse: std::reverse(v.begin(), v.end())
+* Accumulate: std::accumulate(v.begin(), v.end(), 0)
+    * 0: running sum starts at 0. Can be 0.0 for double </code></pre>
+<h2 id="sequence-containers-------------------------------">----------------------------- Sequence Containers ------------------------------</h2>
+<h3 id="arrays">Arrays</h3>
+<p>Lists of items</p>
+<h4 id="usage-28">Usage:</h4>
+<pre><code>* Initialize Array: &#39;int numbers[5] {1, 2, 3, 4, 5}&#39; or &#39;int numbers[5] = {1...}&#39;</code></pre>
+<h3 id="vectors">Vectors</h3>
+<p>Multi-dimensional arrays that are dynamic, have all same types of elements, stored contiguously in memory, elements initialized to zero.</p>
+<h4 id="usage-29">Usage:</h4>
+<pre><code>* Include: #include &lt;vector&gt;
+* Declare vector with size and initialize: std::vector &lt;int&gt; test_scores (5) {1, 2, 3, 4, 5}
+    * When using for loops with vectors, use unsigned counters, e.g. size_t
+* Access element by index: test_scores[1] or &#39;test_scores.at(1)
+* Append element: test_scores.push_back(&#39;a&#39;)
+* Size of vector: test_scores.size()
+* Declare multi-dimensional vector vector&lt;vector&lt;int&gt;&gt; grid
+* Clear vector: test_scores.clear()</code></pre>
+<h2 id="associative-containers-------------------------------">----------------------------- Associative Containers ------------------------------</h2>
+<h2 id="container-adapters-------------------------------">----------------------------- Container Adapters ------------------------------</h2>
+<h2 id="builtin-packages----------------">---------------------- Builtin Packages ---------------</h2>
+<h3 id="iostream-2">iostream</h3>
+<p>Input and output library for C++</p>
+<h4 id="usage-30">Usage:</h4>
+<pre><code>* &#39;#include &lt;iostream&gt;&#39;: first thing to do to use iostream library
+* std::cout &lt;&lt; &quot;Hello, World&quot; &lt;&lt; std::endl: prints text to console
+* std::cin &gt;&gt; x: assigns input to a variable</code></pre>
+<h3 id="iomanip-2">iomanip</h3>
+<p>Input/output stream manipulator</p>
+<h4 id="usage-31">Usage:</h4>
+<pre><code>* &#39;#include &lt;iomanip&gt;&#39;: link library
+* &#39;cout &lt;&lt; fixed &lt;&lt; setprecision(1);&#39;: Round decimals places to one</code></pre>
+<h3 id="climits">climits</h3>
+<p>Get the limit info of variable types</p>
+<h4 id="usage-32">Usage:</h4>
+<pre><code>* include: #include &lt;climits&gt;
+* min methods: CHAR_MIN, SHRT_MIN, LONG_MIN, LLONG_MIN
+* max methods: (&quot;)_MAX</code></pre>
+<h3 id="cctype">cctype</h3>
+<p>Functions for characters</p>
+<h4 id="usage-33">Usage:</h4>
+<pre><code>* include: &#39;#include &lt;cctype&gt;&#39;
+* Methods: isalpha(&lt;string&gt;), isalnum(), isdigit(), islower(), isupper()
+    * isprint(): if printable character
+    * ispunct(), isspace()
+    * tolower(), toupper()</code></pre>
+<h3 id="cstring">cstring</h3>
+<p>Library for c-style strings</p>
+<h4 id="usage-34">Usage:</h4>
+<pre><code>* include: #include &lt;string&gt;
+* Methods: strcopy(&lt;copy_to&gt;, &lt;copy_from&gt;), strcat(&quot;), strcmp(s1, s2)</code></pre>
+<h3 id="string">string</h3>
+<p>Library for c++ strings</p>
+<h4 id="usage-35">Usage:</h4>
+<pre><code>* include: #include &lt;string&gt;
+* string variable: std::string s1 {&quot;Frank&quot;}
+    * initializing part of a variable: string s2{s1, 0, 3}
+    * contructor-style initialization: string s3{3, &#39;x&#39;}, i.e. &quot;xxx&quot;
+* substring: object.substr(start_index, end_index)
+    * disclaimer: substr cut up till and excluding the end index
+* find index of character: s1.find(&quot;Fra&quot;)
+* erase character(s): s1.erase(0, 2)
+* clear string: s1.clear()
+* size: s1.length()
+* swap values of strings: s1.swap(s2) or std::swap(s1, s2)
+* concatanate: s1 += &quot; James&quot;
+* get entire line: getline(cin, s2, &#39;x&#39;)
+    * cin: form of input
+    * s2: the variable to put to
+    * &#39;x&#39;: the delimiter
+* No position of string: std::string::npos
+    * Example: if(s1.find(s2) != std::string::npos){&quot; substring found&quot;}
+    * Example 2: if(s1.find(s2) == string::npos){&quot;Correct substr not found&quot;}</code></pre>
+<h3 id="iomanip-3">iomanip</h3>
+<p>Manipulate input and output</p>
+<h4 id="usage-36">Usage:</h4>
+<pre><code>* include: #include &lt;iomanip&gt;
+* set precision: cout &lt;&lt; fixed &lt;&lt; setprecision(2)
+* Methods: boolalpha</code></pre>
+<h3 id="cmath">cmath</h3>
+<p>Math library</p>
+<h4 id="usage-37">Usage:</h4>
+<pre><code>* include: #include &lt;cmath&gt;
+* square root: sqrt(&lt;number&gt;)
+* Other Methods: cbrt, sin, cos, ceil, floor, round
+* power: pow(&lt;number&gt;, &lt;power&gt;)</code></pre>
+<h3 id="ctime">ctime</h3>
+<p>Time library</p>
+<h4 id="usage-38">Usage:</h4>
+<pre><code>* include: #include &lt;ctime&gt;
+* get time: time(0)
+    * 0: gets the time from 1971 to now in seconds</code></pre>
+<h3 id="cstdlib">cstdlib</h3>
+<p>C library for standard, general functions</p>
+<h4 id="usage-39">Usage:</h4>
+<pre><code>* include: #include &lt;cstdlib&gt;
+* Generate pseudo-random number: std::rand() % 6 + 1
+    * example above: gets a random number between 1 and 6, inclusive
+* seed pseudo-random number generator: std::srand(time(nullptr))
+    * Disclaimer: Usually called before rand() to prevent the same sequence</code></pre>
+</body>
+</html>
