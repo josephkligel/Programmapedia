@@ -523,6 +523,21 @@ Step-by-step instructions used to solve problems
 	* Accumulate: std::accumulate(v.begin(), v.end(), 0)
 		* 0: running sum starts at 0. Can be 0.0 for double 
 
+### Function Templates
+Make standard functions that work with any types
+#### Usage:
+	* Define template variable: template <typename T>
+		* Tip: Can use typename or class keyword
+	* Declare template function: T max(T a, T b) {return (a > b) ? a : b;}
+	* Initialize template function: max<int>(a, b)
+	* Disclaimer: when comparing classes an overloaded operator must be used
+		* Example: bool operator<(const Person &rhs){return this->age < rhs.age;}
+
+### Class Templates
+Make standard classes that work with any type of inputs
+#### Usage:
+	
+
 ## ----------------------------- Sequence Containers ------------------------------
 
 ### Arrays
