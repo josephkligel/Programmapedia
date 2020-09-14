@@ -526,9 +526,9 @@ Step-by-step instructions used to solve problems
 ### Function Templates
 Make standard functions that work with any types
 #### Usage:
-	* Define template variable: template <typename T>
+	* Decine template variable: template <typename T>
 		* Tip: Can use typename or class keyword
-	* Declare template function: T max(T a, T b) {return (a > b) ? a : b;}
+	* Define template function: T max(T a, T b) {return (a > b) ? a : b;}
 	* Initialize template function: max<int>(a, b)
 	* Disclaimer: when comparing classes an overloaded operator must be used
 		* Example: bool operator<(const Person &rhs){return this->age < rhs.age;}
@@ -536,7 +536,8 @@ Make standard functions that work with any types
 ### Class Templates
 Make standard classes that work with any type of inputs
 #### Usage:
-	
+	* Declare template variable: template <typename T>
+	* Define template Class: class
 
 ## ----------------------------- Sequence Containers ------------------------------
 
