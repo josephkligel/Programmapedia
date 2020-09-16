@@ -537,7 +537,9 @@ Make standard functions that work with any types
 Make standard classes that work with any type of inputs
 #### Usage:
 	* Declare template variable: template <typename T>
-	* Define template Class: class
+	* Define template Class: No real difference here, just explicit types with template name type
+	* Change template type and add number for array types: template<typename T, int N>		
+		* N: Represents numbers of elements in an array, e.g. int 5 would be int nums[5]
 
 ## ----------------------------- Sequence Containers ------------------------------
 
