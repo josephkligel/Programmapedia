@@ -413,7 +413,6 @@ Boolean manipulation
 	* No boolean: std::cout.setf(std::ios::noboolalpha)
 	* Reset formatting to default: std::cout << std::resetioflags(std::ios::boolalpha)
 
-
 ### Integer
 Integer Manipulation
 #### Iomanip:
@@ -452,7 +451,7 @@ Field width, fill, and align
 #### Usage:
 	* Include: #include <iomanip>
 	* Set character width: cout << std::setw(10) << num << std::endl // -------num
-		* 10(argument): Tells the setw method to make data 10 characters long
+		* setw(10): Tells the setw method to make data 10 characters long
 		* '-': The dashes represent the empty characters
 	* Left justify data: cout << std::left << num << hello
 
@@ -526,7 +525,7 @@ Step-by-step instructions used to solve problems
 ### Function Templates
 Make standard functions that work with any types
 #### Usage:
-	* Decine template variable: template <typename T>
+	* Define template variable: template <typename T>
 		* Tip: Can use typename or class keyword
 	* Define template function: T max(T a, T b) {return (a > b) ? a : b;}
 	* Initialize template function: max<int>(a, b)
@@ -540,6 +539,22 @@ Make standard classes that work with any type of inputs
 	* Define template Class: No real difference here, just explicit types with template name type
 	* Change template type and add number for array types: template<typename T, int N>		
 		* N: Represents numbers of elements in an array, e.g. int 5 would be int nums[5]
+
+### Iterators
+Allows abstracting an arbitrary container as a sequence of elements
+#### Usage:
+	* Dislaimer: Iterators must be declared based on the container type
+	* Declaring iterators: std::vector<int>::iterator it1;
+	* Begining and ending of container: vec.begin(), vec.end()
+		* Disclaimer: end() is the element after the last, i.e. the sentinal or end of container
+		* Use begin for iterator: auto it = vec.begin() or std::vector<int>::iterator it = vec.begin()
+	* Looping with iterators: while(it != vec.end()){ cout << *it; ++it;}   
+		* For loop: for(auto it = vec.begin(); it != vec.end(); it++){...}
+	* Reverse iterator: std::vector<int>::reverse_iterator it = vec.begin()
+	* Other iterators: An assortment of iterators
+		* Const: vec.cbegin(), cend()
+		* reverse: vec.rbegin(), rend()
+		* Const reverse: vec.crbegin(), crend()
 
 ## ----------------------------- Sequence Containers ------------------------------
 
@@ -627,8 +642,9 @@ Library for c++ strings
 Manipulate input and output
 #### Usage:
 	* include: #include <iomanip>
-	* set precision: cout << fixed << setprecision(2)
-	* Methods: boolalpha
+	* set precision: std::cout << std::fixed << std::setprecision(2)
+	* Print boolean keywords to console: std::boolalpha
+	* Do not print boolean keywords: std::noboolalpha
 
 ### cmath
 Math library
