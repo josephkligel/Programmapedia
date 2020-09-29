@@ -37,9 +37,10 @@ Use library in program
 ### Access Modifiers
 Modifiers telling what kind of access a class, method, and/or variable has
 #### Usage:
-	* public: No modifier means public. public gives access to all
-	* private: 
-	* protected: 
+	* public: public gives access to all
+	* protected: Can only be accessed by class, package, and subclass
+	* Default: Not written. Access only to class and package
+	* private: Can only be accessed by class
 
 ### Non-Access Modifiers
 Behavior modifiers for classes, methods, and variables
@@ -50,15 +51,15 @@ Behavior modifiers for classes, methods, and variables
 ### Types of Data
 Different data categories in Java
 #### Usage:
-	* Primitive types: char, Integer, double, float, long, short, byte, boolean
+	* Primitive types: char, int, double, float, long, short, byte, boolean
 		* Boolean: boolean isTrue = true
-	* Object type: String
+	* Object types: String, Integer
 
 ### Variables
 Using variables in Java
 #### Usage:
 	* Standards: Variable names are camel-cased
-	* Declaration and Initialiazation: Int x = 0
+	* Declaration and Initialiazation: int x = 0
 	* Casting: (String) x
 	* Local Variables: Variables contained within blocks, i.e. '{}'
 	* Global Variables: Variables declared outside of any blocks or local scopes
@@ -82,11 +83,23 @@ Loops and flows in Java
 	* Loops: while, for, do while
 		* do while: do {<code to do>} while(<condition>) 
 
-### Classes
-Using classes in Java
+### Classes and Objects
+Using classes and objects in Java
 #### Usage:
-	* Declaration and Initialization: class Person { public String name;}
-	* Construction/Creating an Object: new Person("Dave")
+	* Class Declaration: class Person { String name; ... }
+	* Constructors: new Person("Dave")
+		* Definition: Objects are instances of classes
+		* Default Contructor: Uses no parameters
+		* Overloaded Constructor: Create your own instead of using default
+	* Unnamed code blocks: {...}
+		* Info: They are called everytime an object is created
+	* Static code block: static {static int count; ...}
+		* Disclaimer: Can only contain other static variables
+		* Info: Called one time when class is first used
+	* Static Method: public static void doSomething {...}
+		* Disclaimer: Can only be called by class, not an instance
+	* Instance Methods: Called by objects
+	* Use Parent Constructor: super()
 
 ### Exception
 Handling exceptions in Java
@@ -96,12 +109,24 @@ Handling exceptions in Java
 		* Print error: e.printStackTrace()
 	* finally: finally {<do whether caught or not>}
 
+### Concepts of Object-Oriented Programming
+The foundations of OOP
+#### The Four Pillars:
+	* Abstraction: Hiding and controlling data without having to know how it works
+	* Encapsulation: Grouping like code together and containing within its scope
+	* Inheritance: Gain traits from parent class. No multiple inheritance
+	* Polymorphism: Many forms of contructors or methods
+#### Extras
+	* Override Methods: Redefining an inherited Method, e.g. @Override makeNoise...
+		* Disclaimer: Method signature have to be the same
+	* Overload Methods: Different forms of the same method
+
 ## ----------------------------- Streams ---------------------------------
 
-### Input Stream
+### Input Stream from Console
 Stream coming from somewhere
 ### Console Input:
-	* Import: import java.util.scanner
+	* Import: import java.util.Scanner
 	* Declaration and Initialization: Scanner input = new Scanner(System.in);
 		* System.in: Input from console
 	* Get Input: Storing input 
@@ -114,7 +139,7 @@ Stream coming from somewhere
 		* Has boolean: boolean bool = input.hasBoolean()
 	* Closing Input: input.close()
 
-### Output Stream
+### Output Stream from Console
 Streams going somewhere
 #### Usage:
 	* Output with line: System.out.println(<arg>)
