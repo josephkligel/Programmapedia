@@ -630,13 +630,15 @@ Library for c++ strings
 	* size: s1.length()
 	* swap values of strings: s1.swap(s2) or std::swap(s1, s2)
 	* concatanate: s1 += " James"
-	* get entire line: getline(cin, s2, 'x')
+	* get entire line: getline(cin, str_var, 'x')
 		* cin: form of input
-		* s2: the variable to put to
+		* str_var: the variable to put to
 		* 'x': the delimiter
 	* No position of string: std::string::npos
 		* Example: if(s1.find(s2) != std::string::npos){" substring found"}
 		* Example 2: if(s1.find(s2) == string::npos){"Correct substr not found"}
+	* Convert string to char *: const char *c = s2.c_str()
+		* Info: Doesn't have to be constant
 
 ### iomanip
 Manipulate input and output
