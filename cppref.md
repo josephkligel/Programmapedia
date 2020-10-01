@@ -69,16 +69,21 @@ Uses of variables
 The operators used in C++
 #### Usage:	
 	* Give priority to code: (*vector_ptr)[0]
-	* sizeof(var): gets the byte-size of a variable type, variable, or literal
+	* sizeof var: gets the byte-size of a variable type, variable, or literal
 	* null pointer: nullptr
-	* &<var>: Declare reference or get address of a variable
-	* Reference another variable: string &theBoss = mrSamberg
+	* &: &<var>
+		* Left-hand side: Declare reference
+		* Right-hand side: Get address of a variable
+	* Left-hand Side Reference: string &theBoss = mrSamberg
 		* Print reference value: cout << theBoss
-	* Get address: string *theBoss; theBoss = &mrSamberg
+	* Right-hand Side Address: string *theBoss; theBoss = &mrSamberg
 		* Print reference from pointer: cout << theBoss
 		* Print address of variable: cout << &<variable_name>
 	* pointer to memory location: int *number{&x}
 		* See pointer section for more
+	* functor: struct Square_Functor {void operator() (int x) {...} }
+		* Definition: Overloads '()' operator
+
 ### Pointers		
 Points to a memory location
 ### Usage:
@@ -148,6 +153,9 @@ Logic modularization in C++
 	* prototyping functions: int add_number(int a, int b)
 		* Functions have to be prototyped if they are called somewhere before their defined
 		* A prototype only consists of the header information and not the body
+	* Lambda Functions: [](int x) {...}
+		* []: Capture block. It allows lambda to use variables within the scope of its parent
+		* (int x): The parameters the lambda can take
 
 ### Memory Allocation
 Dynamic memory allocation on the heap, a free-for-all
@@ -520,7 +528,24 @@ Step-by-step instructions used to solve problems
 	* Sort: std::sort(v.begin(), v.end())
 	* Reverse: std::reverse(v.begin(), v.end())
 	* Accumulate: std::accumulate(v.begin(), v.end(), 0)
-		* 0: running sum starts at 0. Can be 0.0 for double 
+		* 0: running sum starts at 0. Can be 0.0 for double
+	* Find: std::find(v.begin(), v.end(), <item>) // returns iterator
+		* Item: The item the find function looks for in the container
+		* If not found: Returns the end() iterator
+		* Classes: Must use overloaded '==' operator to properly find a class instance 
+	* For_each: std::for_each(v.begin(), v.end(), <function name>)
+		* Definition: Applies a function to each element of a given container
+	* Count: std::cout(v.begin(), v.end(), <item>)
+		* Definition: Count the number of occurences of a given item in a container
+	* Replace: std::replace(v.begin(), v.end(), <specific>, <new>)
+		* Specific, New: replace all specific elements the new element
+	* All_of: std::all_of(", ", [](int x){return x < 20; } )
+		* Definition: Returns true if all elements meet the condition
+	* Any_of: std::any_of(")
+		* Definition: Returns true if any elements meet the condition
+	* Transform: std::transform(str.begin(), str.end(), str.begin(), ::toupper)
+		* Definition: Apply a function to each element, transforming it
+
 
 ### Function Templates
 Make standard functions that work with any types
