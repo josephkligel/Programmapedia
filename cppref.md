@@ -65,6 +65,14 @@ Uses of variables
 	* unsigned: 'unsigned int x{1}'
 		* Can't be negative
 
+### Arrays
+Lists of items
+#### Usage:
+	* Initialize Array: 'int numbers[5] {1, 2, 3, 4, 5}' or 'int numbers[5] = {1...}'
+	* First Element: The first element is a pointer, i.e. *numbers
+		* Alternative: The first element can also be accessed by numbers[0]
+	* Access element: numbers[<index_num>]
+
 ### Operators
 The operators used in C++
 #### Usage:	
@@ -516,19 +524,32 @@ String buffers
 Easily accessable containers and algorithms
 ### Container Libraries
 Lists that hold elements
-#### Types
+#### Types:
 	* Sequence Containers: array, vector, list, forward_list, deque
 	* Associative Containers: set, multi set, map, multi map
 	* Container Adapters: stack, queue, priority_queue
+#### Methods:
+	* Info: All containters have these methods
+	* Element Access: <container>.at(0), <container>[0]
+	* Append: <container>.push_back(), push_front()
+	* Insert: <container>.insert(<iterator>, vec.begin(), vec.end())
+		* Info: One element or range, either iterators or values, can be inserted
+		* Iterator: Position to insert element[s]
+		* vec.begin & vec.end: Range of elements to insert
+	* Emplace: emplace_back("Jack", 25)
+		* Definition: Appends container with a new object created with the arguments
+	* Get front or back element: front(), back()
+	* Get front or back iterator: begin(), end()
+	* Is empty: empty()
+	* Size: size(), max_size()
 
 ### Algorithm Library
 Step-by-step instructions used to solve problems
 #### Usage:
 	* Include: #include <algorithm>
+	* Back inserter: std::back_inserter(vec2)
 	* Sort: std::sort(v.begin(), v.end())
 	* Reverse: std::reverse(v.begin(), v.end())
-	* Accumulate: std::accumulate(v.begin(), v.end(), 0)
-		* 0: running sum starts at 0. Can be 0.0 for double
 	* Find: std::find(v.begin(), v.end(), <item>) // returns iterator
 		* Item: The item the find function looks for in the container
 		* If not found: Returns the end() iterator
@@ -537,15 +558,23 @@ Step-by-step instructions used to solve problems
 		* Definition: Applies a function to each element of a given container
 	* Count: std::cout(v.begin(), v.end(), <item>)
 		* Definition: Count the number of occurences of a given item in a container
+	* Count if: std::count_if(v.begin(), v.end(), <function>)
+		* Definition: Counts the occurences if meets a condition
+		* Function: Can be a lambda, e.g. [](int x){return x < 10; }
 	* Replace: std::replace(v.begin(), v.end(), <specific>, <new>)
-		* Specific, New: replace all specific elements the new element
+		* Specific, New: replace all specific elements with the new element
 	* All_of: std::all_of(", ", [](int x){return x < 20; } )
 		* Definition: Returns true if all elements meet the condition
 	* Any_of: std::any_of(")
 		* Definition: Returns true if any elements meet the condition
 	* Transform: std::transform(str.begin(), str.end(), str.begin(), ::toupper)
 		* Definition: Apply a function to each element, transforming it
-
+	* Max and Min: std::max_element(vec.begin(), vec.end()), std::min_element
+		* Dislaimer: Returns an iterator and so must be dereferences, e.g. *<max_var>
+	* Copy: std::copy(v.begin(), v.end(), <container>)
+		* container: std::back_inserter(v2) or another vector
+	* Copy if: std::copy_if(", ", ", <function>)
+		* Definition: Copies elements if they meet function condition
 
 ### Function Templates
 Make standard functions that work with any types
@@ -584,23 +613,36 @@ Allows abstracting an arbitrary container as a sequence of elements
 ## ----------------------------- Sequence Containers ------------------------------
 
 ### Arrays
-Lists of items
+The standard template library's version of an array
 #### Usage:
-	* Initialize Array: 'int numbers[5] {1, 2, 3, 4, 5}' or 'int numbers[5] = {1...}'
+	* Info: Does not decay to a pointer at the first element
+	* Disclaimer: Fixed in size
+	* Declaration & Initialization: std::array<int, 5> arr1 = {1, 2 ...}
+	* Access Element: arr1[0]
+	* Max size: arr.max_size()
+	* Swap values: arr1.swap(arr2)
+	* Fill with value: arr1.fill(10)
+	* Get raw array address: int *data = arr.data()
+	* Universal Methods: See Standard Template Library => Container Libraries => Methods
 
 ### Vectors
 Multi-dimensional arrays that are dynamic, have all same types of elements, stored contiguously in memory, elements initialized to zero.
 #### Usage:
 	* Include: #include <vector>
-	* Declare vector with size and initialize: std::vector <int> test_scores (5) {1, 2, 3, 4, 5}
-		* When using for loops with vectors, use unsigned counters, e.g. size_t
+	* Declare & Initialize: std::vector <int> test_scores (5) {1, 2, 3, 4, 5}
+		* Info: Can be used without size
+		* Loops of Vectors: use unsigned counters, e.g. size_t
 	* Access element by index: test_scores[1] or 'test_scores.at(1)
 	* Append element: test_scores.push_back('a')
 	* Size of vector: test_scores.size()
+	* Capacity of vector: test_scores.capacity()
 	* Declare multi-dimensional vector vector<vector<int>> grid
 	* Clear vector: test_scores.clear()
+	* Erase elements: test_scores.erase(<iterator>) or erase(v.begin(), v.begin()+2)
+	* Insert: vec1.insert(<iterator>,vec2.begin(), vec2.end())
 
-## ----------------------------- Associative Containers ------------------------------
+### Deque
+
 
 ## ----------------------------- Container Adapters ------------------------------
 
@@ -696,3 +738,11 @@ C library for standard, general functions
 		* example above: gets a random number between 1 and 6, inclusive
 	* seed pseudo-random number generator: std::srand(time(nullptr))
 		* Disclaimer: Usually called before rand() to prevent the same sequence
+
+### numeric
+Numeric library
+#### Usage:
+	* include: #include <numeric>
+	* Accumulate: std::accumulate(vec.begin(), vec.end(), 0)
+		* Info: Used on containers
+		* 0: The number the function starts at, i.e. 0 + next value and so on
