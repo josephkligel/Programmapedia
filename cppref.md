@@ -642,6 +642,13 @@ Multi-dimensional arrays that are dynamic, have all same types of elements, stor
 	* Insert: vec1.insert(<iterator>,vec2.begin(), vec2.end())
 
 ### Deque
+An indexed sequence container that allows insertion at its beginning and end
+#### Usage:
+	* Include: #include <deque>
+	* Declaration & Initialization: std::deque<std::string> a_deque {"Moe", std::string {"Larry"}...}
+	* Access an Element: a_deque[0] or a_deque.at(0)
+	* Methods: size, max_size, front, back, push_front, push_back, pop_front, pop_back
+		* Etc.: emplace_back, emplace_front 
 
 
 ## ----------------------------- Container Adapters ------------------------------
