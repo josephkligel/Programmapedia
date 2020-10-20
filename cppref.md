@@ -651,6 +651,11 @@ An indexed sequence container that allows insertion at its beginning and end
 		* Etc.: emplace_back, emplace_front 
 
 
+### Lists
+Lists of items
+#### Usage:
+	* Disclaimer: Cannot access a specific element with subscripting
+
 ## ----------------------------- Container Adapters ------------------------------
 
 ## ---------------------- Builtin Packages ---------------
