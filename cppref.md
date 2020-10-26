@@ -654,7 +654,24 @@ An indexed sequence container that allows insertion at its beginning and end
 ### Lists
 Lists of items
 #### Usage:
+	* Include: #include <list>
 	* Disclaimer: Cannot access a specific element with subscripting
+	* Methods: size, max_size, front, back, pop_back, pop_front, push_back
+		* push_front, emplace_back, emplace_front, 
+	* Find: std::find(l.begin(), l.end(), 3)
+		* Return: the method returns an iterator
+	* Insert: std::insert(it, 3)
+		* it: An iterator
+
+### Forward Lists
+A forward list
+#### Usage:
+	* Include: #include <forward_list>
+	* Definition: Singly-linked
+	* Disclaimer: No direct access to elements and no concept of back
+	* Find: std::find(fl.begin(), fl.end(), 3)
+	* Methods: max_size, front, push_front, pop_front, emplace_front, erase_after
+	* Insert: insert_after(<iterator>, 10), emplace_after(10)
 
 ## ----------------------------- Container Adapters ------------------------------
 
