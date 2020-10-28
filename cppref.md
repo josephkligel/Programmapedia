@@ -469,6 +469,7 @@ Field width, fill, and align
 	* Set character width: cout << std::setw(10) << num << std::endl // -------num
 		* setw(10): Tells the setw method to make data 10 characters long
 		* '-': The dashes represent the empty characters
+	* Fill empty space: std::setfill('-')
 	* Left justify data: cout << std::left << num << hello
 
 ### File Streams
@@ -664,16 +665,70 @@ Lists of items
 		* it: An iterator
 
 ### Forward Lists
-A forward list
+A forward list. They are singly-linked
 #### Usage:
 	* Include: #include <forward_list>
-	* Definition: Singly-linked
 	* Disclaimer: No direct access to elements and no concept of back
 	* Find: std::find(fl.begin(), fl.end(), 3)
 	* Methods: max_size, front, push_front, pop_front, emplace_front, erase_after
 	* Insert: insert_after(<iterator>, 10), emplace_after(10)
 
-## ----------------------------- Container Adapters ------------------------------
+## ----------------------------- Associative Containers ------------------------------
+
+### Sets
+A list of non-duplicates ordered by keys
+#### Usages:
+	* Include: #include <set>
+	* Disclaimer: No direct access to elements and no front or back
+	* Methods: size, max_size, erase(<iterator or element val>), count(<value>)
+		* clear, empty
+	* Insert: s.insert(7), emplace(...)
+	* Find (Not std library): s.find(5)
+#### Unordered_set
+	* Include: #include <unordered_set>
+	* Declaration: std::unordered_set<int> us
+#### Unordered_multisets
+	* Include: #include <unordered_set>
+	* Declaration: std::unordered_multiset<int> um
+
+### Maps
+Associate arrays/dictionaries. Assign keys to values
+#### Usage:
+	* Include: #include <map>
+	* Disclaimer: No duplicate keys, front, or back 
+	* Methods: size, max_size, count(<value>), clear, empty
+	* Declaration: std::map<int, char> a_map
+	* Pairs: Maps use pairs
+		* Create: std::pair<int, char> p1
+		* Make: std::make_pair(2, 'R')
+	* Insert: m.insert(3, 'T')
+		* Make_pair: m.insert(std::make_pair(3, 'T'))
+		* Subscript: m[<key>] = <value>
+		* At: m.at(<key>) = <value>
+	* Erase: m.erase(<key> || <iterator>)
+	* Access: <elem>.first, <elem>.second
+#### Unordered_map
+	* Include: #include <unordered_map>
+	* Declaration: std::unordered_map<int, char> um
+#### Multimap
+	* Include: #include <map>
+	* Info: Does allow duplicates
+	* Declaration: std::multimap<int, char> mm
+#### Unordered Multimap
+	* Include: #include <unordered_multimap>
+	* Declaration: std::unordered_multimap<int, char> umm
+
+## ---------------------- Container Adapters ----------------
+
+### Stacks
+
+#### Usage:
+	* Include: #include
+
+### Queues
+
+#### Usage:
+	* Include: #include
 
 ## ---------------------- Builtin Packages ---------------
 
