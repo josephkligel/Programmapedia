@@ -721,14 +721,34 @@ Associate arrays/dictionaries. Assign keys to values
 ## ---------------------- Container Adapters ----------------
 
 ### Stacks
-
+Last-in First-out (LIFO) data structure
 #### Usage:
-	* Include: #include
+	* Include: #include <stack>
+	* Disclaimer: All operations occur on one of the stack (top), and no iterators
+	* Methods: push, pop, top, empty, size
+	* Declaration: std::stack<int> s
+		* Types: Can use other stl containers, e.g. std::stack<int, std::vector<int>>
+	* Clear stack: Use pop method only 
 
 ### Queues
-
+First-in First-out (FIFO) data structure
 #### Usage:
-	* Include: #include
+	* Include: #include <queue>
+	* Disclaimer: Elements are pushed at the back popped from front
+		* No iterators or direct access to elements
+	* Methods: push, pop, front, back, empty, size
+	* Declaration: std::queue<int> q || std::queue<int, std::list<int>> ql
+	* Push: Inserts at the back
+	* Pop: Deletes at the front
+
+### Priority Queues
+Allows insertions and removals of elements in order from the front of the container
+#### Usage:
+	* Include: #include <queue>
+	* Disclaimer: Largest value will always be at the front, and no iterators
+	* Methods: push, pop, top, empty, size
+	* Declaration: std::priority_queue<int> pq
+	* 
 
 ## ---------------------- Builtin Packages ---------------
 
