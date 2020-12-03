@@ -755,15 +755,20 @@ Allows insertions and removals of elements in order from the front of the contai
 ### iostream
 Input and output library for C++
 #### Usage:
-	* '#include <iostream>': first thing to do to use iostream library
-	* std::cout << "Hello, World" << std::endl: prints text to console
+	* Include: #include <iostream>
+	* Print to console: std::cout << "Hello, World" << std::endl
 	* std::cin >> x: assigns input to a variable
+	* Set boolean values: std::cout << std::boolalpha
+	* Unset boolean values: std::cout << std::noboolalpha
 
 ### iomanip
 Input/output stream manipulator
 #### Usage:
-	* '#include <iomanip>': link library
-	* 'cout << fixed << setprecision(1);': Round decimals places to one
+	* Include: #include <iomanip>
+	* Set decimal output: std::cout << std::fixed << std::setprecision(2)
+	* Justify: std::cout << std::left, std::right
+	* Fill: std::cout << std::setw(20) << std::setfill('-')
+	* Set width: std::cout << std::setw(20)
 
 ### climits
 Get the limit info of variable types
@@ -793,7 +798,7 @@ Library for c++ strings
 	* string variable: std::string s1 {"Frank"}
 		* initializing part of a variable: string s2{s1, 0, 3}
 		* contructor-style initialization: string s3{3, 'x'}, i.e. "xxx"
-	* substring: object.substr(start_index, end_index)
+	* substring: object.substr(<start_index>, <end>)
 		* disclaimer: substr cut up till and excluding the end index
 	* find index of character: s1.find("Fra")
 	* erase character(s): s1.erase(0, 2)
@@ -806,18 +811,9 @@ Library for c++ strings
 		* str_var: the variable to put to
 		* 'x': the delimiter
 	* No position of string: std::string::npos
-		* Example: if(s1.find(s2) != std::string::npos){" substring found"}
-		* Example 2: if(s1.find(s2) == string::npos){"Correct substr not found"}
-	* Convert string to char *: const char *c = s2.c_str()
-		* Info: Doesn't have to be constant
-
-### iomanip
-Manipulate input and output
-#### Usage:
-	* include: #include <iomanip>
-	* set precision: std::cout << std::fixed << std::setprecision(2)
-	* Print boolean keywords to console: std::boolalpha
-	* Do not print boolean keywords: std::noboolalpha
+		* Example: if(s1.find(s2) != std::string::npos){"Substring found"}
+		* Example 2: if(s1.find(s2) == string::npos){"Correct, substring not found"}
+	* Convert string to char *: char *c = str.c_str()
 
 ### cmath
 Math library
@@ -831,8 +827,13 @@ Math library
 Time library 
 #### Usage:
 	* include: #include <ctime>
-	* get time: time(0)
-		* 0: gets the time from 1971 to now in seconds
+	* Time type: time_t
+	* Get time in seconds since Jan 1, 1970: time_t t; time(&t)
+		* Disclaimer: time funciton takes pointer
+			* 1: Has to be declared then turned into seconds with the time function
+		* Alternative: time(0)
+	* Get current string date: time_t t; time(&t); ctime(&t)
+		* Disclaimer: Must be declared, converted to seconds, and converted with ctime 
 
 ### cstdlib
 C library for standard, general functions
@@ -842,6 +843,7 @@ C library for standard, general functions
 		* example above: gets a random number between 1 and 6, inclusive
 	* seed pseudo-random number generator: std::srand(time(nullptr))
 		* Disclaimer: Usually called before rand() to prevent the same sequence
+	* System commands: system(<command>)
 
 ### numeric
 Numeric library
@@ -850,3 +852,13 @@ Numeric library
 	* Accumulate: std::accumulate(vec.begin(), vec.end(), 0)
 		* Info: Used on containers
 		* 0: The number the function starts at, i.e. 0 + next value and so on
+
+### chrono
+C++ time manipulation library
+#### Usage:
+	* Include: #include <chrono>
+	* Get now in seconds: std::chrono::time_point t1 = std::chrono::steady_clock::now()
+	* Convert: auto t1 = std::chrono::duration_cast<std::chrono::microseconds>(variable)
+		* Milliseconds: std::chrono::milliseconds
+		* Seconds: std::chrono::seconds
+		* Print to console: std::cout << t1.count()
