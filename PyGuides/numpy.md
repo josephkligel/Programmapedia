@@ -25,7 +25,17 @@ Numpy arrays
 	* Create evenly-spaced array: np.linspace(<start>, <stop>, <num>)
 	* Create diagonally numbered array: np.eye(<num>)
 		* num: Creates a 2-D array with the num for the row and column count
-
+	* Accessing elements in an array: arr[1]
+	* Accessing Multi-dimensional array: arr[<row number>][<column number>]
+		* Alternative: arr[row,col]
+		* Access range: arr[2:,:1]
+	* Accessing a range: arr[1:5]
+	* Broadcasting or changing a range of elements to a new item: arr[0:5] = 100
+		* Disclaimer: Broadcasting is permanent
+	* Copying array: arr.copy()
+		* Assigning a copy to a new array: arr_copy = arr.copy()
+		* Disclaimer: copy must be called to prevent the change of original
+	 
 ### Random
 Random function for numpy
 #### Usage:
@@ -51,4 +61,16 @@ Attributes of numpy arrays
 	* Min element: nparr.min()
 		* Min's index: nparr.argmin()
 
+### Conditional
+Find elements in the array that match a specified condition
+#### Usage:
+	* Conditional statement: arr > 4
+		* Answer: returns an array with false and true for elements
+		* Return the elements: arr[arr > 4]
+
+### Arithmetic Operations
+Mathmatical operations performed on np arrays
+#### Usage:
+	* Get sin: np.sin(arr)
+	* Get log: np.log(arr)
 		
