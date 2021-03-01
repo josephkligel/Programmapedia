@@ -2,13 +2,26 @@
 Legend:
 >("): Same as above or before
 
-## ---------------------Installation and Setup Steps------------------------
+## --------------------- Installation and Setup Steps ------------------------
 
 1. pip3 install ipython pandas jupyter
 
 2. jupyter notebook
 
 3. import pandas
+
+## ------------------- Syntax and Semantics ------------------------
+
+### DataFrame
+Array objects using Pandas
+#### Usage:
+	* Importing: import pandas
+	* Creating a dataframe: 
+
+### Operations
+Mathmatical and statistical operations on dataframes
+#### Usage:
+	*
 
 ## ----------------------Creating Dataframes------------------
 DataFrame
@@ -36,14 +49,18 @@ DataFrame
 	-add row: 'df2 = df1.T', 'df2[10] = [11, 1200, 'USA']', 'df1 = df2.T'
 	
 
-## -------------------------------Types of files------------------------
-Types	
-### Read:
-	-pandas.read_csv(<filename>, sep=',')
-	-pandas.read_json(<filename>)
-	-pandas.read_excel(<filename>)
+## ------------------------------- File IO ------------------------
 
-### Save to:
-	-<df>.to_csv(<filename>)
-	-<df>.to_json(<fn>)
-	-<df>.to_excel(<fn>)
+### Reading from Files
+Read a file into Pandas	
+### Usage:
+	* CSV: pandas.read_csv(<filename>, sep=',')
+	* JSON: pandas.read_json(<filename>)
+	* Excel: pandas.read_excel(<filename>)
+
+### Saving
+Saving files using Pandas
+#### Usage:
+	* CSV: df.to_csv(<filename>)
+	* JSON: df.to_json(<filename>)
+	* Excel: df.to_excel(<filename>)

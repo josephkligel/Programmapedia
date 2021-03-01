@@ -39,12 +39,14 @@ Numpy arrays
 ### Random
 Random function for numpy
 #### Usage:
-	* Random uniformed distribution between 0 and 1: np.random.rand(<num or dimensions>)
+	* Random uniformed distribution between 0 and 1: np.random.rand(<num>)
+		* No argument: Gives one number
 		* 2-D: np.random.rand(5,5)
 	* Normal Distribution: np.random.randn(<num>)
 		* Definition: Create a random range from -1 to 1, with average as 0
 		* 2-D: np.random.randn(5,5)
 	* Random interger: np.random.randint(<start>, <stop>, <num>)
+	* Get same random numbers: np.random.seed(101)
 
 ### Reshape
 Reshape numpy arrays
@@ -71,6 +73,10 @@ Find elements in the array that match a specified condition
 ### Arithmetic Operations
 Mathmatical operations performed on np arrays
 #### Usage:
-	* Get sin: np.sin(arr)
-	* Get log: np.log(arr)
+	* Get sin: np.sin(arr) or arr.sin()
+	* Get log: np.log(arr) or arr.log()
+	* Get sum of all elements: np.sum(arr) or arr.sum()
+		* Sum of columns: np.sum(arr,axis=0) or arr.sum(axis=0)
+		* Sum of rows: np.sum(arr,1) or arr.sum(1)
+	* Get standard deviation: np.std(arr) or arr.std()
 		
