@@ -1,7 +1,7 @@
-# Reference for UNIX Commands ---
-
-## Linux Boot Process ---
-
+# Reference for UNIX Commandsi
+---
+## Linux Boot Process
+---
 1. Boot
 	+ Linux boot process: Firmware, Bootloader, Kernel, Initialization
 
@@ -19,12 +19,12 @@
 	+ Kernel starts the grandfather process (systemd)
 	+ Systemd starts system services, starts login shells and GUI interface
 
-## Keyboard Shortcuts ---
-
+## Keyboard Shortcuts
+---
 ### Terminal Controls
 Key controls to interact with terminal
 #### Examples
-	+ ^C: stop process
+> ^C: stop process
 	+ ^A: beginning of line
 	+ ^E: end of line
 	+ ^U: delete to beginning of line
@@ -36,8 +36,8 @@ Key controls to interact with terminal
 	+ !!: run the previous command exactly as written
 	+ !*: run the previous command that starts with a certain letter or word. A number will print out the command from that line number, e.g.'!1983' prints 'which curl'
 
-## System ---
-
+## System
+---
 ### su
 Switch to root user
 
@@ -127,8 +127,8 @@ Below are a few of the steps required to make sure mysql is installed correctly
 	password retrieval: "grep 'temporary password' /var/log/mysqld.log"
 
 
-## Basic Interaction ---
-
+## Basic Interaction
+---
 ### variables: named values
 #### Examples
 	+ x=1: Sets 'x' to the integer 1
@@ -168,8 +168,8 @@ Download a file using a web address
 ### ping
 sees if a server is working. The argument is a web address.
 
-## File and Directory Manipulation and Interaction ---
-
+## File and Directory Manipulation and Interaction
+---
 ### Permissions
 File and directory permission settings
 #### Permission Types
@@ -305,8 +305,8 @@ used to print of parts of text
 #### Examples
 	+ awk '{print $1}' <filename>: prints off the first column from the file
 
-## Search Commands ---
-
+## Search Commands
+---
 ### find
 find files & directories
 #### Examples
