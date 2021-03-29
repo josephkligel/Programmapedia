@@ -1,5 +1,5 @@
-# Reference for UNIX Commandsi
----
+# Reference for UNIX Commands
+
 ## Linux Boot Process
 1. Boot
 	+ Linux boot process: Firmware, Bootloader, Kernel, Initialization
@@ -34,8 +34,10 @@ Key controls to interact with terminal
 	+ !*: run the previous command that starts with a certain letter or word. A number will print out the command from that line number, e.g.'!1983' prints 'which curl'
 
 ## Basic Interaction
-Set a variable: `x=1`
-Erase variable: `unset x`
+
+#### Variables
+* Set a variable: `x=1`
+* Erase variable: `unset x`
 
 echo: `echo hello`
 Use escape characters: `echo -e "this\tguy"`
