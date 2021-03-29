@@ -20,7 +20,7 @@
 
 ## Terminal Controls
 Key controls to interact with terminal
-#### Examples
+#### Keyboard Shortcuts
 	+ ^C: stop process
 	+ ^A: beginning of line
 	+ ^E: end of line
@@ -34,7 +34,7 @@ Key controls to interact with terminal
 	+ !*: run the previous command that starts with a certain letter or word. A number will print out the command from that line number, e.g.'!1983' prints 'which curl'
 
 ## System
-* Switch to root user: `su`
+`su`: Switch to root user
 #### Password commands
 	+ Change password for a user: `passwd <username>`	
 #### User Commands
@@ -57,7 +57,7 @@ Key controls to interact with terminal
 * update-alternatives: lets you see the alternative of default programs
 	+ See program alternatives: `<package manager>-alternatives --config x-terminal-emulator`
 * reset terminal: `reset`
-* df: Find out the available and used disk space
+#### df: Find out the available and used disk space
 	+ -H: Human readable in 1000 numerical denominations
 	+ -h: In 1024 numerical denominations
 * du: Analyze space usage
@@ -66,16 +66,15 @@ Key controls to interact with terminal
 	+ Delete trash: `rm -rf ~/.local/share/Trash/*`
 * Check memory: `free -m` or `cat /proc/meminfo`
 * top: check CPU, RAM, and processes
-* ln
-Create symbolic links
-#### Types
+#### ln: Create symbolic links
+##### Types
 	+ inode: pointer or number of a file on the storage device
 	+ soft links: links that will be removed if linked files are removed or renamed
 	+ hard links: Not affected by deletion or manipulator of linked files
-#### Flags
+##### Flags
 	+ no flags: makes hard symbolic links
 	+ -s: makes soft symbolic links
-#### Examples
+##### Examples
 	+ no flags: ln ~/Videos ~/Desktop/Videos
 	+ -s: ln -s ~/Videos ~/Desktop/Videos
 
@@ -214,7 +213,8 @@ lets you navigate through a file
 	+ n:			Move to next search result
 	+ N:			Move to previous search result
 	+ q:			Quit less
-## Regular Expressions and String Manipulation ---
+
+## Regular Expressions and String Manipulation
 
 * Wildcards
 Used in regular expression. Very useful
@@ -264,7 +264,6 @@ used to print of parts of text
 	+ awk '{print $1}' <filename>: prints off the first column from the file
 
 ## Search Commands
----
 * find
 find files & directories
 #### Examples
