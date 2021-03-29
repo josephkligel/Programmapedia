@@ -35,75 +35,38 @@ Key controls to interact with terminal
 
 ## System
 * Switch to root user: `su`
-* Password commands
+#### Password commands
 	+ Change password for a user: `passwd <username>`	
-
-### User Commands
-	+ Add User to sudoer file: 'adduser <username>'
-
-### visudo
-Password settings for users
-#### Examples
-	+ '\<username\> ALL=(ALL) NOPASSWD:ALL': to require no password for sudo commands
-
-### ssh
-connect to another linux system
-#### Steps
-	+ ssh: 'ssh joseph@10.0.0.155'
-	+ enable: 'sudo systemctl enable ssh'
-
-### ps
-See all the processes on the system
-#### Flags
-	+ All processes: ps aux
+#### User Commands
+	+ Add User to sudoer file: `adduser <username>`
+#### visudo: Sets password settings for users
+	+ Add this to require no password for sudoing: `\<username\> ALL=(ALL) NOPASSWD:ALL`
+* ssh: connects to another linux system
+	+ ssh using username and IPv4 address: 'ssh joseph@10.0.0.155'
+	+ enable ssh: 'sudo systemctl enable ssh'
+* ps: Sees all the processes on the system
+	+ All processes: `ps aux`
 	+ All processes with a certain name:  'ps aux | grep spring'
-
-### kill
-Kills program with pid
-#### Examples
-	+ Kill program:	kill -15 4048
-
-### pkill
-kill all the processes matching a name
-#### Flags
-	+ Terminate code: pkill -15
-	+ Force terminate: pkill -15 -f
-
-### history
-prints the history of commands
-#### Examples:
-	+ Get history of a command: 'history | grep curl'
-
-### update-alternatives
-lets you see the alternative of default programs
-#### Examples
-	+ See program alternatives: apt-alternatives --config x-terminal-emulator
-
-### reset
-reinitializes terminal
-
-### df
-Find out the available and used disk space
-#### Flags
-	+ -H: Human readable
-
-### du
-Analyze space usage
-#### Examples
+* kill: Kills program with pid
+	+ Kill program:	`kill -15 4048`
+* pkill: kill all the processes matching a name
+	+ Terminate code: `pkill -15 <program>` 
+	+ Force terminate: `pkill -15 -f <program>`	
+* historyprints the history of commands
+	+ Get history of a command: `history | grep curl`
+* update-alternatives: lets you see the alternative of default programs
+	+ See program alternatives: `<package manager>-alternatives --config x-terminal-emulator`
+* reset terminal: `reset`
+* df: Find out the available and used disk space
+	+ -H: Human readable in 1000 numerical denominations
+	+ -h: In 1024 numerical denominations
+* du: Analyze space usage
 	+ du [-h|c|s] <directory>
-
-### Trash
-Deleting trash via bash
-#### Examples
-	+ Delete trash: rm -rf ~/.local/share/Trash/*
-
-### free -m or cat /proc/meminfo
-check memory
-
-### top
-check CPU, RAM, and processes
-
-### ln
+* Trash: Deleting trash via bash
+	+ Delete trash: `rm -rf ~/.local/share/Trash/*`
+* Check memory: `free -m` or `cat /proc/meminfo`
+* top: check CPU, RAM, and processes
+* ln
 Create symbolic links
 #### Types
 	+ inode: pointer or number of a file on the storage device
@@ -116,7 +79,7 @@ Create symbolic links
 	+ no flags: ln ~/Videos ~/Desktop/Videos
 	+ -s: ln -s ~/Videos ~/Desktop/Videos
 
-### mysql
+* mysql
 Below are a few of the steps required to make sure mysql is installed correctly
 #### Steps
 	password retrieval: "grep 'temporary password' /var/log/mysqld.log"
@@ -124,12 +87,12 @@ Below are a few of the steps required to make sure mysql is installed correctly
 
 ## Basic Interaction
 ---
-### variables: named values
+* variables: named values
 #### Examples
 	+ x=1: Sets 'x' to the integer 1
 	+ 'unset x': x is no longer assigned a value. The variable is gone
 
-### echo
+* echo
 Print string to screen
 #### Flags and arguments
 	+ -e:	allows you to add non-characters such as tabs
@@ -139,7 +102,7 @@ Print string to screen
 	+ echo "str" > <file>:	redirects string to a newly created file
 	+ echo "str" > <file>:	appends a string to an existing file
 
-### Help Commands:
+* Help Commands:
 #### Examples
 	+ man: Display manual page for command
 	+ whatis: one line summary of command
@@ -151,21 +114,21 @@ Print string to screen
 #### Flags
 	+ -k: to search, e.g. 'man -k "grep"'
 
-### pwd
+* pwd
 print current working directory
 
-### curl
+* curl
 Download a file using a web address
 #### Examples:
 	+ Get ip address: curl ifconfig.me
 	+ Get geolocation: curl http://api.geoiplookup.net/?query=\<Public\_IP\>
 
-### ping
+* ping
 sees if a server is working. The argument is a web address.
 
 ## File and Directory Manipulation and Interaction
 ---
-### Permissions
+* Permissions
 File and directory permission settings
 #### Permission Types
 	+ r: read
@@ -179,10 +142,10 @@ File and directory permission settings
 	+ Change permission file or directory: chmod <filename>
 	+ Change ownership for file: chown <username> <filename>
 
-### diff
+* diff
 compares files that are similar
 
-### ls
+* ls
 lists the files in current directory.
 #### flags
 	+ -a:	 shows all files
@@ -193,52 +156,52 @@ lists the files in current directory.
 	+ -ahrtl: for reverse, modified, human###readable, all list
 	+ -I: ignores a string. For example, 'ls ###I "s*"' ignores all files that start with the letter s.
 
-### touch
+* touch
 create an empty file
 
-### mkdir
+* mkdir
 make empty directory
 
-### cd
+* cd
 change directory
 
-### mv
+* mv
 mv to rename a file or move it to a new location
 
-### cp
+* cp
 cp to copy a file
 
-### rm
+* rm
 Remove a file                        
 
-### head
+* head
 shows first 10 lines of file
 
-### tail
+* tail
 shows last 10 lines of file. 
 #### Flags
 	+ ###f:	allows you view an actively changing file.
 	+ ###1:	last line. 1 can be replaced with any number
 
-### wc
+* wc
 wordcount of file. From left to right, the output is lines, words, and bytes.
 #### Flags
 	+ ###l: counts lines
 	+ ###m: counts characters
 
-### |
+* |
 pipe is used for piping the results of another command
 
-### tee
+* tee
 simultaneous actions
 #### Flags
 	+ -a: append
-### more
+* more
 lets you navigate through a file page by page
 #### Examples
 	+ spacebar: to go to next page
 
-### less
+* less
 lets you navigate through a file
 #### Examples
 	+ up & down arrow keys:	Move up or down one line
@@ -253,7 +216,7 @@ lets you navigate through a file
 	+ q:			Quit less
 ## Regular Expressions and String Manipulation ---
 
-### Wildcards
+* Wildcards
 Used in regular expression. Very useful
 #### Expressions
 	+ '.': Any character
@@ -263,14 +226,14 @@ Used in regular expression. Very useful
 #### Examples
 	+ '*.txt': to list all the files with a .txt extention
 
-### Unicode characters
+* Unicode characters
 Saved unicode characters
 #### Characters
 	+ Γ - gamma: '^C+Shift+u+0393'
 	+ ϐ - beta: '^C+Shift+u+3d0'
 	+ Σ - Uppercase Sigma: '^C+Shift+u+03A3'
 
-### sed
+* sed
 Used with regex to manipulate text
 #### Flags
 	+ -i: insert into file. No '-i' means it will only print temporary changes
@@ -289,25 +252,25 @@ Used with regex to manipulate text
 	+ $: sed ###i '$a PATH=NULL' /etc/profile
 	+ s/: sed ###i 's/a/A/g' test.txt 
 
-### grep
+* grep
 used to search for a substring in a file
 #### Flags
 	+ -i:	for non case-sensitive searchs
 	+ -n:	to display the line numbers of a file
 
-### awk
+* awk
 used to print of parts of text
 #### Examples
 	+ awk '{print $1}' <filename>: prints off the first column from the file
 
 ## Search Commands
 ---
-### find
+* find
 find files & directories
 #### Examples
 	+ 'find . -iname foo*.*: find a file that starts with foo within current directory
 
-### locate
+* locate
 find files & dir via database. Much faster. Have to update db with updatedb command periodically
 #### Examples
 	+ locate <pattern>: locate foo*.*
