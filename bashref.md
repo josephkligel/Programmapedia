@@ -18,8 +18,7 @@
 	+ Kernel starts the grandfather process (systemd)
 	+ Systemd starts system services, starts login shells and GUI interface
 
-## Keyboard Shortcuts
-### Terminal Controls
+## Terminal Controls
 Key controls to interact with terminal
 #### Examples
 	+ ^C: stop process
@@ -35,13 +34,9 @@ Key controls to interact with terminal
 	+ !*: run the previous command that starts with a certain letter or word. A number will print out the command from that line number, e.g.'!1983' prints 'which curl'
 
 ## System
-### su
-Switch to root user
-
-### Password
-Password commands
-#### Examples
-	+ 'passwd <username>': to change password for username
+* Switch to root user: `su`
+* Password commands
+	+ Change password for a user: `passwd <username>`	
 
 ### User Commands
 	+ Add User to sudoer file: 'adduser <username>'
