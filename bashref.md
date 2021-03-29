@@ -34,27 +34,26 @@ Key controls to interact with terminal
 	+ !*: run the previous command that starts with a certain letter or word. A number will print out the command from that line number, e.g.'!1983' prints 'which curl'
 
 ## Basic Interaction
-variables: named values
-	+ Set a variable: `x=1`
-	+ Erase variable: `unset x`
+Set a variable: `x=1`
+Erase variable: `unset x`
 
-echo: Print string to screen
-	**Examples**
-	+ Use escape characters: `echo -e "this\tguy"`
-	+ Redirect to new file: `echo "str" > <file>`
-	+ Append to file: `echo "str" >> <file>`
+echo: `echo hello`
+Use escape characters: `echo -e "this\tguy"`
+Redirect to new file: `echo "str" > <file>`
+Append to file: `echo "str" >> <file>`
+
 pwd: print current working directory
 
-curl: Download a file using a web address
-	**Examples**
-	+ Get ip address: `curl ifconfig.me`
-	+ Get geolocation: `curl http://api.geoiplookup.net/?query=\<Public\_IP\>`
+curl: Downloads a file
+Get ip address: `curl ifconfig.me`
+Get geolocation: `curl http://api.geoiplookup.net/?query=\<Public\_IP\>`
 
 ping: `ping \<url\>`
 
 ## Help Commands
 man: Display manual page for command
-	+ Search for commands with a phrase or word: `man -k "system"`
+Search for commands with a phrase or word: `man -k "system"`
+
 whatis: one line summary of command
 which: which directory is a program located at
 whereis: where the program is located. Same as above
@@ -66,7 +65,7 @@ whoami: shows what user is logged in the current session
 Switch to root user: `su`
 
 Password commands
-	+ Change password for a user: `passwd <username>`
+	* Change password for a user: `passwd <username>`
 	
 User Commands
 	+ Add User to sudoer file: `adduser <username>`
