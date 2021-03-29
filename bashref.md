@@ -1,7 +1,6 @@
 # Reference for UNIX Commandsi
 ---
 ## Linux Boot Process
----
 1. Boot
 	+ Linux boot process: Firmware, Bootloader, Kernel, Initialization
 
@@ -20,11 +19,10 @@
 	+ Systemd starts system services, starts login shells and GUI interface
 
 ## Keyboard Shortcuts
----
 ### Terminal Controls
 Key controls to interact with terminal
 #### Examples
-> ^C: stop process
+	+ ^C: stop process
 	+ ^A: beginning of line
 	+ ^E: end of line
 	+ ^U: delete to beginning of line
@@ -37,14 +35,16 @@ Key controls to interact with terminal
 	+ !*: run the previous command that starts with a certain letter or word. A number will print out the command from that line number, e.g.'!1983' prints 'which curl'
 
 ## System
----
 ### su
 Switch to root user
 
-### Add User and Change Password
+### Password
+Password commands
 #### Examples
 	+ 'passwd <username>': to change password for username
-	+ 'adduser <username>': add user to sudoer file
+
+### User Commands
+	+ Add User to sudoer file: 'adduser <username>'
 
 ### visudo
 Password settings for users
