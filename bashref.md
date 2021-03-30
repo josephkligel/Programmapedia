@@ -1,23 +1,5 @@
 # Reference for UNIX Commands
 
-## Linux Boot Process
-1. Boot
-	* Linux boot process: Firmware, Bootloader, Kernel, Initialization
-
-2. Config Files
-	* UEFI: /boot/efi/EFI/redhat/grub.efi
-	* BIOS: /boot/grub2/grub.cfg
-
-3. Kernel
-	* Kernel loads the ramdisk into ram
-	* Kernel loads device drivers and config files from ramdisk
-	* Kernel unmounts ramdisk and mounts root file system
-	* Starts the initialization state
-
-4. Initialization
-	* Kernel starts the grandfather process (systemd)
-	* Systemd starts system services, starts login shells and GUI interface
-
 ## Terminal Controls
 Key controls to interact with terminal
 #### Keyboard Shortcuts
@@ -45,20 +27,10 @@ Key controls to interact with terminal
 	* Redirect to new file: `echo "str" > <file>`
 	* Append to file: `echo "str" >> <file>`
 
-
-#### curl
-Downloads a file
-	* Get ip address: `curl ifconfig.me`
-	* Get geolocation: `curl http://api.geoiplookup.net/?query=\<Public\_IP\>`
-
-ping: `ping \<url\>`
-
 ## Help Commands
 
-#### man
-Display manual page for command
-	* Search for commands with a phrase or word: `man -k "system"`
-
+man: Manual page for commands
+Search for commands with a phrase or word: `man -k "system"`
 
 whatis: one line summary of command
 
@@ -80,10 +52,6 @@ Switch to root user: `su`
 	
 #### User Commands
 	* Add User to sudoer file: `adduser <username>`
-
-#### visudo
-Sets password settings for users
-	* Add this to require no password for sudoing: `\<username\> ALL=(ALL) NOPASSWD:ALL`
 
 #### ssh
 connects to another linux system
@@ -125,7 +93,7 @@ Analyze space usage
 
 Memory usage: `free -m` or `cat /proc/meminfo`
 
-top: check CPU, RAM, and processes
+Check CPU, RAM, and processes: `top`
 
 Delete trash: `rm -rf ~/.local/share/Trash/*`
 
@@ -150,7 +118,7 @@ Below are a few of the steps required to make sure mysql is installed correctly
 
 #### Permissions
 File and directory permission settings
-###### Permission Types**
+###### Permission Types
 	* r: read
 	* w: write
 	* x: executable
@@ -263,4 +231,12 @@ awk: used to print of parts of text
 find: `find ./ -iname foo*.*`
 
 locate: `locate foo*.*`
+
+## Network
+ping: `ping <url>`
+
+#### curl
+Downloads a file
+	* Get ip address: `curl ifconfig.me`
+	* Get geolocation: `curl http://api.geoiplookup.net/?query=\<Public\_IP\>`
 
