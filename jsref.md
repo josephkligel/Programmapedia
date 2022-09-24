@@ -1,12 +1,10 @@
 # JavaScript Reference
 
 ## Legend:
----
 >("): means what came above or before.
 ><element>: document.querySelector('#someid')
 
 ## Importing/Exporting:
----
 ### Importing (ES6):
 	-import App from './App';
 	-const lodash = requires('lodash'): for nodejs only
@@ -18,7 +16,6 @@
 	-module.exports = function(){}: for nodejs only 
 
 ## Operators
----
 ### Reassignment
 Assign new values to variables
 #### Usage:
@@ -43,7 +40,6 @@ Pull properties from an object
 		*  newName and newValue are the new names of name and value properties
  
 ## Strings
----
 Methods and Examples of string usages in JavaScript.
 	
 ### Methods
@@ -51,10 +47,7 @@ Methods and Examples of string usages in JavaScript.
 	-split: 'a word or array'.split(<delimiter>, [limit number])
 
 ## Arrays
----
-
 Methods for arrays. Many of them also work on strings. So, between arrays and strings, theto-be-mentioned methods are interchangeable.
-
 ### Methods
 	* splice: <array or string>.splice(<start index>, <number to cut>[, <insert word(s) at start index>]): cuts elements from arrays or characters from a string 
 	* push: <array>.push()
@@ -77,17 +70,13 @@ Methods for arrays. Many of them also work on strings. So, between arrays and st
 	* findIndex: <array>.findIndex(index => item < 10)
 		* Definition: Find the index of the first item that matches from an array
 
-## Dates
----						  
-							  
+## Dates					  
 ### Methods:
 	-var date = new Date()
 	-date.getDate() or [getFullYear(), getMonth(), getDay(), getHours(), getMinutes()]
 	-date.toLocaleDateString() or [toLocaleTimeString()]
 
 ## DOM
----
-
 ### Grabbing element objects:
 Gets an element to manipulate
 #### Usage:
@@ -138,14 +127,10 @@ Events on Document and Window
 	* resize: window(<event>, <callback(s)>)
 
 ## Navigator
----
-	
 ### Methods:
 	* Geolocation: navigator.geolocation.getCurrentPosition(postion => console.log(position))
 
-## Location
----
-	
+## Location	
 Get info about current page
 ### Methods:
 	* Info about webpage: location
@@ -155,8 +140,6 @@ Get info about current page
 	* Parent page: location.origin
 
 ## 3rd Party JS Libraries
----
-
 ### Mustache
 JavaScript library to render html
 #### Usage:
