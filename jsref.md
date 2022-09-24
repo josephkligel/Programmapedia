@@ -1,12 +1,12 @@
 # JavaScript Reference
 
 ## Legend:
+---
 >("): means what came above or before.
 ><element>: document.querySelector('#someid')
 
 ## Importing/Exporting:
 ---
-	
 ### Importing (ES6):
 	-import App from './App';
 	-const lodash = requires('lodash'): for nodejs only
@@ -19,7 +19,6 @@
 
 ## Operators
 ---
-
 ### Reassignment
 Assign new values to variables
 #### Usage:
