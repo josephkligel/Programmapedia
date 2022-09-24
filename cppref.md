@@ -2,13 +2,13 @@
 
 Reference site: https://en.cppreference.com/w/cpp/header
 
-Legend:
+# Legend:
 >("): Same as above or near
 >etiam: Also in C programming
 >'': Single quoted text signifies a litteral piece of text.
 	* This is a text that can be used in a program
 
-## ---------------------------- Setup -------------------
+##  Setup
 
 * Install a C++ compiler: Depends on platform being used
 	* Linux: g++
@@ -19,7 +19,7 @@ Legend:
 	* main.cpp: The name of the program to compile
 	* -o: The output name for the main.cpp executable
 
-## ---------------------------- Syntax ----------------
+##  Syntax 
 
 ### Preprocessor Directives
 '#' before a identifier. These are items that are initialized before the compilation of the program.
@@ -182,7 +182,7 @@ Including and creating external header files
 	* Close prepocessor declaration: #endif
 	 
 
-## -------------------- Classes -------------------------
+##  Classes 
 
 ### Classes
 Abstract fashion of re-utilizing code
@@ -348,7 +348,7 @@ Classes that cannot be instantiated and are used as base classes in inheritance 
 		* 1: Subclasses have to instantiate all virtual of functions of an interface 
 	* Tip: Use 'I' in front of the interface class names, e.g. class I_Shape
 
-## ---------------------- Smart Pointers ------------------
+##  Smart Pointers 
 
 ### Smart Pointer
 A pointer that automatically manages its memory allocation
@@ -390,7 +390,7 @@ Creates a non-owning weak reference
 	* Include: #include <memory>
 	* Defining and Declaring: std::weak_ptr<A> a_ptr = a
 
-## ---------------------- Error Handling -------------------
+##  Error Handling 
 
 ### Basic Syntax
 Javascript's syntax is similar to C++'s error handling syntax
@@ -414,7 +414,7 @@ Deriving from C++ built-in exceptions
 #### Usage:
 	* Derive from exception class: class Some_Except: public std::exception{...};
 
-## ------------------------ Streams -------------------------------
+## Streams 
 Stream manipulation, input/output, and formatting
 ### Boolean
 Boolean manipulation
@@ -521,7 +521,7 @@ String buffers
 	* From Variable to buffer: oss << name
 	* Flush out buffer to console: std::cout << oss.str()
 
-## ---------------------- Standard Template Library -------------------
+## Standard Template Library 
 Easily accessable containers and algorithms
 ### Container Libraries
 Lists that hold elements
@@ -611,7 +611,7 @@ Allows abstracting an arbitrary container as a sequence of elements
 		* reverse: vec.rbegin(), rend()
 		* Const reverse: vec.crbegin(), crend()
 
-## ----------------------------- Sequence Containers ------------------------------
+## Sequence Containers 
 
 ### Arrays
 The standard template library's version of an array
@@ -673,7 +673,7 @@ A forward list. They are singly-linked
 	* Methods: max_size, front, push_front, pop_front, emplace_front, erase_after
 	* Insert: insert_after(<iterator>, 10), emplace_after(10)
 
-## ----------------------------- Associative Containers ------------------------------
+## Associative Containers 
 
 ### Sets
 A list of non-duplicates ordered by keys
@@ -718,7 +718,7 @@ Associate arrays/dictionaries. Assign keys to values
 	* Include: #include <unordered_multimap>
 	* Declaration: std::unordered_multimap<int, char> umm
 
-## ---------------------- Container Adapters ----------------
+## Container Adapters
 
 ### Stacks
 Last-in First-out (LIFO) data structure
@@ -750,7 +750,7 @@ Allows insertions and removals of elements in order from the front of the contai
 	* Declaration: std::priority_queue<int> pq
 	* 
 
-## ---------------------- Builtin Packages ---------------
+## Builtin Packages 
 
 ### iostream
 Input and output library for C++
