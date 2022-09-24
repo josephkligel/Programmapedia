@@ -13,7 +13,7 @@ Reference site: https://en.cppreference.com/w/cpp/header
 * Install a C++ compiler: Depends on platform being used
 	* Linux: g++
 	* Web: Can run C++ programs on cpp.sh website
-* compile: g++ -Wall -std=c++14 main.cpp -o main
+* compile: `g++ -Wall -std=c++14 main.cpp -o main`
 	* -Wall: Shows warnings
 	* -std: Specifies the version of C++ to be used
 	* main.cpp: The name of the program to compile
