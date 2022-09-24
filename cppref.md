@@ -2,7 +2,7 @@
 
 Reference site: https://en.cppreference.com/w/cpp/header
 
-# Legend:
+## Legend:
 >("): Same as above or near
 >etiam: Also in C programming
 >'': Single quoted text signifies a litteral piece of text.
