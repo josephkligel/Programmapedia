@@ -1,9 +1,11 @@
 # JavaScript Reference
-Legend:
+
+## Legend:
 >("): means what came above or before.
 ><element>: document.querySelector('#someid')
 
-## --- Importing/Exporting ---
+## Importing/Exporting
+---
 Importing modules
 ### Importing (ES6):
 	-import App from './App';
