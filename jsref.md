@@ -4,21 +4,21 @@
 >("): means what came above or before.
 ><element>: document.querySelector('#someid')
 
-## Importing/Exporting
+## Importing/Exporting:
 ---
-Importing modules
+	
 ### Importing (ES6):
 	-import App from './App';
 	-const lodash = requires('lodash'): for nodejs only
 	-import React, {useState} from 'react': destructuring
 
-Exporting modules
 ### Exporting:
 	-export default App: App function is exported
 	-export {app: "app", function: "function", develop: "develop"}: exports other functions with a given name to use
 	-module.exports = function(){}: for nodejs only 
 
-## ----------------------Operators---------------------
+## Operators
+---
 
 ### Reassignment
 Assign new values to variables
@@ -43,14 +43,19 @@ Pull properties from an object
 	* Assign new names to pulled properties: {name: newName, value: newValue} = event.target
 		*  newName and newValue are the new names of name and value properties
  
-## ----------------------Strings-----------------------
+## Strings
+---
 Methods and Examples of string usages in JavaScript.
+	
 ### Methods
 	-splice: 'a word or array'.splice(<from index>, <to index>)
 	-split: 'a word or array'.split(<delimiter>, [limit number])
 
-## --------------------Arrays-----------------------------
+## Arrays
+---
+
 Methods for arrays. Many of them also work on strings. So, between arrays and strings, theto-be-mentioned methods are interchangeable.
+
 ### Methods
 	* splice: <array or string>.splice(<start index>, <number to cut>[, <insert word(s) at start index>]): cuts elements from arrays or characters from a string 
 	* push: <array>.push()
@@ -73,15 +78,16 @@ Methods for arrays. Many of them also work on strings. So, between arrays and st
 	* findIndex: <array>.findIndex(index => item < 10)
 		* Definition: Find the index of the first item that matches from an array
 
-## ----------------------Dates-------------------------
-Methods for dates
+## Dates
+---						  
+							  
 ### Methods:
 	-var date = new Date()
 	-date.getDate() or [getFullYear(), getMonth(), getDay(), getHours(), getMinutes()]
 	-date.toLocaleDateString() or [toLocaleTimeString()]
 
-## -----------------------DOM----------------------
-DOM Methods
+## DOM
+---
 
 ### Grabbing element objects:
 Gets an element to manipulate
@@ -132,12 +138,15 @@ Events on Document and Window
 ### Window:
 	* resize: window(<event>, <callback(s)>)
 
-## ----------------------------------- Navigator ------------------------------------
-Get geolocation info
-#### Methods:
+## Navigator
+---
+	
+### Methods:
 	* Geolocation: navigator.geolocation.getCurrentPosition(postion => console.log(position))
 
-## ------------------------------ Location -----------------------------
+## Location
+---
+	
 Get info about current page
 ### Methods:
 	* Info about webpage: location
@@ -146,7 +155,8 @@ Get info about current page
 		* redirect: location.href = '/'
 	* Parent page: location.origin
 
-## --------------------------------- 3rd Party JS Libraries ----------------------------
+## 3rd Party JS Libraries
+---
 
 ### Mustache
 JavaScript library to render html
